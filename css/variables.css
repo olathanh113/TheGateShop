@@ -1,0 +1,139 @@
+/* ============================================
+   TheGateShop — Design Tokens
+   The Gate VNXK — Bright, Youthful, Vibrant Light Theme
+   ============================================ */
+
+:root {
+  /* ---- Colors (Clean Bright Light Theme) ---- */
+  --color-bg:              #f8fafc;   /* Crisp clean off-white background */
+  --color-bg-alt:          #f1f5f9;   /* Soft slate light section background */
+  --color-surface:         #ffffff;   /* Pure white card surface */
+  --color-surface-hover:   #fff7ed;   /* Light warm orange tint on hover */
+  --color-surface-elevated:#ffffff;
+  --color-surface-glass:   rgba(255, 255, 255, 0.85);
+
+  /* ---- Accent Palette (Youthful Vibrant Orange) ---- */
+  --color-gold:            #ff5500;   /* Youthful Vibrant Orange */
+  --color-gold-light:      #ff7733;   /* Soft Light Orange */
+  --color-gold-dark:       #e64c00;   /* Deep Crisp Orange */
+  --color-gold-glow:       rgba(255, 85, 0, 0.12);
+
+  --color-amber:           #ff9900;
+  --color-amber-light:     #fff4ed;   /* Soft Light Orange Chip Background */
+
+  --color-text-primary:    #0f172a;   /* Slate Black - High contrast readable text */
+  --color-text-secondary:  #475569;   /* Medium Slate Gray */
+  --color-text-muted:      #94a3b8;   /* Light Muted Gray */
+  --color-text-inverse:    #ffffff;   /* White text on solid orange buttons */
+
+  --color-border:          #e2e8f0;   /* Soft clean light border */
+  --color-border-hover:    #cbd5e1;
+  --color-border-gold:     rgba(255, 85, 0, 0.3);
+
+  --color-success:         #10b981;
+  --color-warning:         #f59e0b;
+  --color-error:           #ef4444;
+  --color-info:            #3b82f6;
+
+  --color-overlay:         rgba(15, 23, 42, 0.45);
+  --color-overlay-heavy:   rgba(15, 23, 42, 0.75);
+
+  /* ---- Gradients ---- */
+  --gradient-gold:         linear-gradient(135deg, #ff5500 0%, #ff7733 50%, #ff8800 100%);
+  --gradient-gold-subtle:  linear-gradient(135deg, #fff4ed 0%, #ffe4d6 100%);
+  --gradient-dark:         linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  --gradient-hero:         linear-gradient(135deg, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.25) 100%);
+  --gradient-card:         linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+
+  /* ---- Typography ---- */
+  --font-heading:          'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-body:             'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+
+  --fs-display:            clamp(2.5rem, 5.5vw, 4.2rem);
+  --fs-h1:                 clamp(2rem, 4vw, 3.2rem);
+  --fs-h2:                 clamp(1.6rem, 3vw, 2.3rem);
+  --fs-h3:                 clamp(1.2rem, 2vw, 1.6rem);
+  --fs-h4:                 1.2rem;
+  --fs-body:               1rem;
+  --fs-body-lg:            1.125rem;
+  --fs-small:              0.875rem;
+  --fs-xs:                 0.75rem;
+  --fs-label:              0.8125rem;
+
+  --fw-light:              300;
+  --fw-regular:            400;
+  --fw-medium:             500;
+  --fw-semibold:           600;
+  --fw-bold:               700;
+
+  --lh-tight:              1.25;
+  --lh-normal:             1.6;
+  --lh-relaxed:            1.75;
+
+  --ls-tight:              -0.02em;
+  --ls-normal:             0;
+  --ls-wide:               0.03em;
+  --ls-wider:              0.08em;
+  --ls-widest:             0.15em;
+
+  /* ---- Spacing ---- */
+  --space-2xs:             0.25rem;   /* 4px */
+  --space-xs:              0.5rem;    /* 8px */
+  --space-sm:              0.75rem;   /* 12px */
+  --space-md:              1rem;      /* 16px */
+  --space-lg:              1.5rem;    /* 24px */
+  --space-xl:              2rem;      /* 32px */
+  --space-2xl:             3rem;      /* 48px */
+  --space-3xl:             4rem;      /* 64px */
+
+  /* ---- Layout ---- */
+  --container-max:         1280px;
+  --container-narrow:      960px;
+  --container-wide:        1440px;
+  --container-padding:     1.5rem;
+
+  --navbar-height:         74px;
+  --announcement-height:   38px;
+
+  /* ---- Border Radius ---- */
+  --radius-sm:             8px;
+  --radius-md:             12px;
+  --radius-lg:             18px;
+  --radius-xl:             24px;
+  --radius-2xl:            32px;
+  --radius-full:           9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm:             0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-md:             0 4px 14px rgba(15, 23, 42, 0.07);
+  --shadow-lg:             0 10px 28px rgba(15, 23, 42, 0.1);
+  --shadow-xl:             0 20px 48px rgba(15, 23, 42, 0.14);
+  --shadow-gold:           0 6px 20px rgba(255, 85, 0, 0.28);
+  --shadow-gold-lg:        0 10px 36px rgba(255, 85, 0, 0.38);
+
+  /* ---- Transitions ---- */
+  --ease-smooth:           cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:           cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:         150ms;
+  --duration-normal:       250ms;
+  --duration-slow:         400ms;
+
+  --transition-base:       all var(--duration-normal) var(--ease-smooth);
+  --transition-fast:       all var(--duration-fast) var(--ease-smooth);
+  --transition-slow:       all var(--duration-slow) var(--ease-smooth);
+
+  /* ---- Z-Index ---- */
+  --z-base:                1;
+  --z-dropdown:            100;
+  --z-sticky:              200;
+  --z-navbar:              500;
+  --z-overlay:             800;
+  --z-modal:               900;
+  --z-toast:               1000;
+
+  /* ---- Glass Effect ---- */
+  --glass-blur:            16px;
+  --glass-bg:              rgba(255, 255, 255, 0.88);
+  --glass-border:          rgba(255, 255, 255, 0.6);
+}

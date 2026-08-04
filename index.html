@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Gate VNXK — Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu chính hãng, đồ thể thao, áo khoác dù, đồ dã ngoại & outdoor cao cấp." />
+  <meta name="keywords" content="The Gate VNXK, thời trang xuất khẩu, quần áo VNXK, đồ outdoor, áo khoác dù, đồ thể thao, thegatevietnamxk" />
+  <meta name="author" content="The Gate - VNXK" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor" />
+  <meta property="og:description" content="Chuyên đồ thời trang Việt Nam Xuất Khẩu chính hãng, chất lượng cao, thiết kế năng động và bền đẹp." />
+  <meta property="og:type" content="website" />
+
+  <title>The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+</head>
+<body>
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span class="announcement-bar__badge">HOT</span>
+      <p class="announcement-bar__text">
+        🔥 HÀNG VNXK CHÍNH HÃNG — MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO ĐƠN HÀNG TỪ 500.000Đ — <strong>HOTLINE/ZALO: 0989 123 456</strong>
+      </p>
+      <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="announcement-bar__link">Chat Fanpage FB ➔</a>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar--transparent" id="navbar" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <!-- Logo -->
+      <a href="/" class="navbar__logo" id="navLogo">
+        <span class="navbar__logo-icon">▲</span>
+        The<span>Gate</span>
+        <span class="navbar__logo-tag">VNXK</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#" class="navbar__link navbar__link--active">Trang chủ</a></li>
+        <li><a href="#categories" class="navbar__link">Danh mục</a></li>
+        <li><a href="#featured" class="navbar__link">Sản phẩm VNXK</a></li>
+        <li><a href="#why-us" class="navbar__link">Về The Gate</a></li>
+        <li><a href="#collection" class="navbar__link">Đồ Outdoor</a></li>
+        <li><a href="#testimonials" class="navbar__link">Đánh giá</a></li>
+        <li><a href="#contact" class="navbar__link">Liên hệ</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="navbar__actions">
+        <!-- Search -->
+        <button class="btn-icon" id="searchBtn" aria-label="Tìm kiếm" title="Tìm kiếm sản phẩm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="btn-icon" id="wishlistBtn" aria-label="Yêu thích" title="Danh sách yêu thích" style="position:relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="navbar__wishlist-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="btn-icon" id="cartBtn" aria-label="Giỏ hàng" title="Giỏ hàng" style="position:relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="navbar__cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Mobile toggle -->
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar__mobile-menu" id="mobileMenu">
+      <a href="#" class="navbar__mobile-link">Trang chủ</a>
+      <a href="#categories" class="navbar__mobile-link">Danh mục</a>
+      <a href="#featured" class="navbar__mobile-link">Sản phẩm VNXK</a>
+      <a href="#why-us" class="navbar__mobile-link">Về The Gate</a>
+      <a href="#collection" class="navbar__mobile-link">Đồ Outdoor</a>
+      <a href="#testimonials" class="navbar__mobile-link">Đánh giá</a>
+      <a href="#contact" class="navbar__mobile-link">Liên hệ</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img
+        class="hero__bg-image"
+        src="assets/images/banners/hero-banner.png"
+        alt="The Gate VNXK Banner"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__badge-wrapper">
+        <span class="hero__badge">⚡ THỜI TRANG VNXK CHÍNH HÃNG</span>
+      </div>
+      <h1 class="hero__title">
+        Hàng Xuất Khẩu<br /><em>Chất Lượng Cao</em>
+      </h1>
+      <p class="hero__desc">
+        Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu tiêu chuẩn Châu Âu & Nhật Bản. Thiết kế năng động, chất liệu thoáng mát và độ bền vượt trội cho mọi hoạt động hàng ngày & outdoor.
+      </p>
+
+      <!-- Floating Stats Badges -->
+      <div class="hero__stats">
+        <div class="hero__stat-item">
+          <span class="hero__stat-num">10.000+</span>
+          <span class="hero__stat-lbl">Khách hàng tin dùng</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat-item">
+          <span class="hero__stat-num">100%</span>
+          <span class="hero__stat-lbl">Chuẩn Hàng VNXK</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat-item">
+          <span class="hero__stat-num">4.9★</span>
+          <span class="hero__stat-lbl">Đánh giá tích cực</span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#featured" class="btn btn-primary btn-lg">Khám phá ngay ➔</a>
+        <a href="#collection" class="btn btn-secondary btn-lg">Bộ Sưu Tập Outdoor</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator">
+      <span>Cuộn khám phá</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES BAR ============ -->
+  <section class="features-bar">
+    <div class="container">
+      <div class="features-bar__grid">
+        <div class="features-bar__item reveal">
+          <div class="features-bar__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="features-bar__title">Miễn phí vận chuyển</div>
+            <div class="features-bar__desc">Cho đơn hàng từ 500.000đ</div>
+          </div>
+        </div>
+        <div class="features-bar__item reveal reveal-delay-1">
+          <div class="features-bar__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="features-bar__title">100% Chuẩn VNXK</div>
+            <div class="features-bar__desc">Chất lượng xuất Châu Âu & Mỹ</div>
+          </div>
+        </div>
+        <div class="features-bar__item reveal reveal-delay-2">
+          <div class="features-bar__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </div>
+          <div>
+            <div class="features-bar__title">Đổi trả trong 30 ngày</div>
+            <div class="features-bar__desc">Đổi size tận nơi dễ dàng</div>
+          </div>
+        </div>
+        <div class="features-bar__item reveal reveal-delay-3">
+          <div class="features-bar__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="features-bar__title">Tư vấn Messenger 24/7</div>
+            <div class="features-bar__desc">Hotline/Zalo: 0989 123 456</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES SHOWCASE ============ -->
+  <section class="categories section" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">DANH MỤC TUYỂN CHỌN</span>
+        <h2 class="section-title">Thời Trang & Trang Thiết Bị Outdoor</h2>
+        <hr class="divider" />
+        <p class="section-desc">Tìm kiếm trang phục phù hợp cho phong cách thường ngày, công sở, thể thao hay dã ngoại</p>
+      </div>
+
+      <div class="grid grid-4">
+        <!-- Men VNXK -->
+        <div class="category-card reveal">
+          <img class="category-card__image" src="assets/images/categories/men.png" alt="Thời trang Nam VNXK" loading="lazy" />
+          <div class="category-card__overlay">
+            <span class="badge badge-new" style="position:static;display:inline-block;margin-bottom:8px;">BÁN CHẠY</span>
+            <h3 class="category-card__name">Thời Trang Nam VNXK</h3>
+            <span class="category-card__count">Áo Polo, Kaki, Áo Phao, Jogger</span>
+            <a href="#featured" class="category-card__link">
+              Khám phá ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Women VNXK -->
+        <div class="category-card reveal reveal-delay-1">
+          <img class="category-card__image" src="assets/images/categories/women.png" alt="Thời trang Nữ VNXK" loading="lazy" />
+          <div class="category-card__overlay">
+            <span class="badge badge-hot" style="position:static;display:inline-block;margin-bottom:8px;">HOT</span>
+            <h3 class="category-card__name">Thời Trang Nữ VNXK</h3>
+            <span class="category-card__count">Đầm Cotton, Áo Thun, Áo Khoác</span>
+            <a href="#featured" class="category-card__link">
+              Khám phá ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Outdoor -->
+        <div class="category-card reveal reveal-delay-2">
+          <img class="category-card__image" src="assets/images/categories/accessories.png" alt="Đồ Outdoor & Dã Ngoại" loading="lazy" />
+          <div class="category-card__overlay">
+            <span class="badge badge-new" style="position:static;display:inline-block;margin-bottom:8px;">CHUYÊN DỤNG</span>
+            <h3 class="category-card__name">Đồ Outdoor & Dã Ngoại</h3>
+            <span class="category-card__count">Rashguard UPF50+, Áo Dù, Túi Waterproof</span>
+            <a href="#featured" class="category-card__link">
+              Khám phá ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sale -->
+        <div class="category-card reveal reveal-delay-3">
+          <img class="category-card__image" src="assets/images/categories/sale.png" alt="Hàng Ưu Đãi VNXK" loading="lazy" />
+          <div class="category-card__overlay">
+            <span class="badge badge-sale" style="position:static;display:inline-block;margin-bottom:8px;">SALE LỚN</span>
+            <h3 class="category-card__name">Hàng Ưu Đãi VNXK</h3>
+            <span class="category-card__count">Giảm giá lên đến 40%</span>
+            <a href="#featured" class="category-card__link">
+              Săn ngay
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PRODUCTS ============ -->
+  <section class="featured-products section" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">SẢN PHẨM NỔI BẬT</span>
+        <h2 class="section-title">Hàng VNXK Được Yêu Thích Nhất</h2>
+        <hr class="divider" />
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="featured-products__tabs reveal">
+        <button class="featured-products__tab featured-products__tab--active" data-filter="all">Tất cả sản phẩm</button>
+        <button class="featured-products__tab" data-filter="nam">Đồ Nam VNXK</button>
+        <button class="featured-products__tab" data-filter="nu">Đồ Nữ VNXK</button>
+        <button class="featured-products__tab" data-filter="phukien">Outdoor & Phụ kiện</button>
+      </div>
+
+      <!-- Products grid -->
+      <div class="grid grid-4" id="featuredProductsGrid">
+        <!-- Products rendered by JS -->
+      </div>
+
+      <div class="flex-center" style="margin-top: var(--space-2xl);">
+        <button class="btn btn-secondary btn-lg reveal" id="loadMoreBtn">Khám phá thêm mẫu mới ➔</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="why-us section" id="why-us">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;gap:var(--space-2xl);">
+        <div class="why-us__content reveal">
+          <span class="section-subtitle">TẠI SAO CHỌN THE GATE</span>
+          <h2 class="section-title">Tiêu Chuẩn VNXK Chính Hãng & Đồ Outdoor</h2>
+          <hr class="divider" style="margin-inline:0;" />
+          <p style="color:var(--color-text-secondary);line-height:var(--lh-relaxed);margin-bottom:var(--space-lg);">
+            The Gate tự hào là địa chỉ uy tín chuyên cung cấp các mặt hàng thời trang Việt Nam Xuất Khẩu chất lượng cao. Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng từ chất liệu vải, đường kim mũi chỉ cho tới phom dáng.
+          </p>
+
+          <div class="why-us__features">
+            <div class="why-us__feature-item">
+              <div class="why-us__icon">✔</div>
+              <div>
+                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Chất liệu đạt chuẩn Châu Âu & Mỹ</h4>
+                <p style="font-size:0.9rem;color:var(--color-text-muted);">Vải Cotton Supplex, Oxford, Cordura chống nước và thun dệt công nghệ Quick-Dry thoáng mát.</p>
+              </div>
+            </div>
+            <div class="why-us__feature-item">
+              <div class="why-us__icon">✔</div>
+              <div>
+                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Giá thành thực dụng & Hợp lý</h4>
+                <p style="font-size:0.9rem;color:var(--color-text-muted);">Giá chỉ từ 180k - 790k cho một sản phẩm xuất khẩu chất lượng cao chuẩn từng chi tiết.</p>
+              </div>
+            </div>
+            <div class="why-us__feature-item">
+              <div class="why-us__icon">✔</div>
+              <div>
+                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Hỗ trợ tư vấn size & Đổi trả dễ dàng</h4>
+                <p style="font-size:0.9rem;color:var(--color-text-muted);">Đội ngũ CSKH trực 24/7 tư vấn vừa vặn theo chiều cao, cân nặng của từng khách hàng.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-us__image-wrapper reveal reveal-delay-1">
+          <div class="glass-card" style="padding:var(--space-md);">
+            <img src="assets/images/banners/hero-banner.png" alt="The Gate VNXK Quality" style="width:100%;border-radius:var(--radius-lg);object-fit:cover;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARALLAX BANNER ============ -->
+  <section class="parallax-banner" id="collection">
+    <div class="parallax-banner__bg">
+      <img
+        src="assets/images/banners/parallax-banner.png"
+        alt="The Gate Outdoor Collection"
+        loading="lazy"
+      />
+    </div>
+    <div class="parallax-banner__overlay"></div>
+    <div class="parallax-banner__content reveal">
+      <span class="parallax-banner__subtitle">BỘ SƯU TẬP CHUYÊN DỤNG</span>
+      <h2 class="parallax-banner__title">The Gate<br /><em>Outdoor & Sportwear</em></h2>
+      <p class="parallax-banner__desc">
+        Sẵn sàng cho mọi hành trình dã ngoại, du lịch & thể thao với các trang phục cản gió, chống nước và chống nắng chỉ số UPF50+.
+      </p>
+      <a href="#featured" class="btn btn-primary btn-lg">Khám phá bộ sưu tập ➔</a>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">ĐÁNH GIÁ KHÁCH HÀNG</span>
+        <h2 class="section-title">Trải Nghiệm Mua Sắm Tại The Gate</h2>
+        <hr class="divider" />
+      </div>
+
+      <div class="testimonials__slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__text">
+            "Áo khoác dù VNXK chống nước của shop mặc đi đường cực thích, chống gió rét siêu tốt. Vải dày dặn mà thoáng mát, đáng tiền từng đồng!"
+          </p>
+          <div class="testimonial-card__author">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #ff5722, #e64a19);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">M</div>
+            <div>
+              <div class="testimonial-card__name">Minh Tuấn</div>
+              <div class="testimonial-card__role">Khách mua tại 12A Cao Bá Quát, Hà Nội</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-card__stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__text">
+            "Áo Polo Supplex Cotton mặc đi đánh Golf thích dã dũng, co giãn mượt mà. Shop tư vấn size cực chuẩn qua Messenger!"
+          </p>
+          <div class="testimonial-card__author">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #ff9800, #ff5722);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">H</div>
+            <div>
+              <div class="testimonial-card__name">Hương Giang</div>
+              <div class="testimonial-card__role">Khách đặt hàng online FB</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-card__stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-card__text">
+            "Mua quần Kaki VNXK co giãn ở đây 3 cái rồi. Mặc bền lắm, giặt máy không lo bai dão. Đóng gói giao hàng siêu nhanh!"
+          </p>
+          <div class="testimonial-card__author">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #e64a19, #ff5722);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">Đ</div>
+            <div>
+              <div class="testimonial-card__name">Đức Anh</div>
+              <div class="testimonial-card__role">Khách hàng thân thiết</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter section" id="newsletter">
+    <div class="container">
+      <div class="newsletter__inner reveal">
+        <span class="section-subtitle">ĐĂNG KÝ NHẬN ƯU ĐÃI</span>
+        <h2 class="section-title">Nhận Thông Báo Hàng VNXK Mới Về</h2>
+        <hr class="divider" />
+        <p class="section-desc">
+          Đăng ký email để nhận thông tin về các lô hàng xuất dư mới nhất, mã giảm giá độc quyền và chương trình ưu đãi đặc biệt.
+        </p>
+        <form class="newsletter__form" id="newsletterForm" onsubmit="event.preventDefault();">
+          <input
+            type="email"
+            class="newsletter__input"
+            placeholder="Nhập email của bạn..."
+            aria-label="Email"
+            required
+            id="newsletterEmail"
+          />
+          <button type="submit" class="btn btn-primary newsletter__btn" id="newsletterSubmit">
+            Đăng ký ngay
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer section" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <a href="/" class="navbar__logo" style="font-size:1.6rem;">
+            <span class="navbar__logo-icon">▲</span>
+            The<span>Gate</span>
+            <span class="navbar__logo-tag">VNXK</span>
+          </a>
+          <p class="footer__brand-desc">
+            Chuyên các mặt hàng thời trang Việt Nam Xuất Khẩu (VNXK) chính hãng, đồ thể thao, đồ tập golf & trang thiết bị dã ngoại outdoor chất lượng cao.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__social-link" aria-label="Facebook Fanpage">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__social-link" aria-label="Messenger">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.51 3.734 7.188V22l3.414-1.874c.907.25 1.867.384 2.852.384 5.523 0 10-4.145 10-9.258S17.523 2 12 2zm1.06 12.544l-2.545-2.716-4.97 2.716 5.466-5.8 2.607 2.716 4.908-2.716-5.466 5.8z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer__heading">Cửa hàng</h3>
+          <ul class="footer__links">
+            <li><a href="#featured" class="footer__link">Thời trang Nam VNXK</a></li>
+            <li><a href="#featured" class="footer__link">Thời trang Nữ VNXK</a></li>
+            <li><a href="#featured" class="footer__link">Đồ Outdoor & Dã Ngoại</a></li>
+            <li><a href="#featured" class="footer__link">Áo Khoác Dù & Phao</a></li>
+            <li><a href="#featured" class="footer__link">Hàng Mới Về</a></li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div>
+          <h3 class="footer__heading">Hỗ trợ</h3>
+          <ul class="footer__links">
+            <li><a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__link">Tư vấn chọn size trực tiếp</a></li>
+            <li><a href="#" class="footer__link">Chính sách đổi trả 30 ngày</a></li>
+            <li><a href="#" class="footer__link">Chính sách giao hàng toàn quốc</a></li>
+            <li><a href="#" class="footer__link">Hướng dẫn kiểm tra hàng</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer__heading">Liên hệ</h3>
+          <ul class="footer__links">
+            <li><a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__link">💬 Chat Fanpage Facebook</a></li>
+            <li><a href="tel:0989123456" class="footer__link">📞 Hotline/Zalo: 0989 123 456</a></li>
+            <li><span class="footer__link">📍 12A Cao Bá Quát, Ba Đình, Hà Nội</span></li>
+            <li><span class="footer__link">🕐 Mở cửa: 9:00 — 21:30 hàng ngày</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 The Gate - Việt Nam XK. Tất cả quyền được bảo lưu.</p>
+        <div class="footer__payment">
+          <span>💳 COD (Thanh toán khi nhận hàng)</span>
+          <span>💳 Chuyển khoản ngân hàng</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
