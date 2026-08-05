@@ -1,3 +1,99 @@
+/* ============ ADDRESS BAR ============ */
+.address-bar {
+  background: #0f0f0f;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--fs-xs);
+  padding: 6px 0;
+}
+
+.address-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.address-bar__stores {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.address-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  transition: var(--transition-colors);
+  white-space: nowrap;
+}
+
+.address-bar__item:hover {
+  color: var(--color-gold);
+}
+
+.address-bar__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.address-bar__social-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-base);
+  white-space: nowrap;
+}
+
+.address-bar__social-link:hover {
+  color: var(--color-gold);
+  border-color: var(--color-border-gold);
+  background: var(--color-gold-glow);
+}
+
+@media (max-width: 768px) {
+  .address-bar {
+    display: none; /* Ẩn trên mobile để tiết kiệm không gian */
+  }
+}
+
+/* ============ WHY-US FEATURES ============ */
+.why-us__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.why-us__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.why-us__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 /* ============ ANNOUNCEMENT BAR ============ */
 .announcement-bar {
   background: var(--gradient-gold);
@@ -60,7 +156,7 @@
 
 .navbar--solid {
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-bottom: 1px solid var(--color-border);

@@ -4,7 +4,7 @@
 
 import { formatPrice, generateStars, showToast, getCartItems, saveCartItems, toggleWishlist, isInWishlist } from '../utils/helpers.js';
 import { updateCartCount, updateWishlistCount } from './navbar.js';
-import { openQuickView } from './quickView.js';
+import { openProductModal } from './productModal.js';
 import { openCartDrawer } from './cartDrawer.js';
 
 export function createProductCard(product) {
@@ -14,8 +14,12 @@ export function createProductCard(product) {
 
   const isLiked = isInWishlist(product.id);
 
+  const salePercent = product.salePrice
+    ? Math.round((1 - product.salePrice / product.price) * 100)
+    : 0;
+
   const badgeHtml = product.badge
-    ? `<span class="badge badge-${product.badge}">${getBadgeLabel(product.badge)}</span>`
+    ? `<span class="badge badge-${product.badge}">${getBadgeLabel(product.badge, salePercent)}</span>`
     : '';
 
   const salePriceHtml = product.salePrice
@@ -29,8 +33,10 @@ export function createProductCard(product) {
       <img
         class="product-card__image"
         src="${product.images[0]}"
-        alt="${product.name}"
+        alt="${product.name} - The Gate VNXK"
         loading="lazy"
+        width="400"
+        height="534"
       />
       <div class="product-card__overlay">
         <button class="product-card__action ${isLiked ? 'active' : ''}" data-action="wishlist" data-id="${product.id}" title="Yêu thích" aria-label="Thêm vào yêu thích">
@@ -79,19 +85,20 @@ export function createProductCard(product) {
   const qvBtn = card.querySelector('[data-action="quickview"]');
   qvBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
-    openQuickView(product);
+    openProductModal(product);
   });
 
-  // Clicking on card opens QuickView
+  // Clicking on card opens Product Modal
   card.addEventListener('click', () => {
-    openQuickView(product);
+    openProductModal(product);
   });
 
   return card;
 }
 
-function getBadgeLabel(badge) {
-  const labels = { new: 'Mới', sale: 'Sale', hot: 'Hot' };
+function getBadgeLabel(badge, salePercent = 0) {
+  if (badge === 'sale' && salePercent > 0) return `SALE -${salePercent}%`;
+  const labels = { new: '✨ Mới', sale: 'SALE', hot: '🔥 HOT' };
   return labels[badge] || badge;
 }
 

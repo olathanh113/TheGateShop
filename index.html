@@ -1,25 +1,68 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Gate VNXK — Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu chính hãng, đồ thể thao, áo khoác dù, đồ dã ngoại & outdoor cao cấp." />
-  <meta name="keywords" content="The Gate VNXK, thời trang xuất khẩu, quần áo VNXK, đồ outdoor, áo khoác dù, đồ thể thao, thegatevietnamxk" />
-  <meta name="author" content="The Gate - VNXK" />
+  <meta name="description" content="The Gate — Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu chính hãng, đồ thể thao, áo khoác dù, đồ dã ngoại & outdoor cao cấp. 2 cơ sở tại Hà Nội, 1 cơ sở tại Ninh Bình." />
+  <meta name="author" content="The Gate" />
 
   <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Gate" />
+  <meta property="og:locale" content="vi_VN" />
   <meta property="og:title" content="The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor" />
   <meta property="og:description" content="Chuyên đồ thời trang Việt Nam Xuất Khẩu chính hãng, chất lượng cao, thiết kế năng động và bền đẹp." />
-  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thegateshop.vn/" />
+  <meta property="og:image" content="https://thegateshop.vn/assets/images/banners/hero-banner.png" />
 
-  <title>The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor</title>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor" />
+  <meta name="twitter:description" content="Chuyên đồ thời trang Việt Nam Xuất Khẩu chính hãng, chất lượng cao xuất Châu Âu & Nhật Bản." />
+
+  <title>The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor | Hà Nội & Ninh Bình</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://thegateshop.vn/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheets -->
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/images/banners/hero-banner.png" fetchpriority="high" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#ea580c',
+              'orange-hover': '#c2410c',
+              'orange-light': '#fff7ed',
+              dark: '#0f172a',
+              body: '#f8fafc'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet overrides -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/base.css" />
@@ -27,526 +70,1413 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/pages/home.css" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+  <!-- Custom CSS for Hiding Scrollbars in overflow-x -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ClothingStore",
+        "@id": "https://thegateshop.vn/#store-hanoi-cs1",
+        "name": "The Gate — Cơ sở Hà Nội 1",
+        "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
+        "url": "https://thegateshop.vn/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "27/8 Tôn Thất Tùng",
+          "addressLocality": "Hà Nội",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84366631498",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "21:30"
+        },
+        "sameAs": ["https://www.facebook.com/thegatevietnamxk"]
+      },
+      {
+        "@type": "ClothingStore",
+        "@id": "https://thegateshop.vn/#store-hanoi-cs2",
+        "name": "The Gate — Cơ sở Hà Nội 2",
+        "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
+        "url": "https://thegateshop.vn/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "126/72 Nguyễn Trãi",
+          "addressLocality": "Hà Nội",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84366631498",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "21:30"
+        }
+      },
+      {
+        "@type": "ClothingStore",
+        "@id": "https://thegateshop.vn/#store-ninhbinh",
+        "name": "The Gate — Cơ sở Ninh Bình",
+        "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng tại Ninh Bình.",
+        "url": "https://thegateshop.vn/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ninh Bình",
+          "addressCountry": "VN"
+        },
+        "telephone": "+84366631498"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <!-- ============ ANNOUNCEMENT BAR ============ -->
-  <div class="announcement-bar">
-    <div class="container announcement-bar__inner">
-      <span class="announcement-bar__badge">HOT</span>
-      <p class="announcement-bar__text">
-        🔥 HÀNG VNXK CHÍNH HÃNG — MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO ĐƠN HÀNG TỪ 500.000Đ — <strong>HOTLINE/ZALO: 0989 123 456</strong>
-      </p>
-      <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="announcement-bar__link">Chat Fanpage FB ➔</a>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-orange-600 selection:text-white pb-20 md:pb-0">
+
+  <!-- Noscript Fallback -->
+  <noscript>
+    <div class="bg-orange-600 text-white py-3 px-4 text-center font-medium text-sm">
+      Trang web hoạt động tốt nhất khi bật JavaScript. Liên hệ qua
+      <a href="https://www.facebook.com/thegatevietnamxk" class="underline font-bold ml-1" target="_blank" rel="noopener noreferrer">Facebook Fanpage</a>
+      hoặc Zalo hotline 036 663 1498 để được tư vấn mua hàng.
     </div>
-  </div>
+  </noscript>
 
-  <!-- ============ NAVBAR ============ -->
-  <nav class="navbar navbar--transparent" id="navbar" aria-label="Main navigation">
-    <div class="navbar__inner">
-      <!-- Logo -->
-      <a href="/" class="navbar__logo" id="navLogo">
-        <span class="navbar__logo-icon">▲</span>
-        The<span>Gate</span>
-        <span class="navbar__logo-tag">VNXK</span>
-      </a>
-
-      <!-- Desktop Menu -->
-      <ul class="navbar__menu" id="navMenu">
-        <li><a href="#" class="navbar__link navbar__link--active">Trang chủ</a></li>
-        <li><a href="#categories" class="navbar__link">Danh mục</a></li>
-        <li><a href="#featured" class="navbar__link">Sản phẩm VNXK</a></li>
-        <li><a href="#why-us" class="navbar__link">Về The Gate</a></li>
-        <li><a href="#collection" class="navbar__link">Đồ Outdoor</a></li>
-        <li><a href="#testimonials" class="navbar__link">Đánh giá</a></li>
-        <li><a href="#contact" class="navbar__link">Liên hệ</a></li>
-      </ul>
-
-      <!-- Actions -->
-      <div class="navbar__actions">
-        <!-- Search -->
-        <button class="btn-icon" id="searchBtn" aria-label="Tìm kiếm" title="Tìm kiếm sản phẩm">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-        </button>
-
-        <!-- Wishlist -->
-        <button class="btn-icon" id="wishlistBtn" aria-label="Yêu thích" title="Danh sách yêu thích" style="position:relative;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
-          <span class="navbar__wishlist-count" style="display:none;">0</span>
-        </button>
-
-        <!-- Cart -->
-        <button class="btn-icon" id="cartBtn" aria-label="Giỏ hàng" title="Giỏ hàng" style="position:relative;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
-          </svg>
-          <span class="navbar__cart-count" style="display:none;">0</span>
-        </button>
-
-        <!-- Mobile toggle -->
-        <button class="navbar__toggle" id="navbarToggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="navbar__mobile-menu" id="mobileMenu">
-      <a href="#" class="navbar__mobile-link">Trang chủ</a>
-      <a href="#categories" class="navbar__mobile-link">Danh mục</a>
-      <a href="#featured" class="navbar__mobile-link">Sản phẩm VNXK</a>
-      <a href="#why-us" class="navbar__mobile-link">Về The Gate</a>
-      <a href="#collection" class="navbar__mobile-link">Đồ Outdoor</a>
-      <a href="#testimonials" class="navbar__mobile-link">Đánh giá</a>
-      <a href="#contact" class="navbar__mobile-link">Liên hệ</a>
-    </div>
-  </nav>
-
-  <!-- ============ HERO SECTION ============ -->
-  <section class="hero" id="hero">
-    <div class="hero__bg">
-      <img
-        class="hero__bg-image"
-        src="assets/images/banners/hero-banner.png"
-        alt="The Gate VNXK Banner"
-      />
-      <div class="hero__overlay"></div>
-    </div>
-
-    <div class="hero__content">
-      <div class="hero__badge-wrapper">
-        <span class="hero__badge">⚡ THỜI TRANG VNXK CHÍNH HÃNG</span>
-      </div>
-      <h1 class="hero__title">
-        Hàng Xuất Khẩu<br /><em>Chất Lượng Cao</em>
-      </h1>
-      <p class="hero__desc">
-        Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu tiêu chuẩn Châu Âu & Nhật Bản. Thiết kế năng động, chất liệu thoáng mát và độ bền vượt trội cho mọi hoạt động hàng ngày & outdoor.
-      </p>
-
-      <!-- Floating Stats Badges -->
-      <div class="hero__stats">
-        <div class="hero__stat-item">
-          <span class="hero__stat-num">10.000+</span>
-          <span class="hero__stat-lbl">Khách hàng tin dùng</span>
+  <!-- ================================================================= -->
+  <!-- 1. TẦNG HEADER (3 TẦNG RÕ RÀNG, TỐI ƯU MOBILE FIRST)               -->
+  <!-- ================================================================= -->
+  <header class="w-full relative z-40 shadow-sm">
+    
+    <!-- TẦNG 1: TOP BAR (MÀU CAM RỰC RỠ bg-orange-600) -->
+    <div class="bg-orange-600 text-white py-2 px-4 text-xs font-semibold uppercase tracking-wider shadow-sm">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
+        <div class="flex items-center justify-center gap-2">
+          <i data-lucide="flame" class="w-4 h-4 text-yellow-300 animate-bounce"></i>
+          <span>🔥 SALE HÈ UP TO 50% — HÀNG XUẤT KHẨU CHÍNH HÃNG — MIỄN SHIP ĐƠN TỪ 500K</span>
         </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat-item">
-          <span class="hero__stat-num">100%</span>
-          <span class="hero__stat-lbl">Chuẩn Hàng VNXK</span>
-        </div>
-        <div class="hero__stat-divider"></div>
-        <div class="hero__stat-item">
-          <span class="hero__stat-num">4.9★</span>
-          <span class="hero__stat-lbl">Đánh giá tích cực</span>
-        </div>
-      </div>
-
-      <div class="hero__actions">
-        <a href="#featured" class="btn btn-primary btn-lg">Khám phá ngay ➔</a>
-        <a href="#collection" class="btn btn-secondary btn-lg">Bộ Sưu Tập Outdoor</a>
-      </div>
-    </div>
-
-    <div class="hero__scroll-indicator">
-      <span>Cuộn khám phá</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ============ FEATURES BAR ============ -->
-  <section class="features-bar">
-    <div class="container">
-      <div class="features-bar__grid">
-        <div class="features-bar__item reveal">
-          <div class="features-bar__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="features-bar__title">Miễn phí vận chuyển</div>
-            <div class="features-bar__desc">Cho đơn hàng từ 500.000đ</div>
-          </div>
-        </div>
-        <div class="features-bar__item reveal reveal-delay-1">
-          <div class="features-bar__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <div class="features-bar__title">100% Chuẩn VNXK</div>
-            <div class="features-bar__desc">Chất lượng xuất Châu Âu & Mỹ</div>
-          </div>
-        </div>
-        <div class="features-bar__item reveal reveal-delay-2">
-          <div class="features-bar__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-          </div>
-          <div>
-            <div class="features-bar__title">Đổi trả trong 30 ngày</div>
-            <div class="features-bar__desc">Đổi size tận nơi dễ dàng</div>
-          </div>
-        </div>
-        <div class="features-bar__item reveal reveal-delay-3">
-          <div class="features-bar__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="features-bar__title">Tư vấn Messenger 24/7</div>
-            <div class="features-bar__desc">Hotline/Zalo: 0989 123 456</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CATEGORIES SHOWCASE ============ -->
-  <section class="categories section" id="categories">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">DANH MỤC TUYỂN CHỌN</span>
-        <h2 class="section-title">Thời Trang & Trang Thiết Bị Outdoor</h2>
-        <hr class="divider" />
-        <p class="section-desc">Tìm kiếm trang phục phù hợp cho phong cách thường ngày, công sở, thể thao hay dã ngoại</p>
-      </div>
-
-      <div class="grid grid-4">
-        <!-- Men VNXK -->
-        <div class="category-card reveal">
-          <img class="category-card__image" src="assets/images/categories/men.png" alt="Thời trang Nam VNXK" loading="lazy" />
-          <div class="category-card__overlay">
-            <span class="badge badge-new" style="position:static;display:inline-block;margin-bottom:8px;">BÁN CHẠY</span>
-            <h3 class="category-card__name">Thời Trang Nam VNXK</h3>
-            <span class="category-card__count">Áo Polo, Kaki, Áo Phao, Jogger</span>
-            <a href="#featured" class="category-card__link">
-              Khám phá ngay
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Women VNXK -->
-        <div class="category-card reveal reveal-delay-1">
-          <img class="category-card__image" src="assets/images/categories/women.png" alt="Thời trang Nữ VNXK" loading="lazy" />
-          <div class="category-card__overlay">
-            <span class="badge badge-hot" style="position:static;display:inline-block;margin-bottom:8px;">HOT</span>
-            <h3 class="category-card__name">Thời Trang Nữ VNXK</h3>
-            <span class="category-card__count">Đầm Cotton, Áo Thun, Áo Khoác</span>
-            <a href="#featured" class="category-card__link">
-              Khám phá ngay
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Outdoor -->
-        <div class="category-card reveal reveal-delay-2">
-          <img class="category-card__image" src="assets/images/categories/accessories.png" alt="Đồ Outdoor & Dã Ngoại" loading="lazy" />
-          <div class="category-card__overlay">
-            <span class="badge badge-new" style="position:static;display:inline-block;margin-bottom:8px;">CHUYÊN DỤNG</span>
-            <h3 class="category-card__name">Đồ Outdoor & Dã Ngoại</h3>
-            <span class="category-card__count">Rashguard UPF50+, Áo Dù, Túi Waterproof</span>
-            <a href="#featured" class="category-card__link">
-              Khám phá ngay
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Sale -->
-        <div class="category-card reveal reveal-delay-3">
-          <img class="category-card__image" src="assets/images/categories/sale.png" alt="Hàng Ưu Đãi VNXK" loading="lazy" />
-          <div class="category-card__overlay">
-            <span class="badge badge-sale" style="position:static;display:inline-block;margin-bottom:8px;">SALE LỚN</span>
-            <h3 class="category-card__name">Hàng Ưu Đãi VNXK</h3>
-            <span class="category-card__count">Giảm giá lên đến 40%</span>
-            <a href="#featured" class="category-card__link">
-              Săn ngay
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FEATURED PRODUCTS ============ -->
-  <section class="featured-products section" id="featured">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">SẢN PHẨM NỔI BẬT</span>
-        <h2 class="section-title">Hàng VNXK Được Yêu Thích Nhất</h2>
-        <hr class="divider" />
-      </div>
-
-      <!-- Filter tabs -->
-      <div class="featured-products__tabs reveal">
-        <button class="featured-products__tab featured-products__tab--active" data-filter="all">Tất cả sản phẩm</button>
-        <button class="featured-products__tab" data-filter="nam">Đồ Nam VNXK</button>
-        <button class="featured-products__tab" data-filter="nu">Đồ Nữ VNXK</button>
-        <button class="featured-products__tab" data-filter="phukien">Outdoor & Phụ kiện</button>
-      </div>
-
-      <!-- Products grid -->
-      <div class="grid grid-4" id="featuredProductsGrid">
-        <!-- Products rendered by JS -->
-      </div>
-
-      <div class="flex-center" style="margin-top: var(--space-2xl);">
-        <button class="btn btn-secondary btn-lg reveal" id="loadMoreBtn">Khám phá thêm mẫu mới ➔</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHY CHOOSE US ============ -->
-  <section class="why-us section" id="why-us">
-    <div class="container">
-      <div class="grid grid-2" style="align-items:center;gap:var(--space-2xl);">
-        <div class="why-us__content reveal">
-          <span class="section-subtitle">TẠI SAO CHỌN THE GATE</span>
-          <h2 class="section-title">Tiêu Chuẩn VNXK Chính Hãng & Đồ Outdoor</h2>
-          <hr class="divider" style="margin-inline:0;" />
-          <p style="color:var(--color-text-secondary);line-height:var(--lh-relaxed);margin-bottom:var(--space-lg);">
-            The Gate tự hào là địa chỉ uy tín chuyên cung cấp các mặt hàng thời trang Việt Nam Xuất Khẩu chất lượng cao. Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng từ chất liệu vải, đường kim mũi chỉ cho tới phom dáng.
-          </p>
-
-          <div class="why-us__features">
-            <div class="why-us__feature-item">
-              <div class="why-us__icon">✔</div>
-              <div>
-                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Chất liệu đạt chuẩn Châu Âu & Mỹ</h4>
-                <p style="font-size:0.9rem;color:var(--color-text-muted);">Vải Cotton Supplex, Oxford, Cordura chống nước và thun dệt công nghệ Quick-Dry thoáng mát.</p>
-              </div>
-            </div>
-            <div class="why-us__feature-item">
-              <div class="why-us__icon">✔</div>
-              <div>
-                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Giá thành thực dụng & Hợp lý</h4>
-                <p style="font-size:0.9rem;color:var(--color-text-muted);">Giá chỉ từ 180k - 790k cho một sản phẩm xuất khẩu chất lượng cao chuẩn từng chi tiết.</p>
-              </div>
-            </div>
-            <div class="why-us__feature-item">
-              <div class="why-us__icon">✔</div>
-              <div>
-                <h4 style="font-size:1.1rem;color:var(--color-text-primary);margin-bottom:4px;">Hỗ trợ tư vấn size & Đổi trả dễ dàng</h4>
-                <p style="font-size:0.9rem;color:var(--color-text-muted);">Đội ngũ CSKH trực 24/7 tư vấn vừa vặn theo chiều cao, cân nặng của từng khách hàng.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="why-us__image-wrapper reveal reveal-delay-1">
-          <div class="glass-card" style="padding:var(--space-md);">
-            <img src="assets/images/banners/hero-banner.png" alt="The Gate VNXK Quality" style="width:100%;border-radius:var(--radius-lg);object-fit:cover;" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PARALLAX BANNER ============ -->
-  <section class="parallax-banner" id="collection">
-    <div class="parallax-banner__bg">
-      <img
-        src="assets/images/banners/parallax-banner.png"
-        alt="The Gate Outdoor Collection"
-        loading="lazy"
-      />
-    </div>
-    <div class="parallax-banner__overlay"></div>
-    <div class="parallax-banner__content reveal">
-      <span class="parallax-banner__subtitle">BỘ SƯU TẬP CHUYÊN DỤNG</span>
-      <h2 class="parallax-banner__title">The Gate<br /><em>Outdoor & Sportwear</em></h2>
-      <p class="parallax-banner__desc">
-        Sẵn sàng cho mọi hành trình dã ngoại, du lịch & thể thao với các trang phục cản gió, chống nước và chống nắng chỉ số UPF50+.
-      </p>
-      <a href="#featured" class="btn btn-primary btn-lg">Khám phá bộ sưu tập ➔</a>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="testimonials section" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">ĐÁNH GIÁ KHÁCH HÀNG</span>
-        <h2 class="section-title">Trải Nghiệm Mua Sắm Tại The Gate</h2>
-        <hr class="divider" />
-      </div>
-
-      <div class="testimonials__slider">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card reveal">
-          <div class="testimonial-card__stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-card__text">
-            "Áo khoác dù VNXK chống nước của shop mặc đi đường cực thích, chống gió rét siêu tốt. Vải dày dặn mà thoáng mát, đáng tiền từng đồng!"
-          </p>
-          <div class="testimonial-card__author">
-            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #ff5722, #e64a19);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">M</div>
-            <div>
-              <div class="testimonial-card__name">Minh Tuấn</div>
-              <div class="testimonial-card__role">Khách mua tại 12A Cao Bá Quát, Hà Nội</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-card__stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-card__text">
-            "Áo Polo Supplex Cotton mặc đi đánh Golf thích dã dũng, co giãn mượt mà. Shop tư vấn size cực chuẩn qua Messenger!"
-          </p>
-          <div class="testimonial-card__author">
-            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #ff9800, #ff5722);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">H</div>
-            <div>
-              <div class="testimonial-card__name">Hương Giang</div>
-              <div class="testimonial-card__role">Khách đặt hàng online FB</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-card__stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <p class="testimonial-card__text">
-            "Mua quần Kaki VNXK co giãn ở đây 3 cái rồi. Mặc bền lắm, giặt máy không lo bai dão. Đóng gói giao hàng siêu nhanh!"
-          </p>
-          <div class="testimonial-card__author">
-            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg, #e64a19, #ff5722);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.1rem;">Đ</div>
-            <div>
-              <div class="testimonial-card__name">Đức Anh</div>
-              <div class="testimonial-card__role">Khách hàng thân thiết</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="newsletter section" id="newsletter">
-    <div class="container">
-      <div class="newsletter__inner reveal">
-        <span class="section-subtitle">ĐĂNG KÝ NHẬN ƯU ĐÃI</span>
-        <h2 class="section-title">Nhận Thông Báo Hàng VNXK Mới Về</h2>
-        <hr class="divider" />
-        <p class="section-desc">
-          Đăng ký email để nhận thông tin về các lô hàng xuất dư mới nhất, mã giảm giá độc quyền và chương trình ưu đãi đặc biệt.
-        </p>
-        <form class="newsletter__form" id="newsletterForm" onsubmit="event.preventDefault();">
-          <input
-            type="email"
-            class="newsletter__input"
-            placeholder="Nhập email của bạn..."
-            aria-label="Email"
-            required
-            id="newsletterEmail"
-          />
-          <button type="submit" class="btn btn-primary newsletter__btn" id="newsletterSubmit">
-            Đăng ký ngay
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer section" id="contact">
-    <div class="container">
-      <div class="footer__grid">
-        <!-- Brand -->
-        <div>
-          <a href="/" class="navbar__logo" style="font-size:1.6rem;">
-            <span class="navbar__logo-icon">▲</span>
-            The<span>Gate</span>
-            <span class="navbar__logo-tag">VNXK</span>
+        <div class="flex items-center gap-4 text-xs">
+          <a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1 font-bold">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            HOTLINE / ZALO: 036 663 1498
           </a>
-          <p class="footer__brand-desc">
-            Chuyên các mặt hàng thời trang Việt Nam Xuất Khẩu (VNXK) chính hãng, đồ thể thao, đồ tập golf & trang thiết bị dã ngoại outdoor chất lượng cao.
-          </p>
-          <div class="footer__social">
-            <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__social-link" aria-label="Facebook Fanpage">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__social-link" aria-label="Messenger">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.51 3.734 7.188V22l3.414-1.874c.907.25 1.867.384 2.852.384 5.523 0 10-4.145 10-9.258S17.523 2 12 2zm1.06 12.544l-2.545-2.716-4.97 2.716 5.466-5.8 2.607 2.716 4.908-2.716-5.466 5.8z"/></svg>
+          <span class="hidden sm:inline opacity-60">|</span>
+          <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="hover:underline hidden sm:flex items-center gap-1">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            Chat Fanpage FB ➔
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TẦNG 2: SUB HEADER (DARK SLATE #0f172a - ẨN TRÊN MOBILE hidden lg:block ĐỂ TRÁNH VỠ HEADER) -->
+    <div class="hidden lg:block bg-slate-900 border-b border-slate-800 py-2.5 px-4 text-xs text-slate-200">
+      <div class="max-w-7xl mx-auto flex justify-between items-center gap-3">
+        <!-- 3 Địa chỉ Cửa hàng -->
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="https://maps.google.com/?q=27/8+Tôn+Thất+Tùng,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1.5" title="Xem bản đồ CS1 Hà Nội">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-500"></i>
+            <span><strong>HN CS1:</strong> 27/8 Tôn Thất Tùng</span>
+          </a>
+          <a href="https://maps.google.com/?q=126/72+Nguyễn+Trãi,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1.5" title="Xem bản đồ CS2 Hà Nội">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-500"></i>
+            <span><strong>HN CS2:</strong> 126/72 Nguyễn Trãi</span>
+          </a>
+          <span class="flex items-center gap-1.5 text-slate-400">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span><strong>Ninh Bình:</strong> Sắp khai trương</span>
+          </span>
+        </div>
+
+        <!-- Dãy nút Social Media -->
+        <div class="flex items-center gap-4 text-slate-300">
+          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-400">Kênh chính thức:</span>
+          <a href="https://shopee.vn/thegatevnxk" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1" title="Shopee The Gate">
+            <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+            <span>Shopee</span>
+          </a>
+          <a href="https://tiktok.com/@thegatevnxk" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1" title="TikTok The Gate">
+            <i data-lucide="video" class="w-3.5 h-3.5"></i>
+            <span>TikTok</span>
+          </a>
+          <a href="https://instagram.com/thegatevnxk" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1" title="Instagram The Gate">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1" title="Facebook Fanpage">
+            <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TẦNG 3: MAIN NAVBAR (NỀN TRẮNG SẠCH SẼ - WHITE LAYOUT) -->
+    <nav class="bg-white text-slate-900 border-b border-slate-200 py-3.5 px-4 sticky top-0 z-30 transition-all shadow-sm" id="navbar">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Logo "The Gate" -->
+        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-2 group" aria-label="The Gate — Trang chủ">
+          <div class="w-9 h-9 rounded-lg bg-orange-600 flex items-center justify-center text-white group-hover:bg-orange-700 transition-colors shadow">
+            <i data-lucide="mountain" class="w-5 h-5"></i>
+          </div>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-900">
+            The<span class="text-orange-600">Gate</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+          <li><a href="#hero" class="hover:text-orange-600 transition-colors py-1">Trang chủ</a></li>
+          <li><a href="#categories" class="hover:text-orange-600 transition-colors py-1">Danh mục</a></li>
+          <li><a href="#featured" class="hover:text-orange-600 transition-colors py-1">Sản phẩm</a></li>
+          <li><a href="#why-us" class="hover:text-orange-600 transition-colors py-1">Về The Gate</a></li>
+          <li><a href="#collection" class="hover:text-orange-600 transition-colors py-1">Đồ Outdoor</a></li>
+          <li><a href="#stores" class="hover:text-orange-600 transition-colors py-1">Cửa hàng</a></li>
+        </ul>
+
+        <!-- Cụm 3 Nút Icon Hình Tròn Nổi Bật -->
+        <div class="flex items-center gap-3">
+          <!-- Search Icon Button -->
+          <button class="w-10 h-10 rounded-full bg-slate-100 hover:bg-orange-600 hover:text-white text-slate-700 flex items-center justify-center transition-all shadow-sm focus:outline-none" id="searchBtn" title="Tìm kiếm sản phẩm" aria-label="Tìm kiếm sản phẩm">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Wishlist Icon Button -->
+          <button class="w-10 h-10 rounded-full bg-slate-100 hover:bg-orange-600 hover:text-white text-slate-700 flex items-center justify-center transition-all shadow-sm relative focus:outline-none" id="wishlistBtn" title="Danh sách yêu thích" aria-label="Danh sách yêu thích">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-600 text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow" id="wishlistCount">0</span>
+          </button>
+
+          <!-- Cart Icon Button -->
+          <button class="w-10 h-10 rounded-full bg-slate-100 hover:bg-orange-600 hover:text-white text-slate-700 flex items-center justify-center transition-all shadow-sm relative focus:outline-none" id="cartBtn" title="Giỏ hàng" aria-label="Giỏ hàng">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-600 text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow" id="cartCount">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="md:hidden w-10 h-10 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center focus:outline-none" id="navbarToggle" aria-label="Mở menu mobile">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-4 mt-3 space-y-4 font-semibold text-sm text-slate-800 shadow-xl rounded-b-2xl" id="mobileMenu">
+        <div class="space-y-2 border-b border-slate-100 pb-3">
+          <a href="#hero" class="block py-1.5 hover:text-orange-600">Trang chủ</a>
+          <a href="#categories" class="block py-1.5 hover:text-orange-600">Danh mục tuyển chọn</a>
+          <a href="#featured" class="block py-1.5 hover:text-orange-600">Sản phẩm nổi bật</a>
+          <a href="#why-us" class="block py-1.5 hover:text-orange-600">Tiêu chuẩn xuất khẩu</a>
+          <a href="#collection" class="block py-1.5 hover:text-orange-600">Bộ sưu tập Outdoor</a>
+          <a href="#stores" class="block py-1.5 hover:text-orange-600">Hệ thống Cửa hàng</a>
+        </div>
+
+        <!-- Khối Hệ Thống Cửa Hàng Trong Mobile Menu -->
+        <div class="space-y-2 text-xs border-b border-slate-100 pb-3">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">📍 Cửa hàng The Gate:</span>
+          <a href="https://maps.google.com/?q=27/8+Tôn+Thất+Tùng,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-700 hover:text-orange-600 py-1">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange-600 shrink-0"></i>
+            <span><strong>HN CS1:</strong> 27/8 Tôn Thất Tùng, Đống Đa</span>
+          </a>
+          <a href="https://maps.google.com/?q=126/72+Nguyễn+Trãi,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-700 hover:text-orange-600 py-1">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange-600 shrink-0"></i>
+            <span><strong>HN CS2:</strong> 126/72 Nguyễn Trãi, Thanh Xuân</span>
+          </a>
+          <div class="flex items-center gap-2 text-slate-500 py-1">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-500 shrink-0"></i>
+            <span><strong>Ninh Bình:</strong> Sắp khai trương</span>
+          </div>
+        </div>
+
+        <!-- Dãy nút Social Trong Mobile Menu -->
+        <div class="flex items-center justify-around gap-2 text-xs pt-1 text-slate-600">
+          <a href="https://shopee.vn/thegatevnxk" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:text-orange-600">
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-orange-600"></i>
+            <span>Shopee</span>
+          </a>
+          <a href="https://tiktok.com/@thegatevnxk" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:text-orange-600">
+            <i data-lucide="video" class="w-5 h-5 text-slate-900"></i>
+            <span>TikTok</span>
+          </a>
+          <a href="https://instagram.com/thegatevnxk" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:text-orange-600">
+            <i data-lucide="instagram" class="w-5 h-5 text-pink-600"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:text-orange-600">
+            <i data-lucide="facebook" class="w-5 h-5 text-blue-600"></i>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================================================= -->
+    <!-- 2. HERO BANNER (LIGHT AESTHETIC WITH ORANGE ACCENTS)             -->
+    <!-- ================================================================= -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-orange-50/60 via-white to-slate-50 py-16" id="hero" aria-label="Banner chính">
+      <!-- Background Image with Soft Light Overlay -->
+      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <img
+          src="assets/images/banners/hero-banner.png"
+          alt="The Gate — Hàng Xuất Khẩu Chất Lượng Cao"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+          class="w-full h-full object-cover object-center filter grayscale mix-blend-multiply"
+        />
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-300 text-orange-700 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+          <i data-lucide="zap" class="w-4 h-4 fill-orange-600 text-orange-600"></i>
+          <span>⚡ THỜI TRANG XUẤT KHẨU CHÍNH HÃNG</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6 max-w-4xl">
+          Hàng Xuất Khẩu<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">Chất Lượng Cao</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl font-normal leading-relaxed mb-10">
+          Chuyên sản phẩm quần áo Việt Nam Xuất Khẩu tiêu chuẩn Châu Âu & Nhật Bản. Thiết kế năng động, chất liệu thoáng mát và độ bền vượt trội cho mọi hoạt động hàng ngày & outdoor.
+        </p>
+
+        <!-- Glassmorphic Light Stats Box -->
+        <div class="w-full max-w-3xl bg-white/90 backdrop-blur-md border border-orange-200/80 rounded-2xl p-6 mb-10 shadow-xl">
+          <div class="grid grid-cols-3 divide-x divide-slate-200 text-center">
+            <div class="px-2">
+              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1">10.000+</div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium">Khách hàng tin dùng</div>
+            </div>
+            <div class="px-2">
+              <div class="text-2xl sm:text-3xl font-extrabold text-orange-600 mb-1">100%</div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium">Hàng Xuất Khẩu</div>
+            </div>
+            <div class="px-2">
+              <div class="text-2xl sm:text-3xl font-extrabold text-amber-500 mb-1 flex items-center justify-center gap-1">
+                <span>4.9</span><i data-lucide="star" class="w-5 h-5 fill-amber-400 text-amber-400"></i>
+              </div>
+              <div class="text-xs sm:text-sm text-slate-600 font-medium">Đánh giá tích cực</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          <a href="#featured" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-base shadow-lg shadow-orange-600/30 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5">
+            <span>KHÁM PHÁ NGAY</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+          <a href="#collection" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-bold text-base flex items-center justify-center gap-2 transition-all shadow-sm">
+            <i data-lucide="compass" class="w-5 h-5 text-orange-600"></i>
+            <span>BỘ SƯU TẬP OUTDOOR</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. BẢNG TIỆN ÍCH CAM KẾT (4 KHỐI GIÁ TRỊ)                         -->
+    <!-- ================================================================= -->
+    <section class="bg-white border-y border-slate-200/80 py-10 px-4" aria-label="Cam kết chất lượng">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Khối 1 -->
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-orange-500/50 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 border border-orange-200">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 text-base mb-1">Miễn phí vận chuyển</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Áp dụng cho mọi đơn hàng từ 500.000đ trên toàn quốc</p>
+          </div>
+        </div>
+
+        <!-- Khối 2 -->
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-orange-500/50 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 border border-orange-200">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 text-base mb-1">100% Hàng Xuất Khẩu</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Chất lượng xuất Châu Âu & Mỹ, chuẩn đét từng đường kim</p>
+          </div>
+        </div>
+
+        <!-- Khối 3 -->
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-orange-500/50 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 border border-orange-200">
+            <i data-lucide="rotate-ccw" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 text-base mb-1">Đổi trả 30 ngày</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Hỗ trợ đổi size tận nơi nhanh chóng & tiện lợi</p>
+          </div>
+        </div>
+
+        <!-- Khối 4 -->
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-orange-500/50 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 border border-orange-200">
+            <i data-lucide="headphone-off" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 text-base mb-1">Tư vấn Zalo 24/7</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Hotline: <a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="text-orange-600 underline font-semibold">036 663 1498</a> hỗ trợ liên tục</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. DANH MỤC TUYỂN CHỌN (MOBILE HORIZONTAL SWIPE / DESKTOP GRID 4) -->
+    <!-- ================================================================= -->
+    <section class="py-20 px-4 max-w-7xl mx-auto overflow-hidden" id="categories" aria-label="Danh mục sản phẩm">
+      <div class="text-center mb-10">
+        <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">DANH MỤC TUYỂN CHỌN</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Thời Trang & Trang Bị Outdoor</h2>
+        <div class="w-16 h-1 bg-orange-600 mx-auto rounded-full mb-4"></div>
+        <p class="text-slate-600 text-sm max-w-xl mx-auto mb-2">Tìm kiếm trang phục phù hợp cho phong cách thường ngày, công sở, thể thao hay dã ngoại chuyên dụng</p>
+        
+        <!-- Dòng chữ hướng dẫn vuốt trên Mobile -->
+        <div class="lg:hidden text-center text-xs text-orange-600 font-bold mt-2 flex items-center justify-center gap-1 animate-pulse">
+          <span>👈 Vuốt 2 bên để chọn mẫu 👉</span>
+        </div>
+      </div>
+
+      <!-- Container: Flex Scroll trên Mobile / Grid 4 trên Desktop -->
+      <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:grid lg:grid-cols-4 no-scrollbar pb-4" id="categoriesContainer">
+        
+        <!-- Card 1: Nam -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink">
+          <div class="aspect-[3/4] w-full overflow-hidden">
+            <img src="assets/images/categories/men.png" alt="Thời Trang Nam — Bán chạy" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-orange-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">BÁN CHẠY</span>
+            <h3 class="text-xl font-bold text-white mb-1">Thời Trang Nam</h3>
+            <p class="text-xs text-slate-200 mb-4">Áo Polo, Kaki, Áo Phao, Jogger</p>
+            <a href="#featured" class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Khám phá ngay</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h3 class="footer__heading">Cửa hàng</h3>
-          <ul class="footer__links">
-            <li><a href="#featured" class="footer__link">Thời trang Nam VNXK</a></li>
-            <li><a href="#featured" class="footer__link">Thời trang Nữ VNXK</a></li>
-            <li><a href="#featured" class="footer__link">Đồ Outdoor & Dã Ngoại</a></li>
-            <li><a href="#featured" class="footer__link">Áo Khoác Dù & Phao</a></li>
-            <li><a href="#featured" class="footer__link">Hàng Mới Về</a></li>
-          </ul>
+        <!-- Card 2: Nữ -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink">
+          <div class="aspect-[3/4] w-full overflow-hidden">
+            <img src="assets/images/categories/women.png" alt="Thời Trang Nữ — Hot" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-red-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">HOT</span>
+            <h3 class="text-xl font-bold text-white mb-1">Thời Trang Nữ</h3>
+            <p class="text-xs text-slate-200 mb-4">Đầm Cotton, Áo Thun, Áo Khoác</p>
+            <a href="#featured" class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Khám phá ngay</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
         </div>
 
-        <!-- Help -->
-        <div>
-          <h3 class="footer__heading">Hỗ trợ</h3>
-          <ul class="footer__links">
-            <li><a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__link">Tư vấn chọn size trực tiếp</a></li>
-            <li><a href="#" class="footer__link">Chính sách đổi trả 30 ngày</a></li>
-            <li><a href="#" class="footer__link">Chính sách giao hàng toàn quốc</a></li>
-            <li><a href="#" class="footer__link">Hướng dẫn kiểm tra hàng</a></li>
-          </ul>
+        <!-- Card 3: Outdoor -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink">
+          <div class="aspect-[3/4] w-full overflow-hidden">
+            <img src="assets/images/categories/accessories.png" alt="Đồ Outdoor & Dã Ngoại — Chuyên dụng" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">CHUYÊN DỤNG</span>
+            <h3 class="text-xl font-bold text-white mb-1">Đồ Outdoor & Dã Ngoại</h3>
+            <p class="text-xs text-slate-200 mb-4">Rashguard UPF50+, Áo Dù, Túi Waterproof</p>
+            <a href="#featured" class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Khám phá ngay</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
         </div>
 
-        <!-- Contact -->
+        <!-- Card 4: Sale -->
+        <div class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink">
+          <div class="aspect-[3/4] w-full overflow-hidden">
+            <img src="assets/images/categories/sale.png" alt="Hàng Ưu Đãi — Sale lớn" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-amber-500 text-slate-950 text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">SALE LỚN</span>
+            <h3 class="text-xl font-bold text-white mb-1">Hàng Ưu Đãi</h3>
+            <p class="text-xs text-slate-200 mb-4">Giảm giá lên đến 50% hàng chính hãng</p>
+            <a href="#featured" class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Săn ngay</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. DANH SÁCH SẢN PHẨM NỔI BẬT (MOBILE HORIZONTAL SWIPE / DESKTOP GRID 4) -->
+    <!-- ================================================================= -->
+    <section class="py-20 px-4 bg-slate-100/70 border-t border-slate-200 overflow-hidden" id="featured" aria-label="Sản phẩm nổi bật">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">SẢN PHẨM NỔI BẬT</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Hàng Được Yêu Thích Nhất</h2>
+          <div class="w-16 h-1 bg-orange-600 mx-auto rounded-full mb-3"></div>
+          
+          <!-- Dòng chữ hướng dẫn vuốt sản phẩm trên Mobile -->
+          <div class="lg:hidden text-center text-xs text-orange-600 font-bold flex items-center justify-center gap-1 animate-pulse">
+            <span>👈 Vuốt 2 bên để chọn mẫu 👉</span>
+          </div>
+        </div>
+
+        <!-- Filter Tabs (Hỗ trợ cuộn ngang mượt mà trên di động no-scrollbar) -->
+        <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-2 sm:gap-4 mb-12 py-2 px-1 justify-start md:justify-center" id="filterTabs">
+          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0" data-category="all">Tất cả sản phẩm</button>
+          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nam">Đồ Nam</button>
+          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nu">Đồ Nữ</button>
+          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="phukien">Outdoor & Phụ kiện</button>
+        </div>
+
+        <!-- Products Grid Container: Flex Scroll trên Mobile / Grid 4 trên Desktop -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:grid lg:grid-cols-4 no-scrollbar pb-4" id="productsGridContainer">
+          
+          <!-- Product 1 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">HOT</span>
+                <img src="assets/images/products/product-01.svg" alt="Áo Khoác Dù VNXK Waterproof" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Khoác Dù VNXK Waterproof</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(218)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">520.000đ</span>
+                <span class="text-xs text-slate-400 line-through">650.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Khoác Dù VNXK Waterproof', '520.000đ', ['M', 'L', 'XL', 'XXL'], 'assets/images/products/product-01.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">SALE -22%</span>
+                <img src="assets/images/products/product-02.svg" alt="Áo Polo Nam Supplex Cotton VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Polo Nam Supplex Cotton VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(185)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">295.000đ</span>
+                <span class="text-xs text-slate-400 line-through">380.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Polo Nam Supplex Cotton VNXK', '295.000đ', ['S', 'M', 'L', 'XL'], 'assets/images/products/product-02.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">MỚI VỀ</span>
+                <img src="assets/images/products/product-03.svg" alt="Quần Kaki Co Giãn Form Slim VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Quần Kaki Co Giãn Form Slim VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(142)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">450.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Quần Kaki Co Giãn Form Slim VNXK', '450.000đ', ['29', '30', '31', '32', '34'], 'assets/images/products/product-03.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="phukien">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">UPF 50+</span>
+                <img src="assets/images/products/product-04.svg" alt="Áo Rashguard Chống Nắng UPF50+" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">Đồ Outdoor</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Rashguard Chống Nắng UPF50+</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(96)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">280.000đ</span>
+                <span class="text-xs text-slate-400 line-through">350.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Rashguard Chống Nắng UPF50+', '280.000đ', ['S', 'M', 'L', 'XL'], 'assets/images/products/product-04.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">SALE LỚN</span>
+                <img src="assets/images/products/product-05.svg" alt="Áo Phao Siêu Nhẹ Outwear VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Phao Siêu Nhẹ Outwear VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(164)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">620.000đ</span>
+                <span class="text-xs text-slate-400 line-through">790.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Phao Siêu Nhẹ Outwear VNXK', '620.000đ', ['M', 'L', 'XL'], 'assets/images/products/product-05.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nu">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">ĐỒ NỮ</span>
+                <img src="assets/images/products/product-06.svg" alt="Đầm Thun Cotton Nữ Casual VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-rose-600 uppercase tracking-wider block mb-1">Thời Trang Nữ</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Đầm Thun Cotton Nữ Casual VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(112)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">320.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Đầm Thun Cotton Nữ Casual VNXK', '320.000đ', ['S', 'M', 'L'], 'assets/images/products/product-06.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-orange-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">QUICK DRY</span>
+                <img src="assets/images/products/product-07.svg" alt="Quần Short Thể Thao Quick-Dry" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Quần Short Thể Thao Quick-Dry</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(310)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">199.000đ</span>
+                <span class="text-xs text-slate-400 line-through">260.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Quần Short Thể Thao Quick-Dry', '199.000đ', ['M', 'L', 'XL', 'XXL'], 'assets/images/products/product-07.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-sky-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">OXFORD</span>
+                <img src="assets/images/products/product-08.svg" alt="Áo Sơ Mi Oxford Cotton VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Sơ Mi Oxford Cotton VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(88)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">420.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Sơ Mi Oxford Cotton VNXK', '420.000đ', ['S', 'M', 'L', 'XL'], 'assets/images/products/product-08.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="phukien">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">WATERPROOF</span>
+                <img src="assets/images/products/product-09.svg" alt="Túi Đeo Chéo Outdoor Waterproof" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">Đồ Outdoor</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Túi Đeo Chéo Outdoor Waterproof</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(145)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">220.000đ</span>
+                <span class="text-xs text-slate-400 line-through">280.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Túi Đeo Chéo Outdoor Waterproof', '220.000đ', ['Freesize'], 'assets/images/products/product-09.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="phukien">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">SALE -20%</span>
+                <img src="assets/images/products/product-10.svg" alt="Mũ Lưỡi Trai Sport Cap VNXK" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">Phụ Kiện</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Mũ Lưỡi Trai Sport Cap VNXK</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(204)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">145.000đ</span>
+                <span class="text-xs text-slate-400 line-through">180.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Mũ Lưỡi Trai Sport Cap VNXK', '145.000đ', ['Freesize'], 'assets/images/products/product-10.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 11 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">FLEECE</span>
+                <img src="assets/images/products/product-11.svg" alt="Áo Hoodie Fleece VNXK Ấm Áp" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Áo Hoodie Fleece VNXK Ấm Áp</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(178)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">420.000đ</span>
+                <span class="text-xs text-slate-400 line-through">520.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Áo Hoodie Fleece VNXK Ấm Áp', '420.000đ', ['M', 'L', 'XL'], 'assets/images/products/product-11.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div class="product-item rounded-2xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-category="nam">
+            <div>
+              <div class="w-full aspect-square rounded-2xl bg-slate-100 p-4 flex items-center justify-center mb-4 relative overflow-hidden group-hover:scale-[1.02] transition-transform">
+                <span class="absolute top-3 left-3 bg-orange-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md uppercase">4-WAY STRETCH</span>
+                <img src="assets/images/products/product-12.svg" alt="Quần Jogger Co Giãn VNXK Sport" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow" />
+              </div>
+              <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Thời Trang Nam</span>
+              <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2">Quần Jogger Co Giãn VNXK Sport</h3>
+              
+              <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-300"></i>
+                <span class="text-slate-500 text-[11px] ml-1">(150)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-extrabold text-orange-600">390.000đ</span>
+              </div>
+
+              <button onclick="openSizeModal('Quần Jogger Co Giãn VNXK Sport', '390.000đ', ['M', 'L', 'XL', 'XXL'], 'assets/images/products/product-12.svg')" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="ruler" class="w-4 h-4"></i>
+                <span>Xem Size & Tư Vấn</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. KHỐI TIÊU CHUẨN XUẤT KHẨU & BỘ SƯU TẬP DÃ NGOẠI                -->
+    <!-- ================================================================= -->
+    <section class="py-20 px-4 bg-white" id="why-us" aria-label="Tiêu chuẩn xuất khẩu">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Cột trái: 3 Ưu điểm vượt trội -->
         <div>
-          <h3 class="footer__heading">Liên hệ</h3>
-          <ul class="footer__links">
-            <li><a href="https://www.facebook.com/thegatevietnamxk" target="_blank" class="footer__link">💬 Chat Fanpage Facebook</a></li>
-            <li><a href="tel:0989123456" class="footer__link">📞 Hotline/Zalo: 0989 123 456</a></li>
-            <li><span class="footer__link">📍 12A Cao Bá Quát, Ba Đình, Hà Nội</span></li>
-            <li><span class="footer__link">🕐 Mở cửa: 9:00 — 21:30 hàng ngày</span></li>
-          </ul>
+          <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">TẠI SAO CHỌN THE GATE</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Tiêu Chuẩn Xuất Khẩu & Đồ Outdoor Chính Hãng</h2>
+          <div class="w-16 h-1 bg-orange-600 rounded-full mb-6"></div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-8">
+            The Gate tự hào là địa chỉ uy tín chuyên cung cấp các mặt hàng thời trang Việt Nam Xuất Khẩu chất lượng cao. Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng từ chất liệu vải, đường kim mũi chỉ cho tới phom dáng chuẩn Châu Âu & Mỹ.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Ưu điểm 1 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="w-9 h-9 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Chất liệu đạt chuẩn Châu Âu & Mỹ</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Vải Cotton Supplex, Oxford, Cordura chống nước và thun dệt công nghệ Quick-Dry thoáng mát, không xù lông.</p>
+              </div>
+            </div>
+
+            <!-- Ưu điểm 2 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="w-9 h-9 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Giá thành thực dụng & Hợp lý</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Giá chỉ từ 180k - 790k cho một sản phẩm xuất khẩu chính hãng chuẩn từng chi tiết thiết kế.</p>
+              </div>
+            </div>
+
+            <!-- Ưu điểm 3 -->
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div class="w-9 h-9 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Hỗ trợ tư vấn size & Đổi trả dễ dàng</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Đội ngũ CSKH trực Zalo & Messenger 24/7 tư vấn vừa vặn theo chiều cao, cân nặng của từng khách hàng.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột phải: Frame ảnh giới thiệu -->
+        <div class="relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 p-2 shadow-xl">
+          <img src="assets/images/banners/hero-banner.png" alt="The Gate Export Quality" width="600" height="400" loading="lazy" class="w-full h-[400px] object-cover rounded-2xl" />
+          <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-lg font-bold text-slate-900">Cam kết 100% Chính Hãng</div>
+                <div class="text-xs text-slate-600">Kiểm tra hàng trước khi thanh toán</div>
+              </div>
+              <a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-orange-600 text-white text-xs font-bold shadow hover:bg-orange-700 transition-colors">
+                Chat Zalo ➔
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Dark Banner "The Gate Outdoor & Sportswear" -->
+    <section class="relative py-24 px-4 overflow-hidden" id="collection" aria-label="Bộ sưu tập Outdoor">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/banners/parallax-banner.png" alt="The Gate Outdoor Collection" width="1920" height="700" loading="lazy" class="w-full h-full object-cover filter brightness-40 contrast-110" />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto flex flex-col items-start justify-center">
+        <span class="text-orange-400 text-xs font-extrabold uppercase tracking-widest mb-3">BỘ SƯU TẬP CHUYÊN DỤNG</span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4 max-w-2xl">
+          The Gate<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Outdoor & Sportswear</span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
+          Sẵn sàng cho mọi hành trình dã ngoại, du lịch & thể thao với các trang phục cản gió, chống nước và chống nắng chỉ số UPF50+.
+        </p>
+        <a href="#featured" class="px-8 py-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm shadow-xl flex items-center gap-2 transition-all">
+          <span>KHÁM PHÁ BỘ SƯU TẬP</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. HỆ THỐNG CỬA HÀNG & ĐĂNG KÝ BẢN TIN                            -->
+    <!-- ================================================================= -->
+    <section class="py-20 px-4 bg-slate-50 border-t border-slate-200" id="stores" aria-label="Hệ thống cửa hàng">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">HỆ THỐNG CỬA HÀNG</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Ghé Thăm Showroom The Gate</h2>
+          <div class="w-16 h-1 bg-orange-600 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- 3 Cards Cửa Hàng (Light Theme) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          
+          <!-- Card Store 1 -->
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between hover:border-orange-500/50 hover:shadow-xl transition-all shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">CS1 - HÀ NỘI</span>
+                <span class="text-xs text-emerald-600 flex items-center gap-1 font-bold">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Mở cửa (9:00 - 21:30)
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">The Gate — Tôn Thất Tùng</h3>
+              <p class="text-xs text-slate-600 mb-6 flex items-start gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-orange-600 shrink-0 mt-0.5"></i>
+                <span>27/8 Tôn Thất Tùng, Đống Đa, Hà Nội</span>
+              </p>
+            </div>
+            
+            <div class="space-y-3 pt-4 border-t border-slate-100">
+              <a href="https://maps.google.com/?q=27/8+Tôn+Thất+Tùng,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="map" class="w-4 h-4 text-orange-600"></i>
+                <span>Xem bản đồ Google Map ➔</span>
+              </a>
+              <a href="tel:0366631498" class="w-full py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>Gọi Hotline CS1</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card Store 2 -->
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between hover:border-orange-500/50 hover:shadow-xl transition-all shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">CS2 - HÀ NỘI</span>
+                <span class="text-xs text-emerald-600 flex items-center gap-1 font-bold">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Mở cửa (9:00 - 21:30)
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">The Gate — Nguyễn Trãi</h3>
+              <p class="text-xs text-slate-600 mb-6 flex items-start gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-orange-600 shrink-0 mt-0.5"></i>
+                <span>126/72 Nguyễn Trãi, Thanh Xuân, Hà Nội</span>
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-4 border-t border-slate-100">
+              <a href="https://maps.google.com/?q=126/72+Nguyễn+Trãi,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="map" class="w-4 h-4 text-orange-600"></i>
+                <span>Xem bản đồ Google Map ➔</span>
+              </a>
+              <a href="tel:0366631498" class="w-full py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>Gọi Hotline CS2</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card Store 3 -->
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 flex flex-col justify-between hover:border-orange-500/50 hover:shadow-xl transition-all shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">CS3 - NINH BÌNH</span>
+                <span class="text-xs text-amber-600 flex items-center gap-1 font-bold">
+                  <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span> Sắp khai trương
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">The Gate — Ninh Bình</h3>
+              <p class="text-xs text-slate-600 mb-6 flex items-start gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+                <span>Trung tâm TP. Ninh Bình (Đang hoàn thiện)</span>
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-4 border-t border-slate-100">
+              <a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="bell" class="w-4 h-4 text-amber-600"></i>
+                <span>Nhận thông báo khai trương ➔</span>
+              </a>
+              <a href="tel:0366631498" class="w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>Tư vấn từ xa Hotline</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Form Đăng ký bản tin (Soft Orange Light Card) -->
+        <div class="rounded-3xl bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border border-orange-200 p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-xl relative overflow-hidden">
+          <div class="relative z-10">
+            <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">ĐĂNG KÝ NHẬN ƯU ĐÃI</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Nhận Thông Báo Lô Hàng Mới Về & Mã Giao Hàng</h2>
+            <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto mb-8">Đăng ký email để không bỏ lỡ các đợt Sale dư xuất khẩu chính hãng giá tốt nhất</p>
+
+            <form class="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto" id="newsletterForm" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận thông báo ưu đãi từ The Gate!');">
+              <input type="email" placeholder="Nhập địa chỉ email của bạn..." required class="w-full px-5 py-3.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:border-orange-600 shadow-sm" />
+              <button type="submit" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold shrink-0 transition-colors shadow-md">
+                Đăng ký ngay
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- 8. FOOTER THÔNG TIN BẢN QUYỀN (DARK SLATE FOR HIGH CONTRAST)      -->
+  <!-- ================================================================= -->
+  <footer class="bg-slate-900 border-t border-slate-800 pt-16 pb-24 md:pb-12 px-4 text-slate-300 text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Cột 1: Brand Info -->
+      <div class="space-y-4">
+        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center text-white">
+            <i data-lucide="mountain" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xl font-extrabold text-white">The<span class="text-orange-500">Gate</span></span>
+        </a>
+        <p class="text-xs leading-relaxed text-slate-400">
+          Chuyên các mặt hàng thời trang Việt Nam Xuất Khẩu chính hãng, đồ thể thao, đồ dã ngoại outdoor chất lượng cao. 2 cơ sở Hà Nội, 1 cơ sở Ninh Bình.
+        </p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 hover:text-orange-400 hover:border-orange-400 flex items-center justify-center transition-colors">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a href="https://shopee.vn/thegatevnxk" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 hover:text-orange-400 hover:border-orange-400 flex items-center justify-center transition-colors">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          </a>
+          <a href="https://tiktok.com/@thegatevnxk" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 hover:text-orange-400 hover:border-orange-400 flex items-center justify-center transition-colors">
+            <i data-lucide="video" class="w-4 h-4"></i>
+          </a>
+          <a href="https://instagram.com/thegatevnxk" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 hover:text-orange-400 hover:border-orange-400 flex items-center justify-center transition-colors">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
         </div>
       </div>
 
-      <div class="footer__bottom">
-        <p class="footer__copyright">© 2026 The Gate - Việt Nam XK. Tất cả quyền được bảo lưu.</p>
-        <div class="footer__payment">
-          <span>💳 COD (Thanh toán khi nhận hàng)</span>
-          <span>💳 Chuyển khoản ngân hàng</span>
-        </div>
+      <!-- Cột 2: Danh mục chính -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Danh Mục Sản Phẩm</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#featured" class="hover:text-orange-400 transition-colors">Thời Trang Nam Xuất Khẩu</a></li>
+          <li><a href="#featured" class="hover:text-orange-400 transition-colors">Thời Trang Nữ VNXK</a></li>
+          <li><a href="#featured" class="hover:text-orange-400 transition-colors">Áo Rashguard Chống Nắng UPF50+</a></li>
+          <li><a href="#featured" class="hover:text-orange-400 transition-colors">Áo Khoác Dù Waterproof</a></li>
+          <li><a href="#featured" class="hover:text-orange-400 transition-colors">Túi & Trang Bị Outdoor Dã Ngoại</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Hỗ trợ khách hàng -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Chính Sách & Hỗ Trợ</h4>
+        <ul class="space-y-2.5">
+          <li><a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors">Tư vấn chọn Size chuẩn xác 24/7</a></li>
+          <li><a href="#why-us" class="hover:text-orange-400 transition-colors">Chính sách đổi trả hàng 30 ngày</a></li>
+          <li><a href="#why-us" class="hover:text-orange-400 transition-colors">Miễn phí vận chuyển từ 500k</a></li>
+          <li><a href="#why-us" class="hover:text-orange-400 transition-colors">Kiểm tra hàng trước khi thanh toán</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 4: Liên hệ cửa hàng -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Thông Tin Liên Hệ</h4>
+        <ul class="space-y-2.5">
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone-call" class="w-4 h-4 text-orange-400 shrink-0"></i>
+            <span>Hotline / Zalo: 036 663 1498</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange-400 shrink-0 mt-0.5"></i>
+            <span>HN CS1: 27/8 Tôn Thất Tùng, Đống Đa</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange-400 shrink-0 mt-0.5"></i>
+            <span>HN CS2: 126/72 Nguyễn Trãi, Thanh Xuân</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+            <span>Giờ làm việc: 9:00 — 21:30 mỗi ngày</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
+      <p>© 2026 The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor. Bản quyền thuộc về The Gate Shop.</p>
+      <div class="flex items-center gap-4">
+        <span>Thanh toán linh hoạt: COD | Chuyển khoản | ZaloPay</span>
       </div>
     </div>
   </footer>
 
-  <!-- ============ BACK TO TOP ============ -->
-  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <polyline points="18 15 12 9 6 15"/>
-    </svg>
+  <!-- ================================================================= -->
+  <!-- 9. STICKY FLOATING MOBILE BOTTOM BAR (NÚT CHỐT ĐƠN CỐ ĐỊNH ĐÁY MÀNH HÌNH MOBILE) -->
+  <!-- ================================================================= -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 shadow-2xl flex items-center gap-2">
+    <!-- Nút 1: Tư vấn Zalo -->
+    <a href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>Tư vấn Zalo</span>
+    </a>
+    
+    <!-- Nút 2: Chat Messenger -->
+    <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all">
+      <i data-lucide="facebook" class="w-4 h-4"></i>
+      <span>Chat Messenger</span>
+    </a>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 10. MODAL POPUP CHỌN SIZE & DEEP LINK CHỐT ĐƠN                    -->
+  <!-- ================================================================= -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm hidden" id="sizeModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl transform transition-all scale-95 opacity-0 duration-300" id="sizeModalCard">
+      
+      <!-- Close Button -->
+      <button onclick="closeSizeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-orange-600 text-slate-500 hover:text-white flex items-center justify-center transition-colors" aria-label="Đóng cửa sổ">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Content -->
+      <div class="flex items-start gap-4 mb-6 pr-6">
+        <div class="w-20 h-20 rounded-2xl bg-slate-100 p-2 flex items-center justify-center shrink-0 border border-slate-200">
+          <img id="modalProductImage" src="assets/images/products/product-01.svg" alt="Product Image" width="80" height="80" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <span class="px-2.5 py-0.5 bg-orange-100 text-orange-700 text-[10px] font-bold rounded-md uppercase mb-1 inline-block">HÀNG XUẤT KHẨU</span>
+          <h3 class="text-lg font-bold text-slate-900 leading-snug" id="modalProductName">Tên sản phẩm</h3>
+          <div class="text-orange-600 font-extrabold text-lg mt-1" id="modalProductPrice">0đ</div>
+        </div>
+      </div>
+
+      <!-- Size Selection -->
+      <div class="mb-6">
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
+          1. Chọn Size Của Bạn: <span class="text-orange-600 font-bold" id="selectedSizeText">M</span>
+        </label>
+        <div class="flex flex-wrap gap-2.5" id="modalSizeButtons">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Action Deep Links -->
+      <div class="space-y-3 pt-4 border-t border-slate-200">
+        <label class="block text-xs font-bold text-slate-500 mb-1">
+          2. Chọn Kênh Chốt Đơn Trực Tiếp:
+        </label>
+        
+        <!-- Nút Zalo Deep Link -->
+        <a id="zaloDeepLinkBtn" href="https://zalo.me/0366631498" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>TƯ VẤN ZALO (CHỐT SIZE & ĐƠN) ➔</span>
+        </a>
+
+        <!-- Nút FB Deep Link -->
+        <a id="fbDeepLinkBtn" href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-lg">
+          <i data-lucide="facebook" class="w-4 h-4"></i>
+          <span>CHAT FANPAGE FACEBOOK ➔</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Nút Quay lại đầu trang -->
+  <button id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="fixed bottom-20 md:bottom-6 right-6 w-11 h-11 rounded-full bg-orange-600 text-white flex items-center justify-center shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110" aria-label="Quay lại đầu trang">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>
 
-  <!-- ============ SCRIPTS ============ -->
+  <!-- ================================================================= -->
+  <!-- 11. JAVASCRIPT XỬ LÝ LỌC & MODAL DEEP LINK                        -->
+  <!-- ================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // Navbar mobile toggle
+      const toggleBtn = document.getElementById('navbarToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Back to top button logic
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTopBtn?.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+          backToTopBtn?.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      // Filter tabs functionality
+      const filterBtns = document.querySelectorAll('.filter-tab-btn');
+      const productItems = document.querySelectorAll('.product-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-orange-600', 'text-white', 'shadow-md');
+            b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+          });
+          btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+          btn.classList.add('bg-orange-600', 'text-white', 'shadow-md');
+
+          const category = btn.getAttribute('data-category');
+          productItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+
+    // Global Modal State Variables
+    let currentProductName = '';
+    let currentProductPrice = '';
+    let currentSelectedSize = 'M';
+
+    // Open Size Modal Function
+    window.openSizeModal = function(name, price, sizesArray, imgUrl) {
+      currentProductName = name;
+      currentProductPrice = price;
+      currentSelectedSize = sizesArray[0] || 'M';
+
+      document.getElementById('modalProductName').textContent = name;
+      document.getElementById('modalProductPrice').textContent = price;
+      document.getElementById('modalProductImage').src = imgUrl;
+
+      // Render size buttons
+      const sizeContainer = document.getElementById('modalSizeButtons');
+      sizeContainer.innerHTML = '';
+
+      const allPossibleSizes = ['S', 'M', 'L', 'XL', 'XXL'];
+      const activeSizes = (sizesArray && sizesArray.length) ? sizesArray : allPossibleSizes;
+
+      activeSizes.forEach(size => {
+        const sizeBtn = document.createElement('button');
+        sizeBtn.type = 'button';
+        sizeBtn.textContent = size;
+        sizeBtn.className = `w-12 h-12 rounded-xl font-bold text-sm transition-all border ${
+          size === currentSelectedSize
+            ? 'bg-orange-600 text-white border-orange-600 shadow-md'
+            : 'bg-slate-100 text-slate-700 border-slate-200 hover:border-orange-500'
+        }`;
+
+        sizeBtn.onclick = () => {
+          currentSelectedSize = size;
+          document.getElementById('selectedSizeText').textContent = size;
+          
+          // Highlight active button
+          Array.from(sizeContainer.children).forEach(b => {
+            b.className = 'w-12 h-12 rounded-xl font-bold text-sm transition-all border bg-slate-100 text-slate-700 border-slate-200 hover:border-orange-500';
+          });
+          sizeBtn.className = 'w-12 h-12 rounded-xl font-bold text-sm transition-all border bg-orange-600 text-white border-orange-600 shadow-md';
+
+          updateDeepLinks();
+        };
+
+        sizeContainer.appendChild(sizeBtn);
+      });
+
+      document.getElementById('selectedSizeText').textContent = currentSelectedSize;
+      updateDeepLinks();
+
+      // Show modal
+      const modal = document.getElementById('sizeModal');
+      const modalCard = document.getElementById('sizeModalCard');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalCard.classList.remove('scale-95', 'opacity-0');
+        modalCard.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    };
+
+    // Close Size Modal Function
+    window.closeSizeModal = function() {
+      const modal = document.getElementById('sizeModal');
+      const modalCard = document.getElementById('sizeModalCard');
+      modalCard.classList.remove('scale-100', 'opacity-100');
+      modalCard.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    };
+
+    // Update Zalo & Facebook Deep Links
+    function updateDeepLinks() {
+      // Format message as requested: "Chào The Gate, tôi muốn tư vấn sản phẩm [Tên SP] - Size: [Size] - Giá Sale: [Giá]"
+      const message = `Chào The Gate, tôi muốn tư vấn sản phẩm ${currentProductName} - Size: ${currentSelectedSize} - Giá Sale: ${currentProductPrice}`;
+      const encodedMsg = encodeURIComponent(message);
+
+      const zaloBtn = document.getElementById('zaloDeepLinkBtn');
+      const fbBtn = document.getElementById('fbDeepLinkBtn');
+
+      if (zaloBtn) {
+        zaloBtn.href = `https://zalo.me/0366631498?text=${encodedMsg}`;
+      }
+      if (fbBtn) {
+        fbBtn.href = `https://www.facebook.com/thegatevietnamxk?text=${encodedMsg}`;
+      }
+    }
+  </script>
+
+  <!-- External App JS Module integration -->
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

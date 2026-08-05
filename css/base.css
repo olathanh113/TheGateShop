@@ -134,3 +134,19 @@ a:hover {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+/* ---- Mobile Touch Target Compliance (K3 Fix) ---- */
+@media (max-width: 768px) {
+  .btn-icon,
+  .navbar__toggle,
+  .back-to-top,
+  .footer__social-link,
+  .address-bar__social-link,
+  .floating-bar__btn {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
