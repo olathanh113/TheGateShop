@@ -8,7 +8,6 @@ import { initScrollAnimations, initParallax } from './utils/animations.js';
 import { initCartDrawer } from './components/cartDrawer.js';
 import { initWishlistDrawer } from './components/wishlistDrawer.js';
 import { initSearchModal } from './components/searchModal.js';
-import { initFloatingBar } from './components/floatingBar.js';
 import { showToast } from './utils/helpers.js';
 
 class App {
@@ -26,9 +25,6 @@ class App {
     initCartDrawer();
     initWishlistDrawer();
     initSearchModal(this.products);
-
-    // Floating Zalo + Messenger bar (mobile)
-    initFloatingBar();
 
     // Render & tabs
     this.renderFeaturedProducts(this.currentFilter, 8);
