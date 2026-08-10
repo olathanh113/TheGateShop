@@ -8,8 +8,8 @@
  */
 
 const STORE_CONFIG = {
-  // ⚠️ TODO: Thay bằng số điện thoại Zalo thực tế (không có dấu cách, không có +84)
-  ZALO_PHONE: '0366631498',
+  // ⚠️ Số điện thoại Zalo hotline chính (CS1)
+  ZALO_PHONE: '0355393871',
 
   // ⚠️ TODO: Thay bằng Fanpage ID hoặc username Messenger thực tế
   MESSENGER_PAGE_ID: 'thegatevietnamxk',

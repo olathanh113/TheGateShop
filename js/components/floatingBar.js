@@ -6,8 +6,8 @@
  */
 
 const FLOATING_CONFIG = {
-  // ⚠️ TODO: Thay bằng số điện thoại Zalo thực tế
-  ZALO_PHONE: '0366631498',
+  // ⚠️ Số điện thoại Zalo hotline chính
+  ZALO_PHONE: '0355393871',
 
   // ⚠️ TODO: Thay bằng Fanpage ID Messenger thực tế
   MESSENGER_PAGE_ID: 'thegatevietnamxk',
