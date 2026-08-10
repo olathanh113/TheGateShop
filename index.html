@@ -528,6 +528,9 @@
           <!-- Rendered dynamically -->
         </div>
 
+        <!-- Numeric Pagination Controls Container (Trang 1, 2, 3...) -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-2" id="paginationContainer"></div>
+
       </div>
     </section>
 
@@ -829,22 +832,18 @@
       <div class="text-center mb-6">
         <div class="relative w-full max-w-[340px] mx-auto mb-3 group/modal">
           
-          <!-- Nút mũi tên Trái (<) trên Desktop Modal -->
           <button onclick="slideModalImage(-1)" class="hidden group-hover/modal:flex absolute left-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200" title="Ảnh trước">
             <i data-lucide="chevron-left" class="w-5 h-5"></i>
           </button>
 
-          <!-- Nút mũi tên Phải (>) trên Desktop Modal -->
           <button onclick="slideModalImage(1)" class="hidden group-hover/modal:flex absolute right-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200" title="Ảnh tiếp">
             <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
 
-          <!-- Frame Vuốt nhiều ảnh sản phẩm -->
           <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 no-scrollbar aspect-square rounded-3xl bg-slate-100 border border-slate-200 p-4 shadow-inner" id="modalImagesSlider">
             <!-- Dynamic images rendered here -->
           </div>
 
-          <!-- Dot Indicators & Mobile swipe hint -->
           <div class="flex items-center justify-center gap-1.5 mt-2.5" id="modalImageDots"></div>
           <span class="text-[11px] text-orange-600 font-bold mt-1 flex items-center justify-center gap-1 animate-pulse">
             <span>👈 Dùng mũi tên hoặc vuốt 2 bên để chuyển ảnh 👉</span>
@@ -910,322 +909,9 @@
     <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>
 
-  <!-- ================================================================= -->
-  <!-- 10. JAVASCRIPT XỬ LÝ SẢN PHẨM & TỰ ĐỘNG ĐỔI CHẤM CHỈ SỐ ÁNH       -->
-  <!-- ================================================================= -->
+  <!-- 10. DỮ LIỆU SẢN PHẨM KHỔNG LỒ TỪ KIOTVIET (100 SẢN PHẨM THẬT DÒNG EXCEL) -->
+  <script src="js/productsData.js"></script>
   <script>
-    const PRODUCTS_DATA = {
-      1: {
-        id: 1,
-        name: "Áo Khoác Dù VNXK Waterproof",
-        category: "nam",
-        price: "520.000đ",
-        originalPrice: "650.000đ",
-        badge: "HOT",
-        badgeColor: "bg-red-600 text-white",
-        rating: 5,
-        reviewCount: 218,
-        images: [
-          "assets/images/products/product-01.svg",
-          "assets/images/products/product-02.svg",
-          "assets/images/products/product-03.svg"
-        ],
-        sizes: ["S", "M", "L", "XL", "XXL"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Xanh Navy", hex: "#1e3a8a" },
-          { name: "Xám Tiêu", hex: "#64748b" }
-        ],
-        inventory: {
-          "S": { "Đen": { cs1: 0, cs2: 0, cs3: 0 }, "Xanh Navy": { cs1: 0, cs2: 0, cs3: 0 }, "Xám Tiêu": { cs1: 0, cs2: 0, cs3: 0 } },
-          "M": { "Đen": { cs1: 3, cs2: 2, cs3: 1 }, "Xanh Navy": { cs1: 1, cs2: 0, cs3: 2 }, "Xám Tiêu": { cs1: 2, cs2: 3, cs3: 0 } },
-          "L": { "Đen": { cs1: 5, cs2: 4, cs3: 2 }, "Xanh Navy": { cs1: 2, cs2: 3, cs3: 1 }, "Xám Tiêu": { cs1: 0, cs2: 2, cs3: 3 } },
-          "XL": { "Đen": { cs1: 2, cs2: 1, cs3: 0 }, "Xanh Navy": { cs1: 0, cs2: 2, cs3: 1 }, "Xám Tiêu": { cs1: 1, cs2: 0, cs3: 2 } },
-          "XXL": { "Đen": { cs1: 1, cs2: 0, cs3: 0 }, "Xanh Navy": { cs1: 0, cs2: 1, cs3: 0 }, "Xám Tiêu": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      2: {
-        id: 2,
-        name: "Áo Polo Nam Supplex Cotton VNXK",
-        category: "nam",
-        price: "295.000đ",
-        originalPrice: "380.000đ",
-        badge: "SALE -22%",
-        badgeColor: "bg-amber-500 text-slate-950",
-        rating: 5,
-        reviewCount: 185,
-        images: [
-          "assets/images/products/product-02.svg",
-          "assets/images/products/product-01.svg",
-          "assets/images/products/product-08.svg"
-        ],
-        sizes: ["S", "M", "L", "XL"],
-        colors: [
-          { name: "Trắng", hex: "#ffffff" },
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Cam Nhấn", hex: "#ea580c" }
-        ],
-        inventory: {
-          "S": { "Trắng": { cs1: 2, cs2: 1, cs3: 0 }, "Đen": { cs1: 1, cs2: 3, cs3: 1 }, "Cam Nhấn": { cs1: 0, cs2: 0, cs3: 0 } },
-          "M": { "Trắng": { cs1: 4, cs2: 2, cs3: 3 }, "Đen": { cs1: 5, cs2: 4, cs3: 2 }, "Cam Nhấn": { cs1: 3, cs2: 1, cs3: 2 } },
-          "L": { "Trắng": { cs1: 3, cs2: 0, cs3: 1 }, "Đen": { cs1: 2, cs2: 2, cs3: 0 }, "Cam Nhấn": { cs1: 1, cs2: 2, cs3: 1 } },
-          "XL": { "Trắng": { cs1: 0, cs2: 0, cs3: 0 }, "Đen": { cs1: 0, cs2: 0, cs3: 0 }, "Cam Nhấn": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      3: {
-        id: 3,
-        name: "Quần Kaki Co Giãn Form Slim VNXK",
-        category: "nam",
-        price: "450.000đ",
-        badge: "MỚI VỀ",
-        badgeColor: "bg-emerald-600 text-white",
-        rating: 4,
-        reviewCount: 142,
-        images: [
-          "assets/images/products/product-03.svg",
-          "assets/images/products/product-07.svg",
-          "assets/images/products/product-12.svg"
-        ],
-        sizes: ["29", "30", "31", "32", "34"],
-        colors: [
-          { name: "Kem Be", hex: "#fef3c7" },
-          { name: "Đen", hex: "#0f172a" }
-        ],
-        inventory: {
-          "29": { "Kem Be": { cs1: 1, cs2: 0, cs3: 1 }, "Đen": { cs1: 2, cs2: 1, cs3: 0 } },
-          "30": { "Kem Be": { cs1: 3, cs2: 2, cs3: 1 }, "Đen": { cs1: 4, cs2: 3, cs3: 2 } },
-          "31": { "Kem Be": { cs1: 2, cs2: 1, cs3: 0 }, "Đen": { cs1: 3, cs2: 2, cs3: 1 } },
-          "32": { "Kem Be": { cs1: 1, cs2: 3, cs3: 2 }, "Đen": { cs1: 2, cs2: 1, cs3: 0 } },
-          "34": { "Kem Be": { cs1: 0, cs2: 0, cs3: 0 }, "Đen": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      4: {
-        id: 4,
-        name: "Áo Rashguard Chống Nắng UPF50+",
-        category: "phukien",
-        price: "280.000đ",
-        originalPrice: "350.000đ",
-        badge: "UPF 50+",
-        badgeColor: "bg-red-600 text-white",
-        rating: 5,
-        reviewCount: 96,
-        images: [
-          "assets/images/products/product-04.svg",
-          "assets/images/products/product-01.svg",
-          "assets/images/products/product-09.svg"
-        ],
-        sizes: ["S", "M", "L", "XL"],
-        colors: [
-          { name: "Xanh Biển", hex: "#0284c7" },
-          { name: "Xám Bạc", hex: "#94a3b8" }
-        ],
-        inventory: {
-          "S": { "Xanh Biển": { cs1: 2, cs2: 1, cs3: 1 }, "Xám Bạc": { cs1: 1, cs2: 0, cs3: 2 } },
-          "M": { "Xanh Biển": { cs1: 4, cs2: 3, cs3: 2 }, "Xám Bạc": { cs1: 3, cs2: 2, cs3: 1 } },
-          "L": { "Xanh Biển": { cs1: 2, cs2: 2, cs3: 0 }, "Xám Bạc": { cs1: 1, cs2: 1, cs3: 2 } },
-          "XL": { "Xanh Biển": { cs1: 0, cs2: 1, cs3: 0 }, "Xám Bạc": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      5: {
-        id: 5,
-        name: "Áo Phao Siêu Nhẹ Outwear VNXK",
-        category: "nam",
-        price: "620.000đ",
-        originalPrice: "790.000đ",
-        badge: "SALE LỚN",
-        badgeColor: "bg-amber-500 text-slate-950",
-        rating: 5,
-        reviewCount: 164,
-        images: [
-          "assets/images/products/product-05.svg",
-          "assets/images/products/product-11.svg",
-          "assets/images/products/product-01.svg"
-        ],
-        sizes: ["M", "L", "XL"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Đỏ Đô", hex: "#991b1b" }
-        ],
-        inventory: {
-          "M": { "Đen": { cs1: 3, cs2: 2, cs3: 1 }, "Đỏ Đô": { cs1: 2, cs2: 1, cs3: 0 } },
-          "L": { "Đen": { cs1: 4, cs2: 3, cs3: 2 }, "Đỏ Đô": { cs1: 3, cs2: 2, cs3: 1 } },
-          "XL": { "Đen": { cs1: 1, cs2: 1, cs3: 0 }, "Đỏ Đô": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      6: {
-        id: 6,
-        name: "Đầm Thun Cotton Nữ Casual VNXK",
-        category: "nu",
-        price: "320.000đ",
-        badge: "ĐỒ NỮ",
-        badgeColor: "bg-rose-600 text-white",
-        rating: 4,
-        reviewCount: 112,
-        images: [
-          "assets/images/products/product-06.svg",
-          "assets/images/products/product-02.svg"
-        ],
-        sizes: ["S", "M", "L"],
-        colors: [
-          { name: "Hồng Nhạt", hex: "#f472b6" },
-          { name: "Trắng Nà", hex: "#f8fafc" }
-        ],
-        inventory: {
-          "S": { "Hồng Nhạt": { cs1: 2, cs2: 3, cs3: 1 }, "Trắng Nà": { cs1: 1, cs2: 2, cs3: 0 } },
-          "M": { "Hồng Nhạt": { cs1: 4, cs2: 2, cs3: 3 }, "Trắng Nà": { cs1: 3, cs2: 3, cs3: 1 } },
-          "L": { "Hồng Nhạt": { cs1: 1, cs2: 0, cs3: 1 }, "Trắng Nà": { cs1: 0, cs2: 1, cs3: 0 } }
-        }
-      },
-      7: {
-        id: 7,
-        name: "Quần Short Thể Thao Quick-Dry",
-        category: "nam",
-        price: "199.000đ",
-        originalPrice: "260.000đ",
-        badge: "QUICK DRY",
-        badgeColor: "bg-orange-600 text-white",
-        rating: 5,
-        reviewCount: 310,
-        images: [
-          "assets/images/products/product-07.svg",
-          "assets/images/products/product-12.svg",
-          "assets/images/products/product-03.svg"
-        ],
-        sizes: ["M", "L", "XL", "XXL"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Xanh Rêu", hex: "#3f6212" }
-        ],
-        inventory: {
-          "M": { "Đen": { cs1: 5, cs2: 4, cs3: 3 }, "Xanh Rêu": { cs1: 3, cs2: 2, cs3: 1 } },
-          "L": { "Đen": { cs1: 6, cs2: 5, cs3: 4 }, "Xanh Rêu": { cs1: 4, cs2: 3, cs3: 2 } },
-          "XL": { "Đen": { cs1: 3, cs2: 2, cs3: 1 }, "Xanh Rêu": { cs1: 2, cs2: 1, cs3: 0 } },
-          "XXL": { "Đen": { cs1: 1, cs2: 0, cs3: 0 }, "Xanh Rêu": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      8: {
-        id: 8,
-        name: "Áo Sơ Mi Oxford Cotton VNXK",
-        category: "nam",
-        price: "420.000đ",
-        badge: "OXFORD",
-        badgeColor: "bg-sky-600 text-white",
-        rating: 4,
-        reviewCount: 88,
-        images: [
-          "assets/images/products/product-08.svg",
-          "assets/images/products/product-02.svg"
-        ],
-        sizes: ["S", "M", "L", "XL"],
-        colors: [
-          { name: "Xanh Nhạt", hex: "#bae6fd" },
-          { name: "Trắng", hex: "#ffffff" }
-        ],
-        inventory: {
-          "S": { "Xanh Nhạt": { cs1: 1, cs2: 2, cs3: 0 }, "Trắng": { cs1: 2, cs2: 1, cs3: 1 } },
-          "M": { "Xanh Nhạt": { cs1: 3, cs2: 3, cs3: 2 }, "Trắng": { cs1: 4, cs2: 2, cs3: 1 } },
-          "L": { "Xanh Nhạt": { cs1: 2, cs2: 1, cs3: 1 }, "Trắng": { cs1: 1, cs2: 2, cs3: 0 } },
-          "XL": { "Xanh Nhạt": { cs1: 0, cs2: 0, cs3: 0 }, "Trắng": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      },
-      9: {
-        id: 9,
-        name: "Túi Đeo Chéo Outdoor Waterproof",
-        category: "phukien",
-        price: "220.000đ",
-        originalPrice: "280.000đ",
-        badge: "WATERPROOF",
-        badgeColor: "bg-red-600 text-white",
-        rating: 5,
-        reviewCount: 145,
-        images: [
-          "assets/images/products/product-09.svg",
-          "assets/images/products/product-04.svg",
-          "assets/images/products/product-10.svg"
-        ],
-        sizes: ["Freesize"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Cam Bão", hex: "#ea580c" }
-        ],
-        inventory: {
-          "Freesize": { "Đen": { cs1: 5, cs2: 4, cs3: 3 }, "Cam Bão": { cs1: 3, cs2: 2, cs3: 2 } }
-        }
-      },
-      10: {
-        id: 10,
-        name: "Mũ Lưỡi Trai Sport Cap VNXK",
-        category: "phukien",
-        price: "145.000đ",
-        originalPrice: "180.000đ",
-        badge: "SALE -20%",
-        badgeColor: "bg-amber-500 text-slate-950",
-        rating: 4,
-        reviewCount: 204,
-        images: [
-          "assets/images/products/product-10.svg",
-          "assets/images/products/product-09.svg"
-        ],
-        sizes: ["Freesize"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Trắng", hex: "#ffffff" }
-        ],
-        inventory: {
-          "Freesize": { "Đen": { cs1: 6, cs2: 5, cs3: 4 }, "Trắng": { cs1: 4, cs2: 3, cs3: 2 } }
-        }
-      },
-      11: {
-        id: 11,
-        name: "Áo Hoodie Fleece VNXK Ấm Áp",
-        category: "nam",
-        price: "420.000đ",
-        originalPrice: "520.000đ",
-        badge: "FLEECE",
-        badgeColor: "bg-red-600 text-white",
-        rating: 5,
-        reviewCount: 178,
-        images: [
-          "assets/images/products/product-11.svg",
-          "assets/images/products/product-05.svg"
-        ],
-        sizes: ["M", "L", "XL"],
-        colors: [
-          { name: "Xám Chột", hex: "#475569" },
-          { name: "Đen", hex: "#0f172a" }
-        ],
-        inventory: {
-          "M": { "Xám Chột": { cs1: 2, cs2: 3, cs3: 1 }, "Đen": { cs1: 4, cs2: 2, cs3: 2 } },
-          "L": { "Xám Chột": { cs1: 3, cs2: 1, cs3: 2 }, "Đen": { cs1: 5, cs2: 3, cs3: 1 } },
-          "XL": { "Xám Chột": { cs1: 0, cs2: 0, cs3: 0 }, "Đen": { cs1: 1, cs2: 0, cs3: 0 } }
-        }
-      },
-      12: {
-        id: 12,
-        name: "Quần Jogger Co Giãn VNXK Sport",
-        category: "nam",
-        price: "390.000đ",
-        badge: "4-WAY STRETCH",
-        badgeColor: "bg-orange-600 text-white",
-        rating: 4,
-        reviewCount: 150,
-        images: [
-          "assets/images/products/product-12.svg",
-          "assets/images/products/product-07.svg"
-        ],
-        sizes: ["M", "L", "XL", "XXL"],
-        colors: [
-          { name: "Đen", hex: "#0f172a" },
-          { name: "Ghi Đậm", hex: "#334155" }
-        ],
-        inventory: {
-          "M": { "Đen": { cs1: 3, cs2: 2, cs3: 1 }, "Ghi Đậm": { cs1: 2, cs2: 1, cs3: 0 } },
-          "L": { "Đen": { cs1: 5, cs2: 4, cs3: 2 }, "Ghi Đậm": { cs1: 3, cs2: 2, cs3: 1 } },
-          "XL": { "Đen": { cs1: 2, cs2: 1, cs3: 0 }, "Ghi Đậm": { cs1: 1, cs2: 0, cs3: 0 } },
-          "XXL": { "Đen": { cs1: 0, cs2: 0, cs3: 0 }, "Ghi Đậm": { cs1: 0, cs2: 0, cs3: 0 } }
-        }
-      }
-    };
 
     const STORES_INFO = {
       cs1: {
@@ -1255,7 +941,11 @@
     let selectedSize = '';
     let selectedColor = '';
 
-    // Cuộn slider bằng nút mũi tên hoặc bấm chấm chỉ số
+    // Cấu hình Phân Trang Nút Số (Option 1: Pagination 1, 2, 3...)
+    let currentPage = 1;
+    const itemsPerPage = 8; // 8 sản phẩm / trang
+    let currentCategoryFilter = 'all';
+
     window.slideCardImages = function(productId, direction, event) {
       if (event) event.stopPropagation();
       const slider = document.getElementById(`card-slider-${productId}`);
@@ -1269,7 +959,7 @@
       const slider = document.getElementById(`card-slider-${productId}`);
       if (!slider) return;
       const slideWidth = slider.clientWidth;
-      slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
+      slider.scrollTo({ left: index * slider.clientWidth, behavior: 'smooth' });
     };
 
     window.slideModalImage = function(direction) {
@@ -1286,20 +976,46 @@
       slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
     };
 
-    // Render Card Sản Phẩm kèm theo Lắng Nghe Sự Kiện Cuộn để Tự Động Đổi Màu Chấm Chỉ Số
+    // Render Sản Phẩm theo Phân Trang 1, 2, 3...
     function renderProductGridCards() {
       const container = document.getElementById('productsGridContainer');
+      const paginationContainer = document.getElementById('paginationContainer');
       if (!container) return;
 
+      const allProducts = Object.values(PRODUCTS_DATA);
+      const filtered = allProducts.filter(p => {
+        const hasValidImage = p.images && p.images.length > 0 && !p.images[0].includes('product-01.svg');
+        const matchesCategory = currentCategoryFilter === 'all' || p.category === currentCategoryFilter;
+        return hasValidImage && matchesCategory;
+      });
+
+      const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const pagedProducts = filtered.slice(startIndex, startIndex + itemsPerPage);
+
       container.innerHTML = '';
-      Object.values(PRODUCTS_DATA).forEach(p => {
+
+      if (pagedProducts.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500 font-semibold text-sm">
+            Không tìm thấy sản phẩm nào trong danh mục này.
+          </div>
+        `;
+        if (paginationContainer) paginationContainer.innerHTML = '';
+        return;
+      }
+
+      pagedProducts.forEach(p => {
         const card = document.createElement('div');
         card.className = `product-item rounded-2xl bg-white border border-slate-200/90 p-4 flex flex-col justify-between hover:border-orange-500/60 hover:shadow-xl transition-all duration-300 shadow-sm group w-[260px] shrink-0 snap-start lg:w-auto lg:shrink`;
         card.setAttribute('data-category', p.category);
 
         const imagesHtml = p.images.map((img, idx) => `
-          <div class="w-full shrink-0 snap-start flex items-center justify-center p-2">
-            <img src="${img}" alt="${p.name} - Ảnh ${idx+1}" width="200" height="200" loading="lazy" class="w-36 h-36 object-contain drop-shadow group-hover:scale-105 transition-transform duration-300" />
+          <div class="w-full h-full shrink-0 snap-start flex items-center justify-center">
+            <img src="${img}" alt="${p.name} - Ảnh ${idx+1}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
         `).join('');
 
@@ -1334,7 +1050,7 @@
               </div>
             </div>
 
-            <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Hàng Xuất Khẩu</span>
+            <span class="text-[11px] font-bold text-orange-600 uppercase tracking-wider block mb-1">Mã: ${p.code || 'XK'}</span>
             <h3 onclick="openEnhancedProductModal(${p.id})" class="font-bold text-slate-900 text-base mb-2 group-hover:text-orange-600 transition-colors line-clamp-2 cursor-pointer">${p.name}</h3>
             
             <div class="flex items-center gap-1 mb-3 text-amber-400 text-xs">
@@ -1362,7 +1078,6 @@
 
         container.appendChild(card);
 
-        // Đăng ký sự kiện cuộn scroll cho từng card slider để cập nhật Chấm Chỉ Số
         const slider = card.querySelector(`#card-slider-${p.id}`);
         if (slider) {
           slider.addEventListener('scroll', () => {
@@ -1380,16 +1095,80 @@
         }
       });
 
+      renderPaginationControls(totalPages, filtered.length);
+
       if (window.lucide) {
         lucide.createIcons();
       }
     }
 
-    // Hàm mở Modal Nâng Cấp
+    // Render Dãy Nút Phân Trang Trang 1, 2, 3... Tối ưu Mobile First
+    function renderPaginationControls(totalPages, totalItems) {
+      const container = document.getElementById('paginationContainer');
+      if (!container) return;
+
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = `
+        <div class="w-full text-center text-xs text-slate-500 font-semibold mb-1">
+          Trang <span class="text-orange-600 font-bold">${currentPage}</span> / ${totalPages} (Tổng ${totalItems} sản phẩm)
+        </div>
+      `;
+
+      const isPrevDisabled = currentPage === 1;
+      html += `
+        <button type="button" onclick="changePage(${currentPage - 1})" ${isPrevDisabled ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 ${
+          isPrevDisabled ? 'bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-50' : 'bg-white text-slate-700 border-slate-300 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95'
+        }">
+          <span>◀</span> <span class="hidden sm:inline">Trang</span> trước
+        </button>
+      `;
+
+      for (let i = 1; i <= totalPages; i++) {
+        const isCurrent = i === currentPage;
+        html += `
+          <button type="button" onclick="changePage(${i})" class="w-9 h-9 rounded-xl text-xs font-bold transition-all border ${
+            isCurrent ? 'bg-orange-600 text-white border-orange-600 shadow-md ring-2 ring-orange-400/40 scale-105' : 'bg-white text-slate-700 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95'
+          }">
+            ${i}
+          </button>
+        `;
+      }
+
+      const isNextDisabled = currentPage === totalPages;
+      html += `
+        <button type="button" onclick="changePage(${currentPage + 1})" ${isNextDisabled ? 'disabled' : ''} class="px-3.5 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 ${
+          isNextDisabled ? 'bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-50' : 'bg-white text-slate-700 border-slate-300 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95'
+        }">
+          <span class="hidden sm:inline">Trang</span> tiếp <span>▶</span>
+        </button>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    window.changePage = function(pageNumber) {
+      currentPage = pageNumber;
+      renderProductGridCards();
+      
+      const gridContainer = document.getElementById('productsGridContainer');
+      if (gridContainer) {
+        gridContainer.scrollLeft = 0;
+      }
+
+      const featuredSec = document.getElementById('featured');
+      if (featuredSec) {
+        featuredSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
     window.openEnhancedProductModal = function(productId) {
       activeProduct = PRODUCTS_DATA[productId] || PRODUCTS_DATA[1];
       
-      document.getElementById('modalProductName').textContent = activeProduct.name;
+      document.getElementById('modalProductName').textContent = (activeProduct.code ? `[${activeProduct.code}] ` : '') + activeProduct.name;
       document.getElementById('modalProductPrice').textContent = activeProduct.price;
 
       const origPriceEl = document.getElementById('modalProductOriginalPrice');
@@ -1420,7 +1199,6 @@
       }, 10);
     };
 
-    // Render Modal Image Slider kèm theo Đồng Bộ Chấm Chỉ Số trong Modal
     function renderModalImagesSlider() {
       const sliderContainer = document.getElementById('modalImagesSlider');
       const dotsContainer = document.getElementById('modalImageDots');
@@ -1431,8 +1209,8 @@
 
       activeProduct.images.forEach((img, idx) => {
         const slide = document.createElement('div');
-        slide.className = 'w-full shrink-0 snap-start flex items-center justify-center p-2 h-full';
-        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" width="280" height="280" class="w-full h-full object-contain drop-shadow-md" />`;
+        slide.className = 'w-full h-full shrink-0 snap-start flex items-center justify-center';
+        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" class="w-full h-full object-cover rounded-2xl drop-shadow-md" />`;
         sliderContainer.appendChild(slide);
 
         const dot = document.createElement('button');
@@ -1443,7 +1221,6 @@
         dotsContainer.appendChild(dot);
       });
 
-      // Lắng nghe sự kiện cuộn scroll trên Modal Slider để tự động cập nhật Chấm Chỉ Số
       sliderContainer.onscroll = () => {
         const slideWidth = sliderContainer.clientWidth || 1;
         const activeIndex = Math.round(sliderContainer.scrollLeft / slideWidth);
@@ -1583,7 +1360,7 @@
         const storeStock = stockObj[storeKey] || 0;
         const isAvailable = storeStock > 0;
 
-        const msgText = `Chào The Gate, tôi muốn tư vấn mua tại ${store.name}: ${activeProduct.name} - Size: ${selectedSize} - Màu: ${selectedColor} - Giá: ${activeProduct.price} - 📷 Link ảnh SP: ${productImgFullUrl}`;
+        const msgText = `Chào The Gate, tôi muốn tư vấn mua tại ${store.name}:\n- Mã SP: ${activeProduct.code || 'XK'} — ${activeProduct.name}\n- Size: ${selectedSize} | Màu: ${selectedColor} | Giá: ${activeProduct.price}\n- 📷 Link ảnh SP: ${productImgFullUrl}`;
         const encodedMsg = encodeURIComponent(msgText);
         const zaloUrl = `https://zalo.me/${store.zalo}?text=${encodedMsg}`;
         const telUrl = `tel:${store.phone}`;
@@ -1630,7 +1407,7 @@
       const fbBtn = document.getElementById('mainFbFanpageLink');
       if (fbBtn && activeProduct) {
         const productImgFullUrl = window.location.origin + '/' + (activeProduct.images[0] || 'assets/images/products/product-01.svg');
-        const msgText = `Chào The Gate, tôi muốn tư vấn sản phẩm ${activeProduct.name} - Size: ${selectedSize} - Màu: ${selectedColor} - Giá Sale: ${activeProduct.price} - 📷 Link ảnh: ${productImgFullUrl}`;
+        const msgText = `Chào The Gate, tôi muốn tư vấn sản phẩm [${activeProduct.code || 'XK'}] ${activeProduct.name} - Size: ${selectedSize} - Màu: ${selectedColor} - Giá Sale: ${activeProduct.price} - 📷 Link ảnh: ${productImgFullUrl}`;
         fbBtn.href = `https://www.facebook.com/thegatevietnamxk?text=${encodeURIComponent(msgText)}`;
       }
     }
@@ -1665,15 +1442,9 @@
           btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
           btn.classList.add('bg-orange-600', 'text-white', 'shadow-md');
 
-          const category = btn.getAttribute('data-category');
-          const productItems = document.querySelectorAll('.product-item');
-          productItems.forEach(item => {
-            if (category === 'all' || item.getAttribute('data-category') === category) {
-              item.style.display = 'flex';
-            } else {
-              item.style.display = 'none';
-            }
-          });
+          currentCategoryFilter = btn.getAttribute('data-category') || 'all';
+          currentPage = 1;
+          renderProductGridCards();
         });
       });
     });

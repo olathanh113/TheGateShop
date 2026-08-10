@@ -1,0 +1,35 @@
+==========================================================================
+    DANH SÁCH SẢN PHẨM THIẾU ẢNH HOẶC LỖI LINK ẢNH (PRODUCT ERRORS LOG)    
+    Thời gian kiểm tra: 15:03:04 10/8/2026
+==========================================================================
+
+[LỖI THIẾU ẢNH EXCEL] ID: 3 | Mã SKU: 791 | Tên SP: "Quần Dài JDX Shirring Point 0126 M" | Danh mục: nam | Giá: 280.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 9 | Mã SKU: 3289 | Tên SP: "Swimsuit Roxy One Piece LS 0324 Kid" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 10 | Mã SKU: 3361 | Tên SP: "Quần Dài ALLFORYOU 3361 1225 F" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 14 | Mã SKU: 5104 | Tên SP: "Tee Cộc Fila CH 5104 0526" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 18 | Mã SKU: 7900 | Tên SP: "Tee Cộc Oakley Relax 0326 M" | Danh mục: nam | Giá: 350.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 20 | Mã SKU: 10310 | Tên SP: "Quần Dài Lẻ NB 0326" | Danh mục: nam | Giá: 450.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 23 | Mã SKU: KH14 | Tên SP: "Quần Dài Keith Haring 0626 M" | Danh mục: nam | Giá: 220.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 33 | Mã SKU: CL15 | Tên SP: "Tất Lẻ 15 0226" | Danh mục: nam | Giá: 20.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 36 | Mã SKU: SQB | Tên SP: "Short Quiksilver Basic 0326 M" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 37 | Mã SKU: BKQ | Tên SP: "Short Quiksilver Basic 0326 Kid" | Danh mục: nam | Giá: 250.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 39 | Mã SKU: TJO5FJ5 | Tên SP: "TJO CVS Quilted Field Jacket" | Danh mục: nam | Giá: 1.050.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 40 | Mã SKU: B220 | Tên SP: "Quần Dài NBA Contrast 0226 Kid" | Danh mục: nam | Giá: 220.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 41 | Mã SKU: BB20 | Tên SP: "Tất Bombas Be Better 0126 (1 PAIR)" | Danh mục: nam | Giá: 20.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 47 | Mã SKU: BHH | Tên SP: "Brief Head CH 1025" | Danh mục: nam | Giá: 60.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 54 | Mã SKU: PGA | Tên SP: "Polo Dài PGA Performance 0925 M" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 55 | Mã SKU: GGL | Tên SP: "Golf Gloves Lẻ CT 0725" | Danh mục: nam | Giá: 280.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 59 | Mã SKU: TH02 | Tên SP: "Skirt Golf Lẻ TH 0525 F" | Danh mục: nam | Giá: 820.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 60 | Mã SKU: CO269 | Tên SP: "Quần Dài Charles Tyrwhitt 0325 M" | Danh mục: nam | Giá: 350.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 76 | Mã SKU: GSW03 | Tên SP: "Quần Dài Something Jean 0322" | Danh mục: nam | Giá: 280.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 77 | Mã SKU: SP02537 | Tên SP: "Quần Dài Cutter &amp; Buck Lẻ 0521" | Danh mục: nam | Giá: 320.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 78 | Mã SKU: QLAE | Tên SP: "Quần Legging Aeropostale 0422 F" | Danh mục: nam | Giá: 160.000đ
+[LỖI THIẾU ẢNH EXCEL] ID: 82 | Mã SKU: SP02494 | Tên SP: "Quần Váy Columbia Bigsize Sale 50 F" | Danh mục: nu | Giá: 160.000đ
+
+==========================================================================
+TỔNG KẾT BÁO CÁO LỖI:
+- Tổng số sản phẩm kiểm tra: 100
+- Sản phẩm THIẾU ẢNH hoàn toàn trong Excel: 22
+- Sản phẩm có LINK ẢNH HỎNG (404/Lỗi CDN): 0
+- Tổng sản phẩm cần bổ sung/sửa ảnh: 22
+==========================================================================
