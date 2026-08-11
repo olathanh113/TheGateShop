@@ -1,4 +1,156 @@
 const PRODUCTS_DATA = {
+  "1001": {
+    "id": 1001,
+    "code": "SALE-01",
+    "name": "Áo Khoác Dù Outdoor Waterproof Ultra-Light",
+    "category": "sale",
+    "price": "199.000đ",
+    "originalPrice": "450.000đ",
+    "badge": "SALE 56%",
+    "badgeColor": "bg-red-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 142,
+    "images": [
+      "assets/images/sale/1.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "colors": [
+      { "name": "Đen", "hex": "#0f172a" },
+      { "name": "Xám Outdoor", "hex": "#475569" },
+      { "name": "Cam Hỏa", "hex": "#ea580c" }
+    ],
+    "inventory": {
+      "M": { "Đen": { "cs1": 5, "cs2": 3, "cs3": 4 } },
+      "L": { "Xám Outdoor": { "cs1": 4, "cs2": 6, "cs3": 2 } },
+      "XL": { "Cam Hỏa": { "cs1": 3, "cs2": 2, "cs3": 5 } }
+    }
+  },
+  "1002": {
+    "id": 1002,
+    "code": "SALE-02",
+    "name": "Bộ Thể Thao Dã Ngoại Co Giãn 4 Chiều Premium",
+    "category": "sale",
+    "price": "249.000đ",
+    "originalPrice": "520.000đ",
+    "badge": "GIẢM 52%",
+    "badgeColor": "bg-red-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 98,
+    "images": [
+      "assets/images/sale/2.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["M", "L", "XL", "2XL"],
+    "colors": [
+      { "name": "Xanh Navy", "hex": "#1e3a8a" },
+      { "name": "Đen", "hex": "#0f172a" }
+    ],
+    "inventory": {
+      "M": { "Xanh Navy": { "cs1": 6, "cs2": 4, "cs3": 2 } },
+      "L": { "Đen": { "cs1": 5, "cs2": 5, "cs3": 3 } }
+    }
+  },
+  "1003": {
+    "id": 1003,
+    "code": "SALE-03",
+    "name": "Áo Polo Thể Thao Golf High-Tech Edition",
+    "category": "sale",
+    "price": "220.000đ",
+    "originalPrice": "480.000đ",
+    "badge": "SALE HOT 54%",
+    "badgeColor": "bg-orange-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 115,
+    "images": [
+      "assets/images/sale/3.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Trắng", "hex": "#ffffff" },
+      { "name": "Xanh Rêu", "hex": "#166534" }
+    ],
+    "inventory": {
+      "M": { "Trắng": { "cs1": 4, "cs2": 5, "cs3": 3 } },
+      "L": { "Xanh Rêu": { "cs1": 3, "cs2": 4, "cs3": 4 } }
+    }
+  },
+  "1004": {
+    "id": 1004,
+    "code": "SALE-04",
+    "name": "Quần Dài Jogger Outdoor Multi-Pocket Tactical",
+    "category": "sale",
+    "price": "260.000đ",
+    "originalPrice": "550.000đ",
+    "badge": "GIẢM 53%",
+    "badgeColor": "bg-red-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 87,
+    "images": [
+      "assets/images/sale/4.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["M", "L", "XL", "2XL"],
+    "colors": [
+      { "name": "Xám Than", "hex": "#334155" },
+      { "name": "Đen Tactical", "hex": "#020617" }
+    ],
+    "inventory": {
+      "M": { "Xám Than": { "cs1": 5, "cs2": 2, "cs3": 4 } },
+      "L": { "Đen Tactical": { "cs1": 4, "cs2": 4, "cs3": 2 } }
+    }
+  },
+  "1005": {
+    "id": 1005,
+    "code": "SALE-05",
+    "name": "Áo Phao Lông Vũ Super Warm Ultra Lightweight",
+    "category": "sale",
+    "price": "350.000đ",
+    "originalPrice": "790.000đ",
+    "badge": "XẢ KHO 55%",
+    "badgeColor": "bg-amber-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 204,
+    "images": [
+      "assets/images/sale/5.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Đỏ Đô", "hex": "#991b1b" },
+      { "name": "Xanh Cổ Vịt", "hex": "#115e59" }
+    ],
+    "inventory": {
+      "M": { "Đỏ Đô": { "cs1": 3, "cs2": 5, "cs3": 4 } },
+      "L": { "Xanh Cổ Vịt": { "cs1": 6, "cs2": 3, "cs3": 2 } }
+    }
+  },
+  "1006": {
+    "id": 1006,
+    "code": "SALE-06",
+    "name": "Váy Đầm Cotton Thể Thao Nữ High-Performance",
+    "category": "sale",
+    "price": "180.000đ",
+    "originalPrice": "390.000đ",
+    "badge": "GIẢM 54%",
+    "badgeColor": "bg-red-600 text-white font-extrabold",
+    "rating": 5,
+    "reviewCount": 76,
+    "images": [
+      "assets/images/sale/6.png",
+      "assets/images/sale/7.png"
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": [
+      { "name": "Hồng Pastel", "hex": "#f472b6" },
+      { "name": "Trắng Tinh Kính", "hex": "#f8fafc" }
+    ],
+    "inventory": {
+      "S": { "Hồng Pastel": { "cs1": 4, "cs2": 3, "cs3": 5 } },
+      "M": { "Trắng Tinh Kính": { "cs1": 5, "cs2": 4, "cs3": 3 } }
+    }
+  },
   "1": {
     "id": 1,
     "code": "124",

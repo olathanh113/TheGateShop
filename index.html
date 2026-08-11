@@ -261,8 +261,9 @@
           </div>
         </a>
 
-        <ul class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+        <ul class="hidden md:flex items-center gap-7 font-semibold text-sm text-slate-700">
           <li><a href="#hero" class="hover:text-orange-600 transition-colors py-1">Trang chủ</a></li>
+          <li><a href="javascript:void(0)" onclick="selectCategoryAndScroll('sale')" class="text-red-600 font-extrabold hover:text-orange-600 transition-colors py-1 flex items-center gap-1">🔥 Săn Sale</a></li>
           <li><a href="#categories" class="hover:text-orange-600 transition-colors py-1">Danh mục</a></li>
           <li><a href="#featured" class="hover:text-orange-600 transition-colors py-1">Sản phẩm</a></li>
           <li><a href="#why-us" class="hover:text-orange-600 transition-colors py-1">Về The Gate</a></li>
@@ -285,6 +286,9 @@
       <div class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-4 mt-3 space-y-4 font-semibold text-sm text-slate-800 shadow-xl rounded-b-2xl" id="mobileMenu">
         <div class="space-y-2 border-b border-slate-100 pb-3">
           <a href="#hero" class="block py-1.5 hover:text-orange-600">Trang chủ</a>
+          <a href="javascript:void(0)" onclick="selectCategoryAndScroll('sale')" class="block py-1.5 text-red-600 font-extrabold hover:text-orange-600 flex items-center gap-1.5">
+            <span class="animate-pulse">🔥</span> <span>Săn Sale Sập Sàn (Up to 50%)</span>
+          </a>
           <a href="#categories" class="block py-1.5 hover:text-orange-600">Danh mục tuyển chọn</a>
           <a href="#featured" class="block py-1.5 hover:text-orange-600">Sản phẩm nổi bật</a>
           <a href="#why-us" class="block py-1.5 hover:text-orange-600">Tiêu chuẩn xuất khẩu</a>
@@ -336,15 +340,16 @@
     <!-- 2. HERO BANNER                                                    -->
     <!-- ================================================================= -->
     <section class="relative min-h-[75vh] sm:min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-orange-50/70 via-white to-slate-50 py-12 sm:py-16" id="hero" aria-label="Banner chính">
-      <div class="absolute inset-0 z-0 opacity-10 sm:opacity-20 pointer-events-none">
+      <div class="absolute inset-0 z-0 opacity-20 sm:opacity-30 pointer-events-none">
         <img
-          src="assets/images/banners/hero-banner.png"
-          alt="The Gate — Hàng Xuất Khẩu Chất Lượng Cao"
-          width="1920"
-          height="1080"
+          src="assets/images/sale/7.png"
+          alt="The Gate — Hàng Xuất Khẩu & Outdoor Chính Hãng"
+          width="3780"
+          height="1890"
           fetchpriority="high"
-          class="w-full h-full object-cover object-center filter grayscale mix-blend-multiply"
+          class="w-full h-full object-cover object-center filter contrast-105"
         />
+        <div class="absolute inset-0 bg-gradient-to-b from-orange-50/50 via-white/80 to-slate-50"></div>
       </div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
@@ -457,64 +462,100 @@
       </div>
 
       <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:grid lg:grid-cols-4 no-scrollbar pb-4" id="categoriesContainer">
-        <div onclick="selectCategoryAndScroll('nam')" class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer">
-          <div class="aspect-[3/4] w-full overflow-hidden">
-            <img src="assets/images/categories/men.png" alt="Thời Trang Nam — Bán chạy" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+        <!-- Card 1: GIẢM 50% (3.png) -->
+        <div onclick="selectCategoryAndScroll('sale')" class="group relative rounded-3xl overflow-hidden bg-orange-600 border border-orange-400/50 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <div class="aspect-square w-full overflow-hidden bg-orange-600">
+            <img src="assets/images/sale/3.png" alt="GIẢM 50% — Flash Sale" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
-            <span class="inline-block px-3 py-1 bg-orange-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">BÁN CHẠY</span>
-            <h3 class="text-xl font-bold text-white mb-1">Thời Trang Nam</h3>
-            <p class="text-xs text-slate-200 mb-4">Áo Polo, Kaki, Áo Phao, Jogger</p>
-            <span class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
-              <span>Khám phá ngay</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-4 sm:p-5 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-red-600 text-white text-[10px] sm:text-[11px] font-black rounded-full uppercase tracking-wider mb-1 w-max shadow">🔥 GIẢM 50%</span>
+            <h3 class="text-base sm:text-lg font-black text-white mb-0.5">Săn Sale Giảm 50%</h3>
+            <p class="text-[11px] text-slate-200 mb-2 line-clamp-1">Áo khoác & đồ dã ngoại xuất khẩu</p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Săn deal ngay</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
         </div>
 
-        <div onclick="selectCategoryAndScroll('nu')" class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer">
-          <div class="aspect-[3/4] w-full overflow-hidden">
-            <img src="assets/images/categories/women.png" alt="Thời Trang Nữ — Hot" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+        <!-- Card 2: GIẢM 30% (2.png) -->
+        <div onclick="selectCategoryAndScroll('nam')" class="group relative rounded-3xl overflow-hidden bg-orange-600 border border-orange-400/50 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <div class="aspect-square w-full overflow-hidden bg-orange-600">
+            <img src="assets/images/sale/2.png" alt="GIẢM 30% — Hàng Mới Về" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
-            <span class="inline-block px-3 py-1 bg-red-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">HOT</span>
-            <h3 class="text-xl font-bold text-white mb-1">Thời Trang Nữ</h3>
-            <p class="text-xs text-slate-200 mb-4">Đầm Cotton, Áo Thun, Áo Khoác</p>
-            <span class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
-              <span>Khám phá ngay</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-4 sm:p-5 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-amber-500 text-slate-950 text-[10px] sm:text-[11px] font-black rounded-full uppercase tracking-wider mb-1 w-max shadow">⚡ GIẢM 30%</span>
+            <h3 class="text-base sm:text-lg font-black text-white mb-0.5">Hàng Mới Giảm 30%</h3>
+            <p class="text-[11px] text-slate-200 mb-2 line-clamp-1">Thời trang Nam & Nữ chính hãng</p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Xem sản phẩm 30%</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
         </div>
 
-        <div onclick="selectCategoryAndScroll('phukien')" class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer">
-          <div class="aspect-[3/4] w-full overflow-hidden">
-            <img src="assets/images/categories/accessories.png" alt="Đồ Outdoor & Dã Ngoại — Chuyên dụng" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+        <!-- Card 3: ĐỒNG GIÁ 199K (5.png) -->
+        <div onclick="selectCategoryAndScroll('phukien')" class="group relative rounded-3xl overflow-hidden bg-orange-600 border border-orange-400/50 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <div class="aspect-square w-full overflow-hidden bg-orange-600">
+            <img src="assets/images/sale/5.png" alt="ĐỒNG GIÁ 199K — Outdoor & Phụ kiện" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
-            <span class="inline-block px-3 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">CHUYÊN DỤNG</span>
-            <h3 class="text-xl font-bold text-white mb-1">Đồ Outdoor & Dã Ngoại</h3>
-            <p class="text-xs text-slate-200 mb-4">Rashguard UPF50+, Áo Dù, Túi Waterproof</p>
-            <span class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
-              <span>Khám phá ngay</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-4 sm:p-5 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-emerald-600 text-white text-[10px] sm:text-[11px] font-black rounded-full uppercase tracking-wider mb-1 w-max shadow">🏷️ ĐỒNG GIÁ 199K</span>
+            <h3 class="text-base sm:text-lg font-black text-white mb-0.5">Đồ Outdoor Giá 199K</h3>
+            <p class="text-[11px] text-slate-200 mb-2 line-clamp-1">Áo polo, thun & trang bị outdoor</p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Săn đồng giá 199k</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
         </div>
 
-        <div onclick="selectCategoryAndScroll('all')" class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer">
-          <div class="aspect-[3/4] w-full overflow-hidden">
-            <img src="assets/images/categories/sale.png" alt="Hàng Ưu Đãi — Sale lớn" width="400" height="534" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" />
+        <!-- Card 4: ĐỒNG GIÁ 299K (6.png) -->
+        <div onclick="selectCategoryAndScroll('nu')" class="group relative rounded-3xl overflow-hidden bg-orange-600 border border-orange-400/50 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <div class="aspect-square w-full overflow-hidden bg-orange-600">
+            <img src="assets/images/sale/6.png" alt="ĐỒNG GIÁ 299K — Thời Trang Nữ & Áo Khoác" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
           </div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
-            <span class="inline-block px-3 py-1 bg-amber-500 text-slate-950 text-[11px] font-bold rounded-full uppercase tracking-wider mb-2 w-max shadow">SALE LỚN</span>
-            <h3 class="text-xl font-bold text-white mb-1">Hàng Ưu Đãi</h3>
-            <p class="text-xs text-slate-200 mb-4">Giảm giá lên đến 50% hàng chính hãng</p>
-            <span class="inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
-              <span>Săn ngay</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent p-4 sm:p-5 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-purple-600 text-white text-[10px] sm:text-[11px] font-black rounded-full uppercase tracking-wider mb-1 w-max shadow">💎 ĐỒNG GIÁ 299K</span>
+            <h3 class="text-base sm:text-lg font-black text-white mb-0.5">Hàng Premium Giá 299K</h3>
+            <p class="text-[11px] text-slate-200 mb-2 line-clamp-1">Váy đầm, áo phao & bộ dã ngoại</p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-orange-400 group-hover:text-white transition-colors">
+              <span>Săn đồng giá 299k</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4.5 FLASH SALE SHOWCASE BANNER (TỐI ƯU SÁNG & KHÔNG TỐI NỀN)      -->
+    <!-- ================================================================= -->
+    <section class="py-6 px-4 max-w-7xl mx-auto" id="sale-banner-sec" aria-label="Bảng Khuyến Mãi Flash Sale">
+      <div onclick="selectCategoryAndScroll('sale')" class="group relative rounded-3xl overflow-hidden shadow-2xl border border-orange-300/80 cursor-pointer bg-slate-900">
+        <img
+          src="assets/images/sale/7.png"
+          alt="Flash Sale Khuyến Mãi Sập Sàn The Gate — UP TO 50%"
+          width="3780"
+          height="1890"
+          loading="lazy"
+          class="w-full h-52 sm:h-80 md:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/20 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
+          <span class="px-3.5 py-1.5 rounded-full bg-red-600 text-white text-[10px] sm:text-xs font-black uppercase tracking-widest mb-3 shadow-md animate-pulse flex items-center gap-1">
+            <span>⚡ FLASH SALE CỰC SỐC</span>
+            <span>— UP TO 50%</span>
+          </span>
+          <h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-2 tracking-tight leading-tight drop-shadow-lg">
+            SIÊU SALE HÀNG XUẤT KHẨU
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-100 max-w-lg mb-6 hidden sm:block leading-relaxed drop-shadow">
+            Giảm giá đặc biệt toàn bộ sản phẩm áo khoác dù, áo polo, quần jogger & trang bị dã ngoại outdoor chất lượng cao. Khám phá ngay!
+          </p>
+          <button type="button" class="px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs sm:text-sm shadow-xl flex items-center gap-2 transition-all transform group-hover:scale-105 active:scale-95">
+            <span>SĂN DEAL HÈ NGAY</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -537,6 +578,9 @@
         <!-- Filter Tabs -->
         <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-2 sm:gap-4 mb-12 py-2 px-1 justify-start md:justify-center" id="filterTabs">
           <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0" data-category="all">Tất cả sản phẩm</button>
+          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1.5" data-category="sale">
+            <span class="text-red-500 animate-pulse">🔥</span> <span>SĂN SALE GIẢM SÂU</span>
+          </button>
           <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nam">Đồ Nam</button>
           <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nu">Đồ Nữ</button>
           <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="phukien">Outdoor & Phụ kiện</button>
@@ -599,16 +643,16 @@
           </div>
         </div>
 
-        <div class="relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 p-2 shadow-xl">
-          <img src="assets/images/banners/hero-banner.png" alt="The Gate Export Quality" width="600" height="400" loading="lazy" class="w-full h-[400px] object-cover rounded-2xl" />
-          <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl">
-            <div class="flex items-center justify-between">
+        <div class="relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-200 p-2 shadow-xl group">
+          <img src="assets/images/sale/7.png" alt="The Gate Export Quality" width="3780" height="1890" loading="lazy" class="w-full h-[380px] sm:h-[420px] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700 brightness-95" />
+          <div class="absolute bottom-6 left-6 right-6 p-5 sm:p-6 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-slate-800 shadow-xl text-white">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <div class="text-lg font-bold text-slate-900">Cam kết 100% Chính Hãng</div>
-                <div class="text-xs text-slate-600">Kiểm tra hàng trước khi thanh toán</div>
+                <div class="text-base sm:text-lg font-extrabold text-white">Cam kết 100% Hàng Xuất Khẩu Chính Hãng</div>
+                <div class="text-xs text-slate-300">Được kiểm tra thử đồ tại 3 cơ sở trước khi thanh toán</div>
               </div>
-              <a href="https://zalo.me/0355393871" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-orange-600 text-white text-xs font-bold shadow hover:bg-orange-700 transition-colors">
-                Chat Zalo ➔
+              <a href="https://zalo.me/0355393871" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold shadow-md transition-colors whitespace-nowrap text-center">
+                Tư Vấn Zalo 24/7 ➔
               </a>
             </div>
           </div>
@@ -619,8 +663,8 @@
     <!-- Dark Banner "The Gate Outdoor & Sportswear" -->
     <section class="relative py-24 px-4 overflow-hidden" id="collection" aria-label="Bộ sưu tập Outdoor">
       <div class="absolute inset-0 z-0">
-        <img src="assets/images/banners/parallax-banner.png" alt="The Gate Outdoor Collection" width="1920" height="700" loading="lazy" class="w-full h-full object-cover filter brightness-40 contrast-110" />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+        <img src="assets/images/sale/7.png" alt="The Gate Outdoor Collection" width="3780" height="1890" loading="lazy" class="w-full h-full object-cover filter brightness-45 contrast-110" />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40"></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto flex flex-col items-start justify-center">
@@ -1037,7 +1081,17 @@
       const allProducts = Object.values(PRODUCTS_DATA);
       const filtered = allProducts.filter(p => {
         const hasValidImage = p.images && p.images.length > 0 && !p.images[0].includes('product-01.svg');
-        const matchesCategory = currentCategoryFilter === 'all' || p.category === currentCategoryFilter;
+        const isSaleProduct = p.category === 'sale' || (p.badge && p.badge.toLowerCase().includes('sale')) || (p.originalPrice && p.originalPrice.length > 0);
+
+        let matchesCategory = false;
+        if (currentCategoryFilter === 'all') {
+          matchesCategory = true;
+        } else if (currentCategoryFilter === 'sale') {
+          matchesCategory = isSaleProduct;
+        } else {
+          matchesCategory = p.category === currentCategoryFilter;
+        }
+
         return hasValidImage && matchesCategory;
       });
 
