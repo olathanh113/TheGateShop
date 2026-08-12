@@ -41,6 +41,33 @@ class App {
   }
 
   async loadProducts() {
+    // Attempt loading live catalog from /api/catalog first via window.TheGateCatalog
+    if (typeof window !== 'undefined' && window.TheGateCatalog && typeof window.TheGateCatalog.load === 'function') {
+      try {
+        const payload = await window.TheGateCatalog.load({ endpoint: '/api/catalog', timeoutMs: 5000, attempts: 2 });
+        if (payload && Array.isArray(payload.items) && payload.items.length > 0) {
+          this.products = payload.items.map((item, idx) => ({
+            id: item.code || `catalog-${idx + 1}`,
+            code: item.code,
+            name: item.name,
+            price: item.sale_price,
+            salePrice: item.sale_price,
+            category: 'all',
+            categoryDisplay: 'Catalog Master',
+            images: item.images,
+            rating: 5,
+            reviewCount: 18,
+            sizes: ['S', 'M', 'L', 'XL'],
+            colors: ['#0f172a', '#ea580c']
+          }));
+          return;
+        }
+      } catch (catalogErr) {
+        console.warn('Live catalog degraded or offline, activating fallback local data:', catalogErr.message);
+      }
+    }
+
+    // Fallback to local static dataset
     try {
       const res = await fetch('data/products.json');
       this.products = await res.json();
@@ -56,7 +83,16 @@ class App {
 
     let filtered = this.products;
     if (filter !== 'all') {
-      filtered = this.products.filter(p => p.category === filter);
+      filtered = this.products.filter(p => {
+        const price = typeof p.salePrice === 'number' ? p.salePrice : (typeof p.price === 'number' ? p.price : 0);
+        if (filter === 'sale') return p.category === 'sale' || p.salePrice < p.price;
+        if (filter === 'sale_50') return p.category === 'sale' || (p.price > 0 && (p.price - price) / p.price >= 0.4);
+        if (filter === 'price_under_200') return price > 0 && price < 200000;
+        if (filter === 'price_200_350') return price >= 200000 && price <= 350000;
+        if (filter === 'price_350_500') return price > 350000 && price <= 500000;
+        if (filter === 'price_over_500') return price > 500000;
+        return p.category === filter;
+      });
     }
 
     if (limit && limit < filtered.length) {

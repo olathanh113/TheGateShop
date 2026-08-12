@@ -1,0 +1,29 @@
+{
+  "spreadsheet_id": "1kWGZy7Stnrs842lnt36Y_3ROO-t_pfNvRcz-cVwU1Eg",
+  "tab": "WEBSITE_PRODUCTS",
+  "range": "WEBSITE_PRODUCTS!A1:U1002",
+  "join": "case-sensitive trim(product_code) == Kiot code",
+  "fields": [
+    {"name":"priority","ownership":"MANUAL","type":"integer|null"},
+    {"name":"product_code","ownership":"MANUAL_KEY","type":"string","required":true},
+    {"name":"product_id","ownership":"DERIVED_UNUSED_FOR_JOIN","type":"string|null"},
+    {"name":"kiot_name","ownership":"DERIVED","type":"string|null"},
+    {"name":"custom_name","ownership":"MANUAL","type":"string|null"},
+    {"name":"final_name","ownership":"DERIVED_EDITORIAL","type":"string|null"},
+    {"name":"source_group","ownership":"MANUAL","type":"string|null"},
+    {"name":"category","ownership":"MANUAL","type":"string|null"},
+    {"name":"audience","ownership":"MANUAL","type":"string|null"},
+    {"name":"collection","ownership":"MANUAL","type":"string|null"},
+    {"name":"display_order","ownership":"MANUAL","type":"integer|null"},
+    {"name":"featured","ownership":"MANUAL","type":"boolean"},
+    {"name":"publish","ownership":"MANUAL_GATE","type":"boolean","required":true},
+    {"name":"kiot_price","ownership":"DERIVED_NOT_AUTHORITY","type":"number|null"},
+    {"name":"primary_image_url","ownership":"DERIVED","type":"string|null"},
+    {"name":"custom_image_url","ownership":"MANUAL","type":"https-uri|null"},
+    {"name":"final_image_url","ownership":"DERIVED","type":"string|null"},
+    {"name":"image_preview","ownership":"FORMULA","type":"formula|null"},
+    {"name":"sync_status","ownership":"DERIVED_NOT_PUBLIC","type":"string|null"},
+    {"name":"note","ownership":"MANUAL_PRIVATE_NOT_PUBLIC","type":"string|null"},
+    {"name":"slug","ownership":"MANUAL_OR_DETERMINISTIC","type":"slug|null"}
+  ]
+}

@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Gate catalog offline demo</title><link rel="stylesheet" href="assets/thegate-catalog.css"></head>
+<body><main class="thegate-catalog" data-state="loading"><p class="thegate-catalog__status">Đang tải fixture…</p><pre class="thegate-catalog__grid"></pre></main><script src="assets/thegate-catalog-client.js"></script><script>
+TheGateCatalog.load({endpoint:"fixtures/catalog.synthetic.json",attempts:1}).then(function (catalog) { document.querySelector(".thegate-catalog").dataset.state="ready"; document.querySelector(".thegate-catalog__status").textContent="Offline fixture hợp lệ"; document.querySelector(".thegate-catalog__grid").textContent=JSON.stringify(catalog,null,2); }).catch(function () { document.querySelector(".thegate-catalog").dataset.state="error"; document.querySelector(".thegate-catalog__status").textContent="Fixture không hợp lệ"; });
+</script></body></html>

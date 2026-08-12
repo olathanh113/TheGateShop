@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/assets/thegate-catalog.css">
+<section class="thegate-catalog" data-state="loading" aria-live="polite">
+  <p class="thegate-catalog__status">Đang tải sản phẩm…</p>
+  <div class="thegate-catalog__grid"></div>
+</section>
+<script src="/assets/thegate-catalog-client.js" defer></script>
+<script defer>
+  window.addEventListener("DOMContentLoaded", function () {
+    var root = document.querySelector(".thegate-catalog");
+    var status = root.querySelector(".thegate-catalog__status");
+    var grid = root.querySelector(".thegate-catalog__grid");
+    window.TheGateCatalog.load().then(function (catalog) {
+      var formatter = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
+      catalog.items.forEach(function (item) {
+        var card = document.createElement("article");
+        card.className = "thegate-catalog__card";
+        var image = document.createElement("img");
+        image.className = "thegate-catalog__image";
+        image.src = item.images[0];
+        image.alt = item.name;
+        image.loading = "lazy";
+        var body = document.createElement("div");
+        body.className = "thegate-catalog__body";
+        var name = document.createElement("h2");
+        name.className = "thegate-catalog__name";
+        name.textContent = item.name;
+        var price = document.createElement("p");
+        price.className = "thegate-catalog__price";
+        price.textContent = formatter.format(item.sale_price);
+        body.append(name, price);
+        card.append(image, body);
+        grid.append(card);
+      });
+      root.dataset.state = "ready";
+      status.textContent = catalog.total ? "" : "Hiện chưa có sản phẩm được duyệt hiển thị.";
+    }).catch(function () {
+      root.dataset.state = "error";
+      status.textContent = "Danh mục đang tạm gián đoạn. Vui lòng thử lại sau.";
+    });
+  });
+</script>

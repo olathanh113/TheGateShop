@@ -33,6 +33,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
+  <!-- Catalog Master CSS -->
+  <link rel="stylesheet" href="assets/thegate-catalog.css" />
+
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="assets/images/banners/hero-banner.png" fetchpriority="high" />
 
@@ -575,15 +578,35 @@
           </div>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-2 sm:gap-4 mb-12 py-2 px-1 justify-start md:justify-center" id="filterTabs">
-          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0" data-category="all">Tất cả sản phẩm</button>
-          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1.5" data-category="sale">
-            <span class="text-red-500 animate-pulse">🔥</span> <span>SĂN SALE GIẢM SÂU</span>
+        <!-- Filter Tabs Container với Nút Điều Hướng Trái / Phải -->
+        <div class="relative max-w-full mx-auto mb-8 px-2 sm:px-6 group">
+          <!-- Nút điều hướng Trái -->
+          <button type="button" onclick="scrollTabsNav(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 text-slate-800 border border-slate-200/90 shadow-xl hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-95 transition-all flex items-center justify-center cursor-pointer focus:outline-none" title="Xem thêm tag bên trái" aria-label="Xem thêm tag bên trái">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
           </button>
-          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nam">Đồ Nam</button>
-          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nu">Đồ Nữ</button>
-          <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="phukien">Outdoor & Phụ kiện</button>
+
+          <!-- Filter Tabs List -->
+          <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-2 sm:gap-3 py-2 px-6 scroll-smooth" id="filterTabs">
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0" data-category="all">Tất cả sản phẩm</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1.5" data-category="sale">
+              <span class="text-red-500 animate-pulse">🔥</span> <span>SĂN SALE GIẢM SÂU</span>
+            </button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1.5" data-category="sale_50">
+              <span>⚡</span> <span>Giảm 40% - 50%</span>
+            </button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nam">Đồ Nam</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="nu">Đồ Nữ</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0" data-category="phukien">Outdoor & Phụ kiện</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0" data-category="price_under_200">🏷️ Dưới 200K</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0" data-category="price_200_350">🏷️ 200K - 350K</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0" data-category="price_350_500">🏷️ 350K - 500K</button>
+            <button class="px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0" data-category="price_over_500">🏷️ Trên 500K</button>
+          </div>
+
+          <!-- Nút điều hướng Phải -->
+          <button type="button" onclick="scrollTabsNav(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 text-slate-800 border border-slate-200/90 shadow-xl hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-95 transition-all flex items-center justify-center cursor-pointer focus:outline-none" title="Xem thêm tag bên phải" aria-label="Xem thêm tag bên phải">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
         </div>
 
         <!-- Products Grid Container -->
@@ -1012,6 +1035,13 @@
     const itemsPerPage = 8; // 8 sản phẩm / trang
     let currentCategoryFilter = 'all';
 
+    window.scrollTabsNav = function(direction) {
+      const tabsContainer = document.getElementById('filterTabs');
+      if (!tabsContainer) return;
+      const scrollAmount = 280;
+      tabsContainer.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    };
+
     window.setActiveFilterTab = function(category) {
       currentCategoryFilter = category;
       currentPage = 1;
@@ -1021,6 +1051,9 @@
         const cat = btn.getAttribute('data-category') || 'all';
         if (cat === category) {
           btn.className = 'px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0 ring-2 ring-orange-400/40 scale-105';
+          if (typeof btn.scrollIntoView === 'function') {
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
         } else {
           btn.className = 'px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm filter-tab-btn shrink-0';
         }
@@ -1072,6 +1105,13 @@
       slider.scrollTo({ left: index * slideWidth, behavior: 'smooth' });
     };
 
+    function parseNumericPrice(val) {
+      if (typeof val === 'number') return val;
+      if (!val) return 0;
+      const num = parseInt(String(val).replace(/[^\d]/g, ''), 10);
+      return isNaN(num) ? 0 : num;
+    }
+
     // Render Sản Phẩm theo Phân Trang 1, 2, 3...
     function renderProductGridCards() {
       const container = document.getElementById('productsGridContainer');
@@ -1082,12 +1122,25 @@
       const filtered = allProducts.filter(p => {
         const hasValidImage = p.images && p.images.length > 0 && !p.images[0].includes('product-01.svg');
         const isSaleProduct = p.category === 'sale' || (p.badge && p.badge.toLowerCase().includes('sale')) || (p.originalPrice && p.originalPrice.length > 0);
+        const priceNum = parseNumericPrice(p.price || p.salePrice);
+        const origNum = parseNumericPrice(p.originalPrice);
 
         let matchesCategory = false;
         if (currentCategoryFilter === 'all') {
           matchesCategory = true;
         } else if (currentCategoryFilter === 'sale') {
           matchesCategory = isSaleProduct;
+        } else if (currentCategoryFilter === 'sale_50') {
+          const discountPercent = origNum > 0 ? Math.round(((origNum - priceNum) / origNum) * 100) : 0;
+          matchesCategory = isSaleProduct && (discountPercent >= 40 || (p.badge && (p.badge.includes('50%') || p.badge.includes('52%') || p.badge.includes('56%'))));
+        } else if (currentCategoryFilter === 'price_under_200') {
+          matchesCategory = priceNum > 0 && priceNum < 200000;
+        } else if (currentCategoryFilter === 'price_200_350') {
+          matchesCategory = priceNum >= 200000 && priceNum <= 350000;
+        } else if (currentCategoryFilter === 'price_350_500') {
+          matchesCategory = priceNum > 350000 && priceNum <= 500000;
+        } else if (currentCategoryFilter === 'price_over_500') {
+          matchesCategory = priceNum > 500000;
         } else {
           matchesCategory = p.category === currentCategoryFilter;
         }
@@ -1547,6 +1600,9 @@
       });
     });
   </script>
+
+  <!-- Catalog Master API Client -->
+  <script src="assets/thegate-catalog-client.js" defer></script>
 
   <!-- External App JS Module integration -->
   <script type="module" src="js/app.js"></script>

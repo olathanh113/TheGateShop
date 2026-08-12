@@ -1,0 +1,17 @@
+Source:
+python3 -m unittest discover -s integrations/kiot_public_catalog/tests -v
+
+Staging and extracted package, from api/:
+python3 -m unittest discover -s integrations/kiot_public_catalog/tests -v
+
+Targeted V1.1 regressions, from api/ with tests on PYTHONPATH:
+python3 -m unittest -v [8 exact V1.1 test names recorded in TARGETED_REGRESSION_OUTPUT.txt]
+
+Netlify client:
+node deployment/netlify_dropin/tests/catalog-client.test.js
+
+Compile/import:
+python3 -m compileall -q integrations/kiot_public_catalog
+
+OpenAPI actual-response validation:
+python3 -m unittest -v test_end_to_end.HandoffArtifactContractTests.test_e2e_artifact_04_openapi_actual_website_response_validates test_end_to_end.HandoffArtifactContractTests.test_e2e_artifact_05_public_openapi_has_only_get_operations test_end_to_end.HandoffArtifactContractTests.test_e2e_artifact_08_openapi_distinguishes_three_access_origins
