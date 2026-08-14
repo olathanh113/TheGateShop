@@ -27,10 +27,10 @@
   <link rel="canonical" href="https://thegatevnxk.com/" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon.png?v=2" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2461,16 +2461,8 @@
     <nav class="bg-white text-slate-900 border-b border-slate-200 py-3 sm:py-3.5 px-4 sticky top-0 z-30 transition-all shadow-sm" id="navbar">
       <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
         
-        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-2.5 group" aria-label="The Gate — Trang chủ">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-600 text-white flex items-center justify-center shadow-md group-hover:bg-orange-700 transition-colors shrink-0">
-            <i data-lucide="mountain" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">
-              The<span class="text-orange-600">Gate</span>
-            </span>
-            <span class="text-xs sm:text-xs font-bold tracking-widest text-slate-500 uppercase mt-0.5">VNXK & OUTDOOR</span>
-          </div>
+        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center group py-0.5" aria-label="The Gate — Trang chủ">
+          <img src="assets/images/logo/thegate_logo_transparent.png" alt="The Gate — VNXK & Outdoor" class="h-8 sm:h-9 w-auto max-h-9 object-contain transition-transform group-hover:scale-105" width="180" height="36" />
         </a>
 
         <ul class="hidden md:flex items-center gap-7 font-semibold text-sm text-slate-700">
@@ -2547,6 +2539,696 @@
   </header>
 
   <main id="main-content">
+
+    <!-- ================================================================= -->
+    <!-- 4. DANH MỤC TUYỂN CHỌN                                            -->
+    <!-- ================================================================= -->
+    <section class="py-10 sm:py-16 px-3 sm:px-6 max-w-7xl mx-auto overflow-hidden" id="categories" aria-label="Danh mục sản phẩm">
+      <div class="text-center mb-6 sm:mb-10">
+        <span class="text-orange-600 text-[11px] sm:text-xs font-extrabold uppercase tracking-widest block mb-1.5 sm:mb-2">DANH MỤC TUYỂN CHỌN</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-2 sm:mb-3">Thời Trang & Trang Bị Outdoor</h2>
+        <div class="w-12 sm:w-16 h-1 bg-orange-600 mx-auto rounded-full mb-3 sm:mb-4"></div>
+        <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto px-2">Tìm kiếm trang phục phù hợp cho phong cách thường ngày, công sở, thể thao hay dã ngoại chuyên dụng</p>
+      </div>
+
+      <!-- Categories Responsive Grid (2 Cột trên Mobile, 4 Cột trên Desktop) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5" id="categoriesContainer">
+        <!-- Card 1: Đồng Giá 99K (Ảnh 4.webp) -->
+        <div onclick="selectCategoryAndScroll('donggia_99k')" class="group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm sm:shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] flex flex-col">
+          <div class="relative aspect-square w-full overflow-hidden bg-slate-100">
+            <img src="assets/images/sale/4.webp" alt="Đồng Giá 99K — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-2 left-2 sm:top-3 sm:left-3">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3 sm:py-1 bg-red-600 text-white text-[10px] sm:text-xs font-black rounded-full uppercase tracking-wider shadow-md">🏷️ <span class="hidden sm:inline">ĐỒNG GIÁ </span>99K</span>
+            </div>
+          </div>
+          <div class="p-2.5 sm:p-4 lg:p-5 flex flex-col justify-between flex-grow bg-white">
+            <div>
+              <h3 class="text-xs sm:text-base lg:text-lg font-black text-slate-900 group-hover:text-orange-600 transition-colors mb-0.5 sm:mb-1 tracking-tight line-clamp-1">Đồng Giá 99K</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-slate-500 font-medium line-clamp-1 mb-2 sm:mb-3">Polo, thun, áo khoác & phụ kiện</p>
+            </div>
+            <div class="flex items-center justify-between pt-1.5 sm:pt-2 border-t border-slate-100">
+              <span class="text-[10px] sm:text-xs lg:text-sm font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1">
+                <span>Săn deal 99k</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Hàng Tuyển Chọn Giảm 10% (Ảnh 1.webp) -->
+        <div onclick="selectCategoryAndScroll('sale_10')" class="group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm sm:shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] flex flex-col">
+          <div class="relative aspect-square w-full overflow-hidden bg-slate-100">
+            <img src="assets/images/sale/1.webp" alt="Ưu Đãi Giảm 10% — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-2 left-2 sm:top-3 sm:left-3">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3 sm:py-1 bg-amber-500 text-slate-950 text-[10px] sm:text-xs font-black rounded-full uppercase tracking-wider shadow-md">🎉 GIẢM 10%</span>
+            </div>
+          </div>
+          <div class="p-2.5 sm:p-4 lg:p-5 flex flex-col justify-between flex-grow bg-white">
+            <div>
+              <h3 class="text-xs sm:text-base lg:text-lg font-black text-slate-900 group-hover:text-amber-600 transition-colors mb-0.5 sm:mb-1 tracking-tight line-clamp-1">Hàng Mới Giảm 10%</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-slate-500 font-medium line-clamp-1 mb-2 sm:mb-3">Hàng hiệu tuyển chọn nguyên tag</p>
+            </div>
+            <div class="flex items-center justify-between pt-1.5 sm:pt-2 border-t border-slate-100">
+              <span class="text-[10px] sm:text-xs lg:text-sm font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+                <span>Xem hàng 10%</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Hàng Mới Giảm 30% (Ảnh 2.webp) -->
+        <div onclick="selectCategoryAndScroll('sale_30')" class="group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm sm:shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] flex flex-col">
+          <div class="relative aspect-square w-full overflow-hidden bg-slate-100">
+            <img src="assets/images/sale/2.webp" alt="Hàng Mới Giảm 30% — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-2 left-2 sm:top-3 sm:left-3">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3 sm:py-1 bg-orange-600 text-white text-[10px] sm:text-xs font-black rounded-full uppercase tracking-wider shadow-md">🔥 GIẢM 30%</span>
+            </div>
+          </div>
+          <div class="p-2.5 sm:p-4 lg:p-5 flex flex-col justify-between flex-grow bg-white">
+            <div>
+              <h3 class="text-xs sm:text-base lg:text-lg font-black text-slate-900 group-hover:text-orange-600 transition-colors mb-0.5 sm:mb-1 tracking-tight line-clamp-1">Hàng Mới Giảm 30%</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-slate-500 font-medium line-clamp-1 mb-2 sm:mb-3">Thời trang Nam & Nữ chính hãng</p>
+            </div>
+            <div class="flex items-center justify-between pt-1.5 sm:pt-2 border-t border-slate-100">
+              <span class="text-[10px] sm:text-xs lg:text-sm font-bold text-orange-600 group-hover:text-orange-700 flex items-center gap-1">
+                <span>Xem hàng 30%</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Săn Sale Giảm 50% (Ảnh 3.webp) -->
+        <div onclick="selectCategoryAndScroll('sale_50')" class="group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-sm sm:shadow-md hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] flex flex-col">
+          <div class="relative aspect-square w-full overflow-hidden bg-slate-100">
+            <img src="assets/images/sale/3.webp" alt="Săn Sale Giảm 50% — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-2 left-2 sm:top-3 sm:left-3">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 sm:px-3 sm:py-1 bg-red-600 text-white text-[10px] sm:text-xs font-black rounded-full uppercase tracking-wider shadow-md">⚡ GIẢM 50%</span>
+            </div>
+          </div>
+          <div class="p-2.5 sm:p-4 lg:p-5 flex flex-col justify-between flex-grow bg-white">
+            <div>
+              <h3 class="text-xs sm:text-base lg:text-lg font-black text-slate-900 group-hover:text-red-600 transition-colors mb-0.5 sm:mb-1 tracking-tight line-clamp-1">Săn Sale Giảm 50%</h3>
+              <p class="text-[10px] sm:text-xs lg:text-sm text-slate-500 font-medium line-clamp-1 mb-2 sm:mb-3">Áo khoác & đồ dã ngoại xuất khẩu</p>
+            </div>
+            <div class="flex items-center justify-between pt-1.5 sm:pt-2 border-t border-slate-100">
+              <span class="text-[10px] sm:text-xs lg:text-sm font-bold text-red-600 group-hover:text-red-700 flex items-center gap-1">
+                <span>Săn deal 50% ngay</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 sm:w-4 sm:h-4 stroke-[2.5] group-hover:translate-x-1 transition-transform"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4.5 FLASH SALE SHOWCASE BANNER (HIỂN THỊ TRỌN VẸN 100% ẢNH BANNER) -->
+    <!-- ================================================================= -->
+    <section class="py-6 px-4 max-w-7xl mx-auto" id="sale-banner-sec" aria-label="Bảng Khuyến Mãi Flash Sale">
+      <div onclick="selectCategoryAndScroll('sale')" class="group relative rounded-3xl overflow-hidden shadow-2xl border border-orange-300/80 cursor-pointer bg-orange-600 transition-all duration-300 hover:scale-[1.01] hover:shadow-orange-500/20">
+        <img
+          src="assets/images/sale/7.webp"
+          alt="Flash Sale Khuyến Mãi Sập Sàn The Gate — UP TO 69%"
+          width="3780"
+          height="1890"
+          loading="lazy"
+          class="w-full h-auto aspect-[2/1] object-contain block group-hover:scale-[1.02] transition-transform duration-700"
+        />
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- ================================================================= -->
+    <!-- 5. DANH SÁCH SẢN PHẨM NỔI BẬT (LAYOUT CHUẨN ẢNH 2)               -->
+    <!-- ================================================================= -->
+    <section class="py-10 sm:py-16 px-3 sm:px-6 bg-slate-50/80 border-t border-slate-200" id="featured" aria-label="Sản phẩm nổi bật">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Filter Tabs Header with Beautiful Ergonomic Navigation Arrows -->
+        <div class="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 max-w-full">
+          <!-- Nút điều hướng Trái -->
+          <button type="button" onclick="scrollTabsNav(-1)" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-slate-800 border border-slate-200/90 shadow-md hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Cuộn danh mục sang trái" aria-label="Cuộn danh mục sang trái">
+            <i data-lucide="chevron-left" class="w-5 h-5 pointer-events-none stroke-[2.5]"></i>
+          </button>
+
+          <!-- Filter Tabs List with Full Multi-Catalogs (Tất cả, Săn Sale, 99K, 199K, 299K, Giảm 50%, 30%, 10%, Nam, Nữ, Trẻ Em, Phụ Kiện) -->
+          <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-1.5 sm:gap-2.5 py-1.5 scroll-smooth flex-grow" id="filterTabs">
+            <button type="button" onclick="setActiveFilterTab('all')" class="px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0 flex items-center gap-1 active-tab ring-2 ring-orange-400/40" data-category="all">Tất cả sản phẩm</button>
+            <button type="button" onclick="setActiveFilterTab('sale')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-red-600 border border-red-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale">
+              <span>🔥</span> <span>Săn Sale</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('donggia_99k')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-red-600 border border-red-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="donggia_99k">
+              <span>🏷️</span> <span>Đồng Giá 99K</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('sale_50')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_50">
+              <span class="text-red-500">⚡</span> <span>Giảm 50%</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('sale_30')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_30">
+              <span class="text-orange-500">🔥</span> <span>Giảm 30%</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('sale_10')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_10">
+              <span class="text-amber-500">🎉</span> <span>Giảm 10%</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('nam')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="nam">Đồ Nam</button>
+            <button type="button" onclick="setActiveFilterTab('nu')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="nu">Đồ Nữ</button>
+            <button type="button" onclick="setActiveFilterTab('treem')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="treem">
+              <span>👶</span> <span>Đồ Trẻ Em</span>
+            </button>
+            <button type="button" onclick="setActiveFilterTab('phukien')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="phukien">Outdoor & Phụ kiện</button>
+          </div>
+
+          <!-- Nút điều hướng Phải -->
+          <button type="button" onclick="scrollTabsNav(1)" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-slate-800 border border-slate-200/90 shadow-md hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Cuộn danh mục sang phải" aria-label="Cuộn danh mục sang phải">
+            <i data-lucide="chevron-right" class="w-5 h-5 pointer-events-none stroke-[2.5]"></i>
+          </button>
+        </div>
+
+        <!-- Products Grid Container: 2 columns mobile, 3 columns tablet, 4 columns desktop -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-6" id="productsGridContainer">
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="118">
+            <div onclick="openEnhancedProductModal('118')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/thegate22/92a3f3c2d39e45188675bd5f2881eaa4.jpg" alt="Short Salty Crew Break 0522 F - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 118</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2 Size • 2 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('118')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Short Salty Crew Break 0522 F">Short Salty Crew Break 0522 F</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(113)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">196.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">280.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('118')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="175">
+            <div onclick="openEnhancedProductModal('175')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/23/tjo2025/ed432d08b82f4865970b1d1493e07599.png" alt="Hoodie Quiksilver Graphic 1025 M - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 175</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">3 Size • 2 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('175')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Hoodie Quiksilver Graphic 1025 M">Hoodie Quiksilver Graphic 1025 M</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(110)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">99.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('175')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="201">
+            <div onclick="openEnhancedProductModal('201')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/28/tjo2025/35b59b01d30543eb818ca96cca94cf35.png" alt="Polo Cộc Castel Bajac Welding 1025 M - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 201</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('201')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Cộc Castel Bajac Welding 1025 M">Polo Cộc Castel Bajac Welding 1025 M</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(106)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">245.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">350.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('201')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="220">
+            <div onclick="openEnhancedProductModal('220')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/12/tjo2025/9032c68e3fe248a7ad34128d98aadd83.png" alt="Knit Lẻ BN 0126 - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 220</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">1 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('220')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Knit Lẻ BN 0126">Knit Lẻ BN 0126</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(95)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">315.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">450.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('220')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="231">
+            <div onclick="openEnhancedProductModal('231')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/10/tjo2025/db3b40c3b2264e63ab614fcd2425b043.jpg" alt="Tee Cộc Mode Of One Graphic 1025 - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 231</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">4 Size • 5 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('231')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Tee Cộc Mode Of One Graphic 1025">Tee Cộc Mode Of One Graphic 1025</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(106)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('231')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="286">
+            <div onclick="openEnhancedProductModal('286')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/05/thegate24/95caf392f3074f89b0c9ae69bb81ccec.png" alt="Swimsuit Bebe De Pino All Over 0525 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 286</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">3 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('286')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Swimsuit Bebe De Pino All Over 0525 Kid">Swimsuit Bebe De Pino All Over 0525 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(101)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">224.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('286')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="326">
+            <div onclick="openEnhancedProductModal('326')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/17/tjo2025/28b1c197f24f43699ad396ad39c6a263.png" alt="Skort Esprit Two Tone 1025 F - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 326</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2 Size • 2 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('326')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Skort Esprit Two Tone 1025 F">Skort Esprit Two Tone 1025 F</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(111)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">224.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('326')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="463">
+            <div onclick="openEnhancedProductModal('463')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/05/thegate24/4dcba407a0394ed999fca573c85a49bc.png" alt="Swimsuit Bebe De Pino Tullip 0525 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 463</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">1 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('463')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Swimsuit Bebe De Pino Tullip 0525 Kid">Swimsuit Bebe De Pino Tullip 0525 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(98)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">224.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('463')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="464">
+            <div onclick="openEnhancedProductModal('464')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/05/thegate24/2a3a703b2d0441dda0e2f78f75613f29.png" alt="Rashguard Bebe De Pino Cherry 0525 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 464</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">3 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('464')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Rashguard Bebe De Pino Cherry 0525 Kid">Rashguard Bebe De Pino Cherry 0525 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(99)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('464')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="469">
+            <div onclick="openEnhancedProductModal('469')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/15/tjo2025/5e3437099a8a4d55b8aa4650bb68c8d1.jpg" alt="Quần Dài No Boundaries 1025 - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 469</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('469')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Quần Dài No Boundaries 1025">Quần Dài No Boundaries 1025</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(104)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">154.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">220.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('469')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="511">
+            <div onclick="openEnhancedProductModal('511')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/03/04/tjo2025/fd03141b6b54425ca68284c377f1bf0c.jpg" alt="Mũ Lẻ CL 0326 - 5.11 - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 511</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">1 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('511')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Mũ Lẻ CL 0326 - 5.11">Mũ Lẻ CL 0326 - 5.11</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(86)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">252.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">280.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('511')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="610">
+            <div onclick="openEnhancedProductModal('610')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/12/15/tjo2025/09e4bb2b98be4bca9bfbb8de05b353d3.png" alt="Klattermusen Hrid WP 3L Bag Raven - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 610</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">1 Size • 1 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('610')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Klattermusen Hrid WP 3L Bag Raven">Klattermusen Hrid WP 3L Bag Raven</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(95)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">675.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">750.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('610')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="640">
+            <div onclick="openEnhancedProductModal('640')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/15/tjo2025/77efa4fab4504f50b09a336ae327afc0.jpg" alt="Quần Dài Andar All Round 1025 F - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 640</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2 Size • 3 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('640')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Quần Dài Andar All Round 1025 F">Quần Dài Andar All Round 1025 F</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(95)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('640')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="686">
+            <div onclick="openEnhancedProductModal('686')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/23/tjo2025/71251103ad3f4c1199b817b91361e8d7.png" alt="Short Nepa Cargo Set 0226 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 686</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">4 Size • 4 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('686')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Short Nepa Cargo Set 0226 Kid">Short Nepa Cargo Set 0226 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(111)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">126.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">180.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('686')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="688">
+            <div onclick="openEnhancedProductModal('688')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/24/tjo2025/bbd35927f7854a5eb79cc341527c1a46.png" alt="Tee Cộc Nepa Cargo Set 0226 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 688</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">4 Size • 3 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('688')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Tee Cộc Nepa Cargo Set 0226 Kid">Tee Cộc Nepa Cargo Set 0226 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(113)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">154.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">220.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('688')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="698">
+            <div onclick="openEnhancedProductModal('698')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
+              
+              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/03/17/tjo2025/8175eb3965bf466490a584fd8ba7ec8e.jpg" alt="Anorak Nepa PK Set 0226 Kid - The Gate VNXK" loading="lazy" width="400" height="400" />
+              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
+                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+              </div>
+            </div>
+            <div class="product-card__body flex flex-col flex-grow">
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: 698</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">5 Size • 4 Màu</span>
+              </div>
+              <h3 onclick="openEnhancedProductModal('698')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Anorak Nepa PK Set 0226 Kid">Anorak Nepa PK Set 0226 Kid</h3>
+              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
+                <span>★★★★★</span>
+                <span class="text-slate-400 font-normal">(93)</span>
+              </div>
+              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
+                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">154.000đ</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">220.000đ</span>
+              </div>
+              <button type="button" onclick="openEnhancedProductModal('698')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
+                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
+                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dãy nút Phân trang Pagination -->
+        <div class="flex flex-col items-center justify-center gap-2 mt-8 sm:mt-10 pt-4 sm:pt-6 border-t border-slate-200" id="paginationContainer">
+
+        <div class="w-full text-center text-xs text-slate-500 font-semibold mb-3">
+          Trang <span class="text-orange-600 font-extrabold">1</span> / 67 (Tổng 1.068 sản phẩm)
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+          <button type="button" disabled class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-50">
+            <span>◀</span> <span class="hidden sm:inline">Trang</span> trước
+          </button>
+          <button type="button" onclick="changePage(1)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-orange-600 text-white border-orange-600 shadow-md ring-2 ring-orange-400/40 scale-105">1</button>
+          <button type="button" onclick="changePage(2)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">2</button>
+          <button type="button" onclick="changePage(3)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">3</button>
+          <button type="button" onclick="changePage(4)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">4</button>
+          <button type="button" onclick="changePage(5)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">5</button>
+          <span class="px-1.5 text-slate-400 font-bold text-xs">...</span>
+          <button type="button" onclick="changePage(294)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">294</button>
+          <button type="button" onclick="changePage(2)" class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 bg-white text-slate-800 border-slate-300 hover:bg-orange-600 hover:text-white hover:border-orange-600 shadow-sm active:scale-95 cursor-pointer">
+            <span class="hidden sm:inline">Trang</span> tiếp <span>▶</span>
+          </button>
+        </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================================================================= -->
     <!-- 2. HERO BANNER                                                    -->
@@ -2657,644 +3339,7 @@
       </div>
     </section>
 
-    <!-- ================================================================= -->
-    <!-- 4. DANH MỤC TUYỂN CHỌN                                            -->
-    <!-- ================================================================= -->
-    <section class="py-20 px-4 max-w-7xl mx-auto overflow-hidden" id="categories" aria-label="Danh mục sản phẩm">
-      <div class="text-center mb-10">
-        <span class="text-orange-600 text-xs font-extrabold uppercase tracking-widest block mb-2">DANH MỤC TUYỂN CHỌN</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Thời Trang & Trang Bị Outdoor</h2>
-        <div class="w-16 h-1 bg-orange-600 mx-auto rounded-full mb-4"></div>
-        <p class="text-slate-600 text-sm max-w-xl mx-auto mb-2">Tìm kiếm trang phục phù hợp cho phong cách thường ngày, công sở, thể thao hay dã ngoại chuyên dụng</p>
-        
-        
-      </div>
-
-      <!-- Categories Container với Nút Điều Hướng Trái / Phải -->
-      <div class="relative max-w-full mx-auto px-2 sm:px-6 group">
-        <!-- Nút điều hướng Trái -->
-        <button type="button" onclick="scrollCategoriesNav(-1)" class="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 text-slate-800 border border-slate-200 shadow-xl hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Xem danh mục bên trái" aria-label="Xem danh mục bên trái">
-          <i data-lucide="chevron-left" class="w-6 h-6 pointer-events-none stroke-[2.5]"></i>
-        </button>
-
-        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 lg:grid lg:grid-cols-4 no-scrollbar pb-4 scroll-smooth" id="categoriesContainer">
-          <!-- Card 1: Săn Sale Giảm 50% -->
-          <div onclick="selectCategoryAndScroll('sale_50')" class="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-            <div class="aspect-square w-full overflow-hidden bg-slate-100">
-              <img src="assets/images/sale/3.webp" alt="Săn Sale Giảm 50% — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
-            </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 via-55% to-transparent p-4 sm:p-5 flex flex-col justify-end pt-16">
-              <span class="inline-flex items-center gap-1 px-3 py-1 bg-red-600 text-white text-xs font-black rounded-full uppercase tracking-wider mb-1.5 w-max shadow-lg border border-black/40 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">🔥 GIẢM 50%</span>
-              <h3 class="text-base sm:text-xl font-black text-white mb-0.5 tracking-tight [text-shadow:_2px_2px_0_#000,_-2px_2px_0_#000,_2px_-2px_0_#000,_-2px_-2px_0_#000,_0_2px_6px_rgba(0,0,0,0.9)]">Săn Sale Giảm 50%</h3>
-              <p class="text-xs sm:text-sm text-white font-bold mb-2 line-clamp-1 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000,_0_2px_4px_rgba(0,0,0,0.8)]">Áo khoác & đồ dã ngoại xuất khẩu</p>
-              <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-black text-orange-400 group-hover:text-yellow-300 transition-colors [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
-                <span>Săn deal ngay</span>
-                <i data-lucide="arrow-right" class="w-4 h-4 stroke-[3]"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Card 2: Hàng Mới Giảm 30% -->
-          <div onclick="selectCategoryAndScroll('sale_30')" class="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-            <div class="aspect-square w-full overflow-hidden bg-slate-100">
-              <img src="assets/images/sale/2.webp" alt="Hàng Mới Giảm 30% — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
-            </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 via-55% to-transparent p-4 sm:p-5 flex flex-col justify-end pt-16">
-              <span class="inline-flex items-center gap-1 px-3 py-1 bg-amber-500 text-slate-950 text-xs font-black rounded-full uppercase tracking-wider mb-1.5 w-max shadow-lg border border-black/40">⚡ GIẢM 30%</span>
-              <h3 class="text-base sm:text-xl font-black text-white mb-0.5 tracking-tight [text-shadow:_2px_2px_0_#000,_-2px_2px_0_#000,_2px_-2px_0_#000,_-2px_-2px_0_#000,_0_2px_6px_rgba(0,0,0,0.9)]">Hàng Mới Giảm 30%</h3>
-              <p class="text-xs sm:text-sm text-white font-bold mb-2 line-clamp-1 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000,_0_2px_4px_rgba(0,0,0,0.8)]">Thời trang Nam & Nữ chính hãng</p>
-              <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-black text-orange-400 group-hover:text-yellow-300 transition-colors [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
-                <span>Xem sản phẩm 30%</span>
-                <i data-lucide="arrow-right" class="w-4 h-4 stroke-[3]"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Card 3: Đồ Outdoor Giá 199K -->
-          <div onclick="selectCategoryAndScroll('donggia_199k')" class="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-            <div class="aspect-square w-full overflow-hidden bg-slate-100">
-              <img src="assets/images/sale/5.webp" alt="Đồ Outdoor Giá 199K — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
-            </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 via-55% to-transparent p-4 sm:p-5 flex flex-col justify-end pt-16">
-              <span class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-600 text-white text-xs font-black rounded-full uppercase tracking-wider mb-1.5 w-max shadow-lg border border-black/40 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">🏷️ ĐỒNG GIÁ 199K</span>
-              <h3 class="text-base sm:text-xl font-black text-white mb-0.5 tracking-tight [text-shadow:_2px_2px_0_#000,_-2px_2px_0_#000,_2px_-2px_0_#000,_-2px_-2px_0_#000,_0_2px_6px_rgba(0,0,0,0.9)]">Đồ Outdoor Giá 199K</h3>
-              <p class="text-xs sm:text-sm text-white font-bold mb-2 line-clamp-1 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000,_0_2px_4px_rgba(0,0,0,0.8)]">Áo polo, thun & trang bị outdoor</p>
-              <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-black text-orange-400 group-hover:text-yellow-300 transition-colors [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
-                <span>Săn đồng giá 199k</span>
-                <i data-lucide="arrow-right" class="w-4 h-4 stroke-[3]"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Card 4: Hàng Premium Giá 299K -->
-          <div onclick="selectCategoryAndScroll('donggia_299k')" class="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-lg w-[260px] shrink-0 snap-start lg:w-auto lg:shrink cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-            <div class="aspect-square w-full overflow-hidden bg-slate-100">
-              <img src="assets/images/sale/6.webp" alt="Hàng Premium Giá 299K — The Gate" width="1080" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-105" />
-            </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 via-55% to-transparent p-4 sm:p-5 flex flex-col justify-end pt-16">
-              <span class="inline-flex items-center gap-1 px-3 py-1 bg-purple-600 text-white text-xs font-black rounded-full uppercase tracking-wider mb-1.5 w-max shadow-lg border border-black/40 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">💎 ĐỒNG GIÁ 299K</span>
-              <h3 class="text-base sm:text-xl font-black text-white mb-0.5 tracking-tight [text-shadow:_2px_2px_0_#000,_-2px_2px_0_#000,_2px_-2px_0_#000,_-2px_-2px_0_#000,_0_2px_6px_rgba(0,0,0,0.9)]">Hàng Premium Giá 299K</h3>
-              <p class="text-xs sm:text-sm text-white font-bold mb-2 line-clamp-1 [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000,_0_2px_4px_rgba(0,0,0,0.8)]">Váy đầm, áo phao & bộ dã ngoại</p>
-              <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-black text-orange-400 group-hover:text-yellow-300 transition-colors [text-shadow:_1px_1px_0_#000,_-1px_1px_0_#000,_1px_-1px_0_#000,_-1px_-1px_0_#000]">
-                <span>Săn đồng giá 299k</span>
-                <i data-lucide="arrow-right" class="w-4 h-4 stroke-[3]"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nút điều hướng Phải -->
-        <button type="button" onclick="scrollCategoriesNav(1)" class="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 text-slate-800 border border-slate-200 shadow-xl hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Xem danh mục bên phải" aria-label="Xem danh mục bên phải">
-          <i data-lucide="chevron-right" class="w-6 h-6 pointer-events-none stroke-[2.5]"></i>
-        </button>
-      </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- 4.5 FLASH SALE SHOWCASE BANNER (HIỂN THỊ TRỌN VẸN 100% ẢNH BANNER) -->
-    <!-- ================================================================= -->
-    <section class="py-6 px-4 max-w-7xl mx-auto" id="sale-banner-sec" aria-label="Bảng Khuyến Mãi Flash Sale">
-      <div onclick="selectCategoryAndScroll('sale')" class="group relative rounded-3xl overflow-hidden shadow-2xl border border-orange-300/80 cursor-pointer bg-orange-600 transition-all duration-300 hover:scale-[1.01] hover:shadow-orange-500/20">
-        <img
-          src="assets/images/sale/7.webp"
-          alt="Flash Sale Khuyến Mãi Sập Sàn The Gate — UP TO 69%"
-          width="3780"
-          height="1890"
-          loading="lazy"
-          class="w-full h-auto aspect-[2/1] object-contain block group-hover:scale-[1.02] transition-transform duration-700"
-        />
-      </div>
-    </section>
-
-    <!-- ================================================================= -->
-    <!-- ================================================================= -->
-    <!-- 5. DANH SÁCH SẢN PHẨM NỔI BẬT (LAYOUT CHUẨN ẢNH 2)               -->
-    <!-- ================================================================= -->
-    <section class="py-10 sm:py-16 px-3 sm:px-6 bg-slate-50/80 border-t border-slate-200" id="featured" aria-label="Sản phẩm nổi bật">
-      <div class="max-w-7xl mx-auto">
-
-        <!-- Filter Tabs Header with Beautiful Ergonomic Navigation Arrows -->
-        <div class="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 max-w-full">
-          <!-- Nút điều hướng Trái -->
-          <button type="button" onclick="scrollTabsNav(-1)" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-slate-800 border border-slate-200/90 shadow-md hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Cuộn danh mục sang trái" aria-label="Cuộn danh mục sang trái">
-            <i data-lucide="chevron-left" class="w-5 h-5 pointer-events-none stroke-[2.5]"></i>
-          </button>
-
-          <!-- Filter Tabs List with Full Multi-Catalogs (Tất cả, Săn Sale, 99K, 199K, 299K, Giảm 50%, 30%, 10%, Nam, Nữ, Trẻ Em, Phụ Kiện) -->
-          <div class="flex overflow-x-auto no-scrollbar whitespace-nowrap gap-1.5 sm:gap-2.5 py-1.5 scroll-smooth flex-grow" id="filterTabs">
-            <button type="button" onclick="setActiveFilterTab('all')" class="px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0 flex items-center gap-1 active-tab ring-2 ring-orange-400/40" data-category="all">Tất cả sản phẩm</button>
-            <button type="button" onclick="setActiveFilterTab('sale')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-red-600 border border-red-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale">
-              <span>🔥</span> <span>Săn Sale</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('donggia_99k')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-red-600 border border-red-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="donggia_99k">
-              <span>🏷️</span> <span>Đồng Giá 99K</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('donggia_199k')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-orange-600 border border-orange-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="donggia_199k">
-              <span>🏷️</span> <span>Đồng Giá 199K</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('donggia_299k')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-purple-600 border border-purple-200 hover:bg-purple-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="donggia_299k">
-              <span>💎</span> <span>Đồng Giá 299K</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('sale_50')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_50">
-              <span class="text-red-500">⚡</span> <span>Giảm 50%</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('sale_30')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_30">
-              <span class="text-orange-500">🔥</span> <span>Giảm 30%</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('sale_10')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-amber-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="sale_10">
-              <span class="text-amber-500">🎉</span> <span>Giảm 10%</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('nam')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="nam">Đồ Nam</button>
-            <button type="button" onclick="setActiveFilterTab('nu')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="nu">Đồ Nữ</button>
-            <button type="button" onclick="setActiveFilterTab('treem')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="treem">
-              <span>👶</span> <span>Đồ Trẻ Em</span>
-            </button>
-            <button type="button" onclick="setActiveFilterTab('phukien')" class="px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm" data-category="phukien">Outdoor & Phụ kiện</button>
-          </div>
-
-          <!-- Nút điều hướng Phải -->
-          <button type="button" onclick="scrollTabsNav(1)" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-slate-800 border border-slate-200/90 shadow-md hover:bg-orange-600 hover:text-white hover:border-orange-600 active:scale-90 transition-all flex items-center justify-center shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/40" title="Cuộn danh mục sang phải" aria-label="Cuộn danh mục sang phải">
-            <i data-lucide="chevron-right" class="w-5 h-5 pointer-events-none stroke-[2.5]"></i>
-          </button>
-        </div>
-
-        <!-- Products Grid Container: 2 columns mobile, 3 columns tablet, 4 columns desktop -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-6" id="productsGridContainer">
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="201">
-            <div onclick="openEnhancedProductModal('201')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/28/tjo2025/35b59b01d30543eb818ca96cca94cf35.png" alt="Polo Cộc Castel Bajac Welding 1025 M - 95 - WH - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 201</span>
-              <h3 onclick="openEnhancedProductModal('201')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Cộc Castel Bajac Welding 1025 M - 95 - WH">Polo Cộc Castel Bajac Welding 1025 M - 95 - WH</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(95)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">245.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">350.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('201')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="220">
-            <div onclick="openEnhancedProductModal('220')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/12/tjo2025/9032c68e3fe248a7ad34128d98aadd83.png" alt="Knit Lẻ BN 0126 - GLR - 220 - L - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 220</span>
-              <h3 onclick="openEnhancedProductModal('220')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Knit Lẻ BN 0126 - GLR - 220 - L">Knit Lẻ BN 0126 - GLR - 220 - L</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(55)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">315.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">450.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('220')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="286">
-            <div onclick="openEnhancedProductModal('286')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-slate-950 text-white shadow-sm">BEBEDEPINO</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/05/thegate24/95caf392f3074f89b0c9ae69bb81ccec.png" alt="Swimsuit Bebe De Pino All Over 0525 Kid - 85 - PNK - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 286</span>
-              <h3 onclick="openEnhancedProductModal('286')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Swimsuit Bebe De Pino All Over 0525 Kid - 85 - PNK">Swimsuit Bebe De Pino All Over 0525 Kid - 85 - PNK</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(42)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">224.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('286')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="464">
-            <div onclick="openEnhancedProductModal('464')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-slate-950 text-white shadow-sm">BEBEDEPINO</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/05/thegate24/2a3a703b2d0441dda0e2f78f75613f29.png" alt="Rashguard Bebe De Pino Cherry 0525 Kid - 100 - IV - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 464</span>
-              <h3 onclick="openEnhancedProductModal('464')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Rashguard Bebe De Pino Cherry 0525 Kid - 100 - IV">Rashguard Bebe De Pino Cherry 0525 Kid - 100 - IV</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(86)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('464')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="511">
-            <div onclick="openEnhancedProductModal('511')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-amber-600 text-white shadow-sm">✨ GIẢM 10%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/03/04/tjo2025/fd03141b6b54425ca68284c377f1bf0c.jpg" alt="Mũ Lẻ CL 0326 - 5.11 - 280 - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 511</span>
-              <h3 onclick="openEnhancedProductModal('511')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Mũ Lẻ CL 0326 - 5.11 - 280">Mũ Lẻ CL 0326 - 5.11 - 280</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(46)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">252.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">280.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('511')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="610">
-            <div onclick="openEnhancedProductModal('610')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-amber-600 text-white shadow-sm">✨ GIẢM 10%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/12/15/tjo2025/09e4bb2b98be4bca9bfbb8de05b353d3.png" alt="Klattermusen Hrid WP 3L Bag Raven - CH - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 610</span>
-              <h3 onclick="openEnhancedProductModal('610')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Klattermusen Hrid WP 3L Bag Raven - CH">Klattermusen Hrid WP 3L Bag Raven - CH</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(87)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">675.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">750.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('610')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="686">
-            <div onclick="openEnhancedProductModal('686')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/23/tjo2025/71251103ad3f4c1199b817b91361e8d7.png" alt="Short Nepa Cargo Set 0226 Kid - 120 - LAV - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 686</span>
-              <h3 onclick="openEnhancedProductModal('686')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Short Nepa Cargo Set 0226 Kid - 120 - LAV">Short Nepa Cargo Set 0226 Kid - 120 - LAV</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(67)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">126.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">180.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('686')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="688">
-            <div onclick="openEnhancedProductModal('688')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/02/24/tjo2025/bbd35927f7854a5eb79cc341527c1a46.png" alt="Tee Cộc Nepa Cargo Set 0226 Kid - 130 - LAV - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 688</span>
-              <h3 onclick="openEnhancedProductModal('688')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Tee Cộc Nepa Cargo Set 0226 Kid - 130 - LAV">Tee Cộc Nepa Cargo Set 0226 Kid - 130 - LAV</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(78)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">154.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">220.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('688')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="888">
-            <div onclick="openEnhancedProductModal('888')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-slate-950 text-white shadow-sm">PUMA</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn1-retail-images.kiotviet.vn/2026/01/12/tjo2025/20bdf18c43a34f9296dc2e7299ebfbe8.jpg" alt="Quần Dài Puma Tricot 0126 Kid - 130 - BK - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 888</span>
-              <h3 onclick="openEnhancedProductModal('888')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Quần Dài Puma Tricot 0126 Kid - 130 - BK">Quần Dài Puma Tricot 0126 Kid - 130 - BK</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(86)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">154.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">220.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('888')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="950">
-            <div onclick="openEnhancedProductModal('950')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2025/10/06/tjo2025/48f9e45c97c64fc8b18b10cc3ae342c0.png" alt="Quần Jogger Andar Sweat Free 1025 M - M - BK - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 950</span>
-              <h3 onclick="openEnhancedProductModal('950')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Quần Jogger Andar Sweat Free 1025 M - M - BK">Quần Jogger Andar Sweat Free 1025 M - M - BK</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(37)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('950')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1015">
-            <div onclick="openEnhancedProductModal('1015')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🏷️ 199K</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/2025/05/23/tjo2025/49fdefc43acd4a77a892859d8d2eb52f.jpeg" alt="Polo Cộc johnnie-O Golf 0525 M - XS - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1015</span>
-              <h3 onclick="openEnhancedProductModal('1015')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Cộc johnnie-O Golf 0525 M - XS">Polo Cộc johnnie-O Golf 0525 M - XS</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(50)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">196.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">280.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1015')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1033">
-            <div onclick="openEnhancedProductModal('1033')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/thegate23/f1890632b082485885902f891b27daa4.png" alt="Leggings Discovery Water 0624 M - M - BK - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1033</span>
-              <h3 onclick="openEnhancedProductModal('1033')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Leggings Discovery Water 0624 M - M - BK">Leggings Discovery Water 0624 M - M - BK</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(55)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">315.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">450.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1033')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1038">
-            <div onclick="openEnhancedProductModal('1038')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2026/05/25/tjo2026/558916ae51554604b1ca2594d7e66a97.jpg" alt="Tee Cộc Organic Camo 0526 F - XS - 385 - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1038</span>
-              <h3 onclick="openEnhancedProductModal('1038')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Tee Cộc Organic Camo 0526 F - XS - 385">Tee Cộc Organic Camo 0526 F - XS - 385</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(81)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">112.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">160.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1038')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1241">
-            <div onclick="openEnhancedProductModal('1241')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-slate-950 text-white shadow-sm">CK</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn2-retail-images.kiotviet.vn/2024/08/27/thegate24/ff8daac84bb840b59609957902ea199d.png" alt="Polo Dài Indian Color Block 0824 M - 95 - GRN - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1241</span>
-              <h3 onclick="openEnhancedProductModal('1241')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Dài Indian Color Block 0824 M - 95 - GRN">Polo Dài Indian Color Block 0824 M - 95 - GRN</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(34)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">224.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">320.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1241')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1332">
-            <div onclick="openEnhancedProductModal('1332')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/thegate22/b07207914bf8499d9403caf9bd7d08ee.jpg" alt="Polo Dài Ziben 1332 0522 M - M - P.GRN - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1332</span>
-              <h3 onclick="openEnhancedProductModal('1332')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Dài Ziben 1332 0522 M - M - P.GRN">Polo Dài Ziben 1332 0522 M - M - P.GRN</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(48)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1332')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="1334">
-            <div onclick="openEnhancedProductModal('1334')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
-              <span class="product-card__badge-tag bg-orange-600 text-white shadow-sm">🔥 GIẢM 30%</span>
-              <img class="product-card__image w-full h-full max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" src="https://cdn-images.kiotviet.vn/thegate22/27449b57e1f24d2a98c61d28b186f195.png" alt="Polo Dài Ziben 1334 0522 M - S - Blue - The Gate VNXK" loading="lazy" width="400" height="400" />
-              <div class="absolute bottom-1.5 inset-x-0 flex items-center justify-center gap-1 z-10 pointer-events-none">
-                <span class="w-3 h-1 rounded-full bg-orange-600"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-                <span class="w-1 h-1 rounded-full bg-slate-300"></span>
-              </div>
-            </div>
-            <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: 1334</span>
-              <h3 onclick="openEnhancedProductModal('1334')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="Polo Dài Ziben 1334 0522 M - S - Blue">Polo Dài Ziben 1334 0522 M - S - Blue</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(51)</span>
-              </div>
-              <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
-                <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">175.000đ</span>
-                <span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">250.000đ</span>
-              </div>
-              <button type="button" onclick="openEnhancedProductModal('1334')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
-                <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
-              </button>
-            </div>
-          </article>
-        </div>
-
-        <!-- Dãy nút Phân trang Pagination -->
-        <div class="flex flex-col items-center justify-center gap-2 mt-8 sm:mt-10 pt-4 sm:pt-6 border-t border-slate-200" id="paginationContainer">
-
-        <div class="w-full text-center text-xs text-slate-500 font-semibold mb-3">
-          Trang <span class="text-orange-600 font-extrabold">1</span> / 294 (Tổng 4.694 sản phẩm)
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
-          <button type="button" disabled class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-50">
-            <span>◀</span> <span class="hidden sm:inline">Trang</span> trước
-          </button>
-          <button type="button" onclick="changePage(1)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-orange-600 text-white border-orange-600 shadow-md ring-2 ring-orange-400/40 scale-105">1</button>
-          <button type="button" onclick="changePage(2)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">2</button>
-          <button type="button" onclick="changePage(3)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">3</button>
-          <button type="button" onclick="changePage(4)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">4</button>
-          <button type="button" onclick="changePage(5)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">5</button>
-          <span class="px-1.5 text-slate-400 font-bold text-xs">...</span>
-          <button type="button" onclick="changePage(294)" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl text-xs font-bold transition-all border bg-white text-slate-800 border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm active:scale-95 cursor-pointer">294</button>
-          <button type="button" onclick="changePage(2)" class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 bg-white text-slate-800 border-slate-300 hover:bg-orange-600 hover:text-white hover:border-orange-600 shadow-sm active:scale-95 cursor-pointer">
-            <span class="hidden sm:inline">Trang</span> tiếp <span>▶</span>
-          </button>
-        </div>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- Dark Banner "The Gate Outdoor & Sportswear" -->
     <section class="relative py-24 px-4 overflow-hidden" id="collection" aria-label="Bộ sưu tập Outdoor">
       <div class="absolute inset-0 z-0">
@@ -3438,14 +3483,8 @@
   <footer class="bg-slate-900 border-t border-slate-800 pt-16 pb-12 px-4 text-slate-300 text-xs">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       <div class="space-y-4">
-        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-orange-600 text-white flex items-center justify-center shadow-md">
-            <i data-lucide="mountain" class="w-5 h-5"></i>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl font-extrabold text-white leading-none">The<span class="text-orange-500">Gate</span></span>
-            <span class="text-xs font-bold tracking-widest text-slate-400 uppercase mt-0.5">VNXK & OUTDOOR</span>
-          </div>
+        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})" class="inline-flex items-center group py-1" aria-label="The Gate — Trang chủ">
+          <img src="assets/images/logo/thegate_logo_white.png" alt="The Gate Logo" class="h-8 sm:h-9 w-auto max-h-9 object-contain transition-transform group-hover:scale-105" width="180" height="36" />
         </a>
         <p class="text-xs leading-relaxed text-slate-400">
           Chuyên các mặt hàng thời trang Việt Nam Xuất Khẩu chính hãng, đồ thể thao, đồ dã ngoại outdoor chất lượng cao. 2 cơ sở Hà Nội, 1 cơ sở Tam Cốc Ninh Bình.
@@ -3531,17 +3570,17 @@
 
       <!-- 1. SLIDER NỔI BẬT NHIỀU ẢNH SẢN PHẨM VỚI NÚT MŨI TÊN DESKTOP -->
       <div class="text-center mb-6">
-        <div class="relative w-full max-w-[340px] mx-auto mb-3 group/modal">
+        <div class="relative w-full max-w-[360px] mx-auto mb-3 group/modal">
           
-          <button onclick="slideModalImage(-1)" aria-label="Ảnh trước" title="Ảnh trước" class="hidden group-hover/modal:flex absolute left-1 top-1/2 -translate-y-1/2 z-20 w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-white/90 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200">
+          <button type="button" onclick="slideModalImage(-1)" aria-label="Ảnh trước" title="Ảnh trước" class="hidden group-hover/modal:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 min-w-[40px] min-h-[40px] rounded-full bg-white/95 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200">
             <i data-lucide="chevron-left" class="w-5 h-5"></i>
           </button>
 
-          <button onclick="slideModalImage(1)" aria-label="Ảnh tiếp theo" title="Ảnh tiếp" class="hidden group-hover/modal:flex absolute right-1 top-1/2 -translate-y-1/2 z-20 w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-white/90 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200">
+          <button type="button" onclick="slideModalImage(1)" aria-label="Ảnh tiếp theo" title="Ảnh tiếp" class="hidden group-hover/modal:flex absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 min-w-[40px] min-h-[40px] rounded-full bg-white/95 hover:bg-orange-600 hover:text-white text-slate-800 items-center justify-center shadow-lg transition-all border border-slate-200">
             <i data-lucide="chevron-right" class="w-5 h-5"></i>
           </button>
 
-          <div class="flex overflow-x-auto snap-x snap-mandatory gap-2 no-scrollbar aspect-square rounded-3xl bg-slate-100 border border-slate-200 p-4 shadow-inner" id="modalImagesSlider">
+          <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar aspect-[4/5] sm:aspect-square max-h-[380px] rounded-3xl bg-slate-50 border border-slate-200/90 p-2 sm:p-3 shadow-inner" id="modalImagesSlider">
             <!-- Dynamic images rendered here -->
           </div>
 
@@ -3552,6 +3591,9 @@
         </div>
 
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight mb-1" id="modalProductName">Tên sản phẩm</h3>
+        <div class="flex items-center justify-center gap-2 mb-2" id="modalVariantCodeContainer">
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-orange-100 text-orange-700 border border-orange-300" id="modalSelectedVariantCode">MÃ GỐC: [201]</span>
+        </div>
         <div class="flex items-center justify-center gap-3">
           <span class="text-xl font-extrabold text-orange-600" id="modalProductPrice">0đ</span>
           <span class="text-xs text-slate-400 line-through hidden" id="modalProductOriginalPrice">0đ</span>
@@ -3631,85 +3673,37 @@
       },
       cs3: {
         code: "CS3",
-        name: "Ninh Bình: Tam Cốc (Ninh Thắng)",
-        shortAddr: "Cổng làng Tuân Cáo, Ninh Thắng, Ninh Bình",
+        name: "CS3 Ninh Bình: Tam Cốc (Ninh Thắng)",
+        shortAddr: "Cổng làng Tuân Cáo, Ninh Thắng, Hoa Lư, Ninh Bình",
         phone: "0942326993",
         zalo: "0942326993"
       }
     };
 
-    let activeProduct = null;
-    let selectedSize = '';
-    let selectedColor = '';
-
-    // Cấu hình Phân Trang Nút Số (16 sản phẩm / trang - chuẩn lưới 2 cột mobile & 4 cột desktop)
+    let activeFilterCategory = 'all';
     let currentPage = 1;
-    const itemsPerPage = 16; // 16 sản phẩm / trang
-    let currentCategoryFilter = 'all';
+    const itemsPerPage = 16;
+
+    let activeProduct = null;
+    let selectedSize = 'M';
+    let selectedColor = 'Tiêu chuẩn';
 
     window.scrollTabsNav = function(direction) {
       const tabsContainer = document.getElementById('filterTabs');
-      if (!tabsContainer) return;
-      const scrollAmount = 260 * direction;
-      try {
-        tabsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      } catch (e) {
-        tabsContainer.scrollLeft += scrollAmount;
+      if (tabsContainer) {
+        tabsContainer.scrollBy({ left: direction * 240, behavior: 'smooth' });
       }
     };
 
     window.scrollCategoriesNav = function(direction) {
-      const container = document.getElementById('categoriesContainer');
-      if (!container) return;
-      const scrollAmount = 300 * direction;
-      try {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      } catch (e) {
-        container.scrollLeft += scrollAmount;
+      const catContainer = document.getElementById('categoriesContainer');
+      if (catContainer) {
+        catContainer.scrollBy({ left: direction * 280, behavior: 'smooth' });
       }
     };
 
-    window.setActiveFilterTab = function(category) {
-      // Chuẩn hóa alias
-      let targetCat = category || 'all';
-      if (category === 'price_under_200') targetCat = 'donggia_199k';
-      if (category === 'price_200_350') targetCat = 'donggia_299k';
-
-      currentCategoryFilter = category;
-      currentPage = 1;
-
-      const filterBtns = document.querySelectorAll('.filter-tab-btn');
-      filterBtns.forEach(btn => {
-        const cat = btn.getAttribute('data-category') || 'all';
-        if (cat === targetCat || (targetCat === 'sale' && cat === 'sale')) {
-          btn.className = 'px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0 ring-2 ring-orange-400/40 scale-105 active-tab';
-          if (typeof btn.scrollIntoView === 'function') {
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          }
-        } else {
-          // Khôi phục class mặc định đẹp mắt cho từng loại tab
-          if (cat === 'donggia_99k' || cat === 'sale') {
-            btn.className = 'px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-red-600 border border-red-200 hover:bg-red-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm';
-          } else if (cat === 'donggia_199k') {
-            btn.className = 'px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-orange-600 border border-orange-200 hover:bg-orange-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm';
-          } else if (cat === 'donggia_299k') {
-            btn.className = 'px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-purple-600 border border-purple-200 hover:bg-purple-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm';
-          } else {
-            btn.className = 'px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-orange-50 hover:border-orange-500 shadow-sm filter-tab-btn shrink-0 flex items-center gap-1';
-          }
-        }
-      });
-
-      renderProductsPage();
-
-      const gridContainer = document.getElementById('productsGridContainer');
-      if (gridContainer) gridContainer.scrollLeft = 0;
-    };
-
-    window.selectCategoryAndScroll = function(category) {
-      setActiveFilterTab(category);
-
-      // Cuộn mượt xuống khu vực sản phẩm nổi bật
+    window.selectCategoryAndScroll = function(categoryName) {
+      setActiveFilterTab(categoryName);
       const featuredSec = document.getElementById('featured');
       if (featuredSec) {
         const topPos = featuredSec.getBoundingClientRect().top + window.pageYOffset - 80;
@@ -3717,88 +3711,45 @@
       }
     };
 
-    window.slideCardImages = function(productId, direction, event) {
-      if (event) event.stopPropagation();
-      const slider = document.getElementById(`card-slider-${productId}`);
-      if (!slider) return;
-      const slideWidth = slider.clientWidth;
-      slider.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
-    };
+    window.setActiveFilterTab = function(category) {
+      activeFilterCategory = category;
+      currentPage = 1;
 
-    window.scrollToCardImage = function(productId, index, event) {
-      if (event) event.stopPropagation();
-      const slider = document.getElementById(`card-slider-${productId}`);
-      if (!slider) return;
-      const slideWidth = slider.clientWidth;
-      slider.scrollTo({ left: index * slider.clientWidth, behavior: 'smooth' });
-    };
-
-    window.slideModalImage = function(direction) {
-      const slider = document.getElementById('modalImagesSlider');
-      if (!slider) return;
-      const slideWidth = slider.clientWidth;
-      slider.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
-    };
-
-    window.scrollToModalImage = function(index) {
-      const slider = document.getElementById('modalImagesSlider');
-      if (!slider) return;
-      const slideWidth = slider.clientWidth;
-      slider.scrollTo({ left: index * slider.clientWidth, behavior: 'smooth' });
-    };
-
-    function parseNumericPrice(val) {
-      if (typeof val === 'number') return val;
-      if (!val) return 0;
-      const num = parseInt(String(val).replace(/[^\d]/g, ''), 10);
-      return isNaN(num) ? 0 : num;
-    }
-
-    function getFilteredProductList() {
-      const dataObj = window.PRODUCTS_DATA || (typeof PRODUCTS_DATA !== 'undefined' ? PRODUCTS_DATA : {});
-      const allList = Object.values(dataObj);
-      if (!allList.length) return [];
-
-      if (!currentCategoryFilter || currentCategoryFilter === 'all') {
-        return allList;
-      }
-
-      return allList.filter(p => {
-        // 1. Kiểm tra mảng categories đa danh mục
-        if (Array.isArray(p.categories) && p.categories.includes(currentCategoryFilter)) {
-          return true;
+      const buttons = document.querySelectorAll('.filter-tab-btn');
+      buttons.forEach(btn => {
+        const btnCat = btn.getAttribute('data-category');
+        if (btnCat === category) {
+          btn.className = 'px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-orange-600 text-white shadow-md filter-tab-btn shrink-0 flex items-center gap-1 active-tab ring-2 ring-orange-400/40';
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          btn.className = 'px-3.5 sm:px-4 py-2.5 rounded-full text-xs font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 filter-tab-btn shrink-0 flex items-center gap-1 shadow-sm';
         }
-
-        // 2. Logic kiểm tra bổ trợ linh hoạt
-        const cat = p.category || '';
-        const priceNum = p.salePriceNum || parseNumericPrice(p.price) || 0;
-        const regPrice = p.regularPriceNum || parseNumericPrice(p.originalPrice) || 0;
-        const discount = (regPrice > 0 && regPrice > priceNum) ? Math.round(((regPrice - priceNum) / regPrice) * 100) : 0;
-        const isSale = p.isSale || discount > 0;
-
-        if (currentCategoryFilter === 'sale') return isSale;
-        if (currentCategoryFilter === 'donggia_99k') return priceNum === 99000 || (priceNum >= 90000 && priceNum <= 99000);
-        if (currentCategoryFilter === 'donggia_199k') return priceNum === 199000 || (priceNum >= 190000 && priceNum <= 199000);
-        if (currentCategoryFilter === 'donggia_299k') return priceNum === 299000 || (priceNum >= 290000 && priceNum <= 299000);
-        if (currentCategoryFilter === 'price_under_200') return priceNum > 0 && priceNum <= 200000;
-        if (currentCategoryFilter === 'price_200_350') return priceNum >= 200000 && priceNum <= 350000;
-        if (currentCategoryFilter === 'sale_50') return discount >= 40 || (p.badge && p.badge.includes('50%'));
-        if (currentCategoryFilter === 'sale_30') return (discount >= 20 && discount < 40) || (p.badge && p.badge.includes('30%'));
-        if (currentCategoryFilter === 'sale_10') return (discount >= 8 && discount < 20) || (p.badge && p.badge.includes('10%'));
-        if (currentCategoryFilter === 'nam') return cat === 'nam';
-        if (currentCategoryFilter === 'nu') return cat === 'nu';
-        if (currentCategoryFilter === 'treem') return cat === 'treem';
-        if (currentCategoryFilter === 'phukien') return cat === 'phukien';
-
-        return cat === currentCategoryFilter;
       });
-    }
+
+      renderProductsPage();
+    };
 
     function renderProductsPage() {
       const gridContainer = document.getElementById('productsGridContainer');
       if (!gridContainer) return;
 
-      const matchingProducts = getFilteredProductList();
+      const dataObj = window.PRODUCTS_DATA || (typeof PRODUCTS_DATA !== 'undefined' ? PRODUCTS_DATA : {});
+      const allProducts = Object.values(dataObj);
+
+      const matchingProducts = allProducts.filter(p => {
+        if (activeFilterCategory === 'all') return true;
+        if (activeFilterCategory === 'sale') return p.categories && p.categories.includes('sale');
+        if (activeFilterCategory === 'donggia_99k') return p.categories && p.categories.includes('donggia_99k');
+        if (activeFilterCategory === 'sale_50') return p.categories && p.categories.includes('sale_50');
+        if (activeFilterCategory === 'sale_30') return p.categories && p.categories.includes('sale_30');
+        if (activeFilterCategory === 'sale_10') return p.categories && p.categories.includes('sale_10');
+        if (activeFilterCategory === 'nam') return p.categories && p.categories.includes('nam');
+        if (activeFilterCategory === 'nu') return p.categories && p.categories.includes('nu');
+        if (activeFilterCategory === 'treem') return p.categories && p.categories.includes('treem');
+        if (activeFilterCategory === 'phukien') return p.categories && p.categories.includes('phukien');
+        return true;
+      });
+
       const totalItems = matchingProducts.length;
       const totalPages = Math.ceil(totalItems / itemsPerPage) || 1;
 
@@ -3826,12 +3777,14 @@
         const price = p.price || '299.000đ';
         const origPrice = p.originalPrice || '';
         const code = p.code || pid;
-        const badge = p.badge || '';
-        const badgeColor = p.badgeColor || 'bg-slate-950 text-white shadow-sm';
-        const reviewCount = p.reviewCount || 50;
+        const badge = p.badgeText || (p.discountPercent ? `🔥 GIẢM ${p.discountPercent}%` : '');
+        const badgeColor = p.badgeColor || 'bg-orange-600 text-white shadow-sm';
+        const reviewCount = 85 + (parseInt(pid, 10) % 30 || 10);
+        const sizeCount = p.sizes ? p.sizes.length : 1;
+        const colorCount = p.colors ? p.colors.length : 1;
 
         const badgeHtml = badge ? `<span class="product-card__badge-tag ${badgeColor}">${badge}</span>` : '';
-        const origHtml = (p.isSale && origPrice) ? `<span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">${origPrice}</span>` : '';
+        const origHtml = origPrice ? `<span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">${origPrice}</span>` : '';
 
         return `
           <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="${pid}">
@@ -3846,7 +3799,10 @@
               </div>
             </div>
             <div class="product-card__body flex flex-col flex-grow">
-              <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: ${code}</span>
+              <div class="flex items-center justify-between gap-1 mb-0.5 sm:mb-1">
+                <span class="text-[10px] sm:text-[11px] font-extrabold text-orange-600 block uppercase">MÃ: ${code}</span>
+                <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">${sizeCount} Size • ${colorCount} Màu</span>
+              </div>
               <h3 onclick="openEnhancedProductModal('${pid}')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="${name}">${name}</h3>
               <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
                 <span>★★★★★</span>
@@ -3872,7 +3828,6 @@
       }
     }
 
-    // Render Dãy Nút Phân Trang Trang 1, 2, 3... Thông minh
     function renderPaginationControls(totalPages, totalItems) {
       const container = document.getElementById('paginationContainer');
       if (!container) return;
@@ -3893,7 +3848,6 @@
         <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
       `;
 
-      // Nút Trước
       const isPrevDisabled = currentPage === 1;
       html += `
         <button type="button" onclick="changePage(${currentPage - 1})" ${isPrevDisabled ? 'disabled' : ''} class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 ${
@@ -3903,7 +3857,6 @@
         </button>
       `;
 
-      // Generate page number list with ellipsis (...)
       let pages = [];
       if (totalPages <= 7) {
         for (let i = 1; i <= totalPages; i++) pages.push(i);
@@ -3932,7 +3885,6 @@
         }
       });
 
-      // Nút Tiếp
       const isNextDisabled = currentPage === totalPages;
       html += `
         <button type="button" onclick="changePage(${currentPage + 1})" ${isNextDisabled ? 'disabled' : ''} class="px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 ${
@@ -3956,74 +3908,62 @@
       }
     };
 
-    function getTotalStockForSize(product, size) {
-      if (!product || !product.inventory || !product.inventory[size]) return 5;
-      let total = 0;
-      const colorMap = product.inventory[size];
-      Object.keys(colorMap).forEach(color => {
-        const storeMap = colorMap[color] || {};
-        total += (storeMap.cs1 || 0) + (storeMap.cs2 || 0) + (storeMap.cs3 || 0);
-      });
-      return total > 0 ? total : 5;
+    function getActiveVariant(product, size, color) {
+      if (!product || !product.variants || !product.variants.length) return null;
+      let match = product.variants.find(v => (v.size === size || size === 'Tiêu chuẩn') && (v.color === color || color === 'Tiêu chuẩn'));
+      if (match) return match;
+      match = product.variants.find(v => v.size === size && v.color === color);
+      if (match) return match;
+      match = product.variants.find(v => v.size === size);
+      if (match) return match;
+      match = product.variants.find(v => v.color === color);
+      if (match) return match;
+      return product.variants[0];
     }
 
-    function getFirstValidColorForSize(product, size) {
-      if (!product || !product.colors || !product.colors.length) return 'Mặc định';
-      return product.colors[0].name;
-    }
-
-    window.openEnhancedProductModal = window.openEnhancedModal = function(productId) {
-      activeProduct = PRODUCTS_DATA[productId] || PRODUCTS_DATA[Object.keys(PRODUCTS_DATA)[0]] || PRODUCTS_DATA[1];
-      if (!activeProduct) return;
-
-      // Chuẩn hóa dữ liệu Sizes / Colors / Inventory cho sản phẩm từ API Catalog
-      if (!activeProduct.sizes || !activeProduct.sizes.length) {
-        activeProduct.sizes = ['S', 'M', 'L', 'XL', '2XL'];
-      }
-      if (!activeProduct.colors || !activeProduct.colors.length) {
-        activeProduct.colors = [
-          { name: 'Mặc định / Tiêu chuẩn', hex: '#1e293b' }
-        ];
-      }
-      if (!activeProduct.inventory) {
-        const avail = activeProduct.availability || {};
-        const cs1Stock = avail.ton_that_thiep === 'in_stock' ? 5 : 0;
-        const cs2Stock = avail.nguyen_trai === 'in_stock' ? 5 : 0;
-        const cs3Stock = avail.tam_coc === 'in_stock' ? 5 : 0;
-        
-        activeProduct.inventory = {};
-        activeProduct.sizes.forEach(sz => {
-          activeProduct.inventory[sz] = {
-            'Mặc định / Tiêu chuẩn': { cs1: cs1Stock, cs2: cs2Stock, cs3: cs3Stock }
-          };
-        });
-      }
-      
-      const nameEl = document.getElementById('modalProductName');
-      if (nameEl) nameEl.textContent = (activeProduct.code ? `[${activeProduct.code}] ` : '') + activeProduct.name;
-      
-      const priceEl = document.getElementById('modalProductPrice');
-      if (priceEl) priceEl.textContent = activeProduct.price;
-
-      const origPriceEl = document.getElementById('modalProductOriginalPrice');
-      if (origPriceEl) {
-        if (activeProduct.originalPrice) {
-          origPriceEl.textContent = activeProduct.originalPrice;
-          origPriceEl.classList.remove('hidden');
+    function scrollToModalImage(index) {
+      const slider = document.getElementById('modalImagesSlider');
+      if (slider) {
+        const width = slider.clientWidth || 340;
+        if (typeof slider.scrollTo === 'function') {
+          slider.scrollTo({ left: index * width, behavior: 'smooth' });
         } else {
-          origPriceEl.classList.add('hidden');
+          slider.scrollLeft = index * width;
         }
       }
+    }
 
-      renderModalImagesSlider();
+    window.slideModalImage = function(direction) {
+      const slider = document.getElementById('modalImagesSlider');
+      if (slider) {
+        const width = slider.clientWidth || 340;
+        if (typeof slider.scrollBy === 'function') {
+          slider.scrollBy({ left: direction * width, behavior: 'smooth' });
+        } else {
+          slider.scrollLeft += direction * width;
+        }
+      }
+    };
 
-      selectedSize = activeProduct.sizes[0] || 'M';
-      selectedColor = activeProduct.colors[0]?.name || 'Mặc định';
+    window.openEnhancedProductModal = window.openEnhancedModal = function(productId) {
+      const dataObj = window.PRODUCTS_DATA || (typeof PRODUCTS_DATA !== 'undefined' ? PRODUCTS_DATA : {});
+      activeProduct = dataObj[productId] || Object.values(dataObj)[0];
+      if (!activeProduct) return;
 
+      if (!activeProduct.sizes || !activeProduct.sizes.length) {
+        activeProduct.sizes = ['Tiêu chuẩn'];
+      }
+      if (!activeProduct.colors || !activeProduct.colors.length) {
+        activeProduct.colors = [{ name: 'Tiêu chuẩn', label: 'Tiêu chuẩn', hex: '#1e293b' }];
+      }
+
+      selectedSize = activeProduct.sizes[0] || 'Tiêu chuẩn';
+      selectedColor = activeProduct.colors[0]?.name || 'Tiêu chuẩn';
+
+      renderModalImagesSlider(selectedColor);
       renderSizeButtons();
       renderColorButtons();
-      updateStockAndStoresDisplay();
-      updateMainFbLink();
+      updateVariantDetails();
 
       const modal = document.getElementById('enhancedSizeModal');
       const modalCard = document.getElementById('enhancedModalCard');
@@ -4052,7 +3992,7 @@
       }, 200);
     };
 
-    function renderModalImagesSlider() {
+    function renderModalImagesSlider(targetColor) {
       const sliderContainer = document.getElementById('modalImagesSlider');
       const dotsContainer = document.getElementById('modalImageDots');
       if (!sliderContainer || !activeProduct) return;
@@ -4060,15 +4000,27 @@
       sliderContainer.innerHTML = '';
       if (dotsContainer) dotsContainer.innerHTML = '';
 
-      const imgs = (activeProduct.images && activeProduct.images.length > 0) ? activeProduct.images : ['assets/images/products/product-01.svg'];
+      const colorKey = targetColor || selectedColor;
+      let imgs = [];
 
-      imgs.forEach((img, idx) => {
+      if (activeProduct.colorImages && activeProduct.colorImages[colorKey] && activeProduct.colorImages[colorKey].length > 0) {
+        imgs = activeProduct.colorImages[colorKey];
+      } else if (activeProduct.images && activeProduct.images.length > 0) {
+        imgs = activeProduct.images;
+      } else {
+        imgs = ['assets/images/products/product-01.svg'];
+      }
+
+      // Strict Deduplication & keep max 3 photos per color
+      const uniqueImgs = Array.from(new Set(imgs)).slice(0, 3);
+
+      uniqueImgs.forEach((img, idx) => {
         const slide = document.createElement('div');
-        slide.className = 'w-full h-full shrink-0 snap-start flex items-center justify-center';
-        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" class="w-full h-full object-contain rounded-2xl drop-shadow-md" width="600" height="600" loading="lazy" />`;
+        slide.className = 'w-full h-full min-w-full shrink-0 snap-start flex items-center justify-center p-1';
+        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" class="max-w-full max-h-full w-auto h-auto object-contain rounded-2xl drop-shadow-sm select-none" loading="lazy" />`;
         sliderContainer.appendChild(slide);
 
-        if (dotsContainer) {
+        if (dotsContainer && uniqueImgs.length > 1) {
           const dot = document.createElement('button');
           dot.type = 'button';
           dot.className = `modal-dot-item ${idx === 0 ? 'w-5 bg-orange-600' : 'w-2 bg-slate-300'} h-2 rounded-full transition-all duration-300 cursor-pointer`;
@@ -4078,10 +4030,12 @@
         }
       });
 
+      sliderContainer.scrollLeft = 0;
+
       sliderContainer.onscroll = () => {
         if (!dotsContainer) return;
         const scrollLeft = sliderContainer.scrollLeft;
-        const width = sliderContainer.clientWidth;
+        const width = sliderContainer.clientWidth || 340;
         const activeIndex = Math.round(scrollLeft / (width || 1));
         const dots = dotsContainer.querySelectorAll('.modal-dot-item');
         dots.forEach((d, i) => {
@@ -4110,8 +4064,13 @@
     window.selectModalSize = function(size) {
       selectedSize = size;
       renderSizeButtons();
-      updateStockAndStoresDisplay();
-      updateMainFbLink();
+      const currentVariant = getActiveVariant(activeProduct, selectedSize, selectedColor);
+      if (currentVariant && currentVariant.color && currentVariant.color !== selectedColor) {
+        selectedColor = currentVariant.color;
+        renderColorButtons();
+      }
+      renderModalImagesSlider(selectedColor);
+      updateVariantDetails();
     };
 
     function renderColorButtons() {
@@ -4125,7 +4084,7 @@
           selectedColor === c.name ? 'bg-orange-50 text-orange-700 border-orange-500 ring-2 ring-orange-400/30' : 'bg-slate-50 text-slate-800 border-slate-200 hover:bg-slate-100'
         }">
           <span class="w-3.5 h-3.5 rounded-full border border-slate-300" style="background-color: ${c.hex};"></span>
-          <span>${c.name}</span>
+          <span>${c.label || c.name}</span>
         </button>
       `).join('');
     }
@@ -4133,20 +4092,65 @@
     window.selectModalColor = function(colorName) {
       selectedColor = colorName;
       renderColorButtons();
-      updateStockAndStoresDisplay();
-      updateMainFbLink();
+      renderModalImagesSlider(selectedColor);
+      updateVariantDetails();
     };
 
-    function updateStockAndStoresDisplay() {
+    function updateVariantDetails() {
+      if (!activeProduct) return;
+      const currentVariant = getActiveVariant(activeProduct, selectedSize, selectedColor);
+
+      const nameEl = document.getElementById('modalProductName');
+      const variantCodeEl = document.getElementById('modalSelectedVariantCode');
+      const priceEl = document.getElementById('modalProductPrice');
+      const origPriceEl = document.getElementById('modalProductOriginalPrice');
+
+      if (nameEl) nameEl.textContent = activeProduct.name;
+
+      if (variantCodeEl) {
+        if (currentVariant && currentVariant.code && currentVariant.code !== activeProduct.code) {
+          variantCodeEl.innerHTML = `MÃ BIẾN THỂ: <span class="text-slate-900 underline font-black">[${currentVariant.code}]</span> • Size: ${selectedSize} • Màu: ${selectedColor}`;
+        } else {
+          variantCodeEl.innerHTML = `MÃ GỐC: <span class="text-slate-900 font-black">[${activeProduct.code}]</span> • Size: ${selectedSize} • Màu: ${selectedColor}`;
+        }
+      }
+
+      const displayPrice = (currentVariant && currentVariant.price) ? currentVariant.price : activeProduct.price;
+      const displayOrigPrice = (currentVariant && currentVariant.originalPrice) ? currentVariant.originalPrice : activeProduct.originalPrice;
+
+      if (priceEl) priceEl.textContent = displayPrice;
+      if (origPriceEl) {
+        if (displayOrigPrice) {
+          origPriceEl.textContent = displayOrigPrice;
+          origPriceEl.classList.remove('hidden');
+        } else {
+          origPriceEl.classList.add('hidden');
+        }
+      }
+
+      if (currentVariant && currentVariant.images && currentVariant.images.length > 0) {
+        const vImg = currentVariant.images[0];
+        const imgIdx = activeProduct.images.indexOf(vImg);
+        if (imgIdx !== -1) {
+          scrollToModalImage(imgIdx);
+        }
+      }
+
+      updateStockAndStoresDisplay(currentVariant);
+      updateMainFbLink(currentVariant);
+    }
+
+    function updateStockAndStoresDisplay(currentVariant) {
       if (!activeProduct) return;
 
-      const avail = activeProduct.availability || {};
+      const variant = currentVariant || getActiveVariant(activeProduct, selectedSize, selectedColor) || activeProduct;
+      const avail = variant.availability || activeProduct.availability || {};
       const isCs1 = avail.ton_that_thiep === 'in_stock';
       const isCs2 = avail.nguyen_trai === 'in_stock';
       const isCs3 = avail.tam_coc === 'in_stock';
 
       const inStockCount = [isCs1, isCs2, isCs3].filter(Boolean).length;
-      const badgeContainer = document.getElementById('modalInventoryStatusBadge');
+      const badgeContainer = document.getElementById('stockBadgeContainer');
       if (badgeContainer) {
         if (inStockCount > 0) {
           badgeContainer.className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 inline-flex items-center gap-1.5';
@@ -4157,66 +4161,73 @@
         }
       }
 
-      const productImgFullUrl = (activeProduct.images && activeProduct.images[0]) ? activeProduct.images[0] : (window.location.origin + '/assets/images/products/product-01.svg');
+      const variantCode = variant.code || activeProduct.code || 'XK';
+      const variantName = variant.name || activeProduct.name;
+      const productImgFullUrl = (variant.images && variant.images[0]) || (activeProduct.images && activeProduct.images[0]) || (window.location.origin + '/assets/images/products/product-01.svg');
 
       const storeListContainer = document.getElementById('storeStockListContainer');
-      storeListContainer.innerHTML = '';
+      if (storeListContainer) {
+        storeListContainer.innerHTML = '';
 
-      Object.keys(STORES_INFO).forEach(storeKey => {
-        const store = STORES_INFO[storeKey];
-        let isAvailable = false;
-        if (storeKey === 'cs1') isAvailable = isCs1;
-        else if (storeKey === 'cs2') isAvailable = isCs2;
-        else if (storeKey === 'cs3') isAvailable = isCs3;
+        Object.keys(STORES_INFO).forEach(storeKey => {
+          const store = STORES_INFO[storeKey];
+          let isAvailable = false;
+          if (storeKey === 'cs1') isAvailable = isCs1;
+          else if (storeKey === 'cs2') isAvailable = isCs2;
+          else if (storeKey === 'cs3') isAvailable = isCs3;
 
-        const msgText = `Chào The Gate, tôi muốn tư vấn mua tại ${store.name}:\n- Mã SP: ${activeProduct.code || 'XK'} — ${activeProduct.name}\n- Size: ${selectedSize} | Màu: ${selectedColor} | Giá: ${activeProduct.price}\n- 📷 Link ảnh SP: ${productImgFullUrl}`;
-        const encodedMsg = encodeURIComponent(msgText);
-        const zaloUrl = `https://zalo.me/${store.zalo}?text=${encodedMsg}`;
-        const telUrl = `tel:${store.phone}`;
+          const msgText = `Chào The Gate, tôi muốn tư vấn mua tại ${store.name}:\n- Mã SP: [${variantCode}] — ${variantName}\n- Size: ${selectedSize} | Màu: ${selectedColor} | Giá: ${variant.price || activeProduct.price}\n- 📷 Link ảnh SP: ${productImgFullUrl}`;
+          const encodedMsg = encodeURIComponent(msgText);
+          const zaloUrl = `https://zalo.me/${store.zalo}?text=${encodedMsg}`;
+          const telUrl = `tel:${store.phone}`;
 
-        const card = document.createElement('div');
-        card.className = `p-3.5 rounded-2xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-all ${
-          isAvailable ? 'bg-white border-slate-200 shadow-sm hover:border-orange-400' : 'bg-slate-50 border-slate-200 opacity-60'
-        }`;
+          const card = document.createElement('div');
+          card.className = `p-3.5 rounded-2xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-all ${
+            isAvailable ? 'bg-white border-slate-200 shadow-sm hover:border-orange-400' : 'bg-slate-50 border-slate-200 opacity-60'
+          }`;
 
-        card.innerHTML = `
-          <div>
-            <div class="flex items-center gap-2 mb-0.5">
-              <span class="font-bold text-xs text-slate-900">${store.name}</span>
-              ${
-                isAvailable
-                  ? `<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Còn hàng</span>`
-                  : `<span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">Tạm hết hàng</span>`
-              }
+          card.innerHTML = `
+            <div>
+              <div class="flex items-center gap-2 mb-0.5">
+                <span class="font-bold text-xs text-slate-900">${store.name}</span>
+                ${
+                  isAvailable
+                    ? `<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Còn hàng</span>`
+                    : `<span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">Tạm hết hàng</span>`
+                }
+              </div>
+              <p class="text-xs text-slate-500">${store.shortAddr}</p>
             </div>
-            <p class="text-xs text-slate-500">${store.shortAddr}</p>
-          </div>
 
-          <div class="flex items-center gap-2 w-full sm:w-auto shrink-0">
-            <a href="${telUrl}" class="flex-1 sm:flex-none px-3 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors shadow">
-              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
-              <span>Gọi Hotline</span>
-            </a>
-            <a href="${zaloUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors shadow">
-              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-              <span>Zalo ${store.code}</span>
-            </a>
-          </div>
-        `;
+            <div class="flex items-center gap-2 w-full sm:w-auto shrink-0">
+              <a href="${telUrl}" class="flex-1 sm:flex-none px-3 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors shadow">
+                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                <span>Gọi Hotline</span>
+              </a>
+              <a href="${zaloUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors shadow">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Zalo ${store.code}</span>
+              </a>
+            </div>
+          `;
 
-        storeListContainer.appendChild(card);
-      });
+          storeListContainer.appendChild(card);
+        });
+      }
 
-      if (window.lucide) {
+      if (window.lucide && typeof lucide.createIcons === 'function') {
         lucide.createIcons();
       }
     }
 
-    function updateMainFbLink() {
+    function updateMainFbLink(currentVariant) {
       const fbBtn = document.getElementById('mainFbFanpageLink');
       if (fbBtn && activeProduct) {
-        const productImgFullUrl = (activeProduct.images && activeProduct.images[0]) ? activeProduct.images[0] : (window.location.origin + '/assets/images/products/product-01.svg');
-        const msgText = `Chào The Gate, tôi muốn tư vấn sản phẩm [${activeProduct.code || 'XK'}] ${activeProduct.name} - Size: ${selectedSize} - Màu: ${selectedColor} - Giá Sale: ${activeProduct.price} - 📷 Link ảnh: ${productImgFullUrl}`;
+        const variant = currentVariant || getActiveVariant(activeProduct, selectedSize, selectedColor) || activeProduct;
+        const variantCode = variant.code || activeProduct.code || 'XK';
+        const variantName = variant.name || activeProduct.name;
+        const productImgFullUrl = (variant.images && variant.images[0]) || (activeProduct.images && activeProduct.images[0]) || (window.location.origin + '/assets/images/products/product-01.svg');
+        const msgText = `Chào The Gate, tôi muốn tư vấn sản phẩm [${variantCode}] ${variantName} - Size: ${selectedSize} - Màu: ${selectedColor} - Giá Sale: ${variant.price || activeProduct.price} - 📷 Link ảnh: ${productImgFullUrl}`;
         fbBtn.href = `https://www.facebook.com/thegatevietnamxk?text=${encodeURIComponent(msgText)}`;
       }
     }
@@ -4267,6 +4278,7 @@
         }
       });
     });
+
   </script>
 </body>
 </html>
