@@ -1,0 +1,13 @@
+{
+  "name": "thegateshop",
+  "version": "1.0.0",
+  "description": "The Gate Shop Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i css/tailwind-input.css -o css/tailwind.min.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

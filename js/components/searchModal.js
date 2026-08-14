@@ -42,6 +42,8 @@ function createModalElement() {
             type="text"
             class="search-modal__input"
             id="searchInput"
+            name="q"
+            aria-label="Tìm kiếm sản phẩm"
             placeholder="Tìm kiếm sản phẩm, danh mục, xu hướng..."
             autocomplete="off"
           />

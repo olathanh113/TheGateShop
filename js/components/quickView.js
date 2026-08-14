@@ -97,11 +97,6 @@ export function openQuickView(product) {
       <span class="quickview__category">${prod.categoryDisplay || 'Thời trang'}</span>
       <h2 class="quickview__title">${prod.name}</h2>
 
-      <div class="quickview__rating">
-        <div class="quickview__stars">${generateStars(prod.rating)}</div>
-        <span class="quickview__rating-count">(${prod.reviewCount} đánh giá)</span>
-      </div>
-
       <div class="quickview__prices">${salePriceHtml}</div>
 
       <p class="quickview__desc">${prod.description || 'Sản phẩm thời trang cao cấp với thiết kế hiện đại, tinh tế.'}</p>
@@ -115,24 +110,6 @@ export function openQuickView(product) {
           `).join('')}
         </div>
       </div>
-
-function getColorHex(colorName) {
-  const map = {
-    'Đen': '#0a0a0a',
-    'Trắng': '#fdfdfd',
-    'Xám đậm': '#333333',
-    'Xám': '#888888',
-    'Đỏ rượu': '#722f37',
-    'Champagne': '#f7e7ce',
-    'Xanh nhạt': '#a0c4ff',
-    'Xanh đen': '#1b263b',
-    'Vàng hồng': '#b76e79',
-    'Vàng': '#ffd700',
-    'Nâu': '#5c4033',
-    'Be': '#f5f5dc'
-  };
-  return map[colorName] || colorName;
-}
 
       <!-- Option: Color -->
       <div class="quickview__option">
@@ -148,7 +125,7 @@ function getColorHex(colorName) {
       <div class="quickview__actions">
         <div class="quantity-picker">
           <button class="quantity-btn" id="qvQtyMinus" aria-label="Giảm số lượng">-</button>
-          <input type="number" class="quantity-input" id="qvQtyInput" value="1" min="1" max="99" />
+          <input type="number" class="quantity-input" id="qvQtyInput" name="quantity" aria-label="Số lượng sản phẩm" value="1" min="1" max="99" />
           <button class="quantity-btn" id="qvQtyPlus" aria-label="Tăng số lượng">+</button>
         </div>
 

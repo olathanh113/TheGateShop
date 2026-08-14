@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thegateshop.vn/sitemap.xml
+Sitemap: https://the-gate-shop.vercel.app/sitemap.xml
