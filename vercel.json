@@ -24,5 +24,11 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/catalog",
+      "destination": "https://catalog-api-production-6f96.up.railway.app/v1/website/catalog"
+    }
   ]
 }

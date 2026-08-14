@@ -1,0 +1,21 @@
+# =================================================================
+# THE GATE CATALOG — NETLIFY CONFIGURATION
+# =================================================================
+
+[build]
+  publish = "."
+
+# Same-Origin Proxy Rewrite for The Gate Catalog API
+[[redirects]]
+  from = "/api/catalog"
+  to = "https://catalog-api-production-6f96.up.railway.app/v1/website/catalog"
+  status = 200
+  force = true
+  headers = { Accept = "application/json" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

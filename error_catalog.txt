@@ -1,0 +1,26 @@
+================================================================================
+THE GATE SHOP — CATALOG & CATEGORY VALIDATION REPORT
+Generated: 2026-08-14T13:36:00+07:00
+Total Catalog Products in Database: 4,694
+================================================================================
+
+[CATEGORY & DEAL STATISTICS (ALL ACTIVE WITH LIVE KIOTVIET DATA)]
+--------------------------------------------------------------------------------
+1. Tất cả sản phẩm (all)                 : 4,694 sản phẩm  [ACTIVE]
+2. 🏷️ Đồng Giá 99K (donggia_99k)         :   472 sản phẩm  [ACTIVE]
+3. 🏷️ Đồng Giá 199K (donggia_199k)       :   541 sản phẩm  [ACTIVE]
+4. 💎 Đồng Giá 299K (donggia_299k)       :   150 sản phẩm  [ACTIVE]
+5. ⚡ Giảm 50% (sale_50)                 :   402 sản phẩm  [ACTIVE] (Mức giảm 45% - 55%)
+6. 🔥 Giảm 30% (sale_30)                 : 3,658 sản phẩm  [ACTIVE] (Mức giảm 25% - 35%)
+7. 🎉 Giảm 10% (sale_10)                 :   203 sản phẩm  [ACTIVE] (Mức giảm 8% - 15%)
+8. Đồ Nam (nam)                          : 3,746 sản phẩm  [ACTIVE] (Đã tách đồ trẻ em)
+9. Đồ Nữ (nu)                            :   343 sản phẩm  [ACTIVE] (Đã tách đồ trẻ em)
+10. 👶 Đồ Trẻ Em (treem)                 :   500 sản phẩm  [ACTIVE] (Tất cả sản phẩm Kid/Bé)
+11. Outdoor & Phụ kiện (phukien)         :   105 sản phẩm  [ACTIVE]
+--------------------------------------------------------------------------------
+
+[EMPTY CATALOG CATEGORIES (0 PRODUCTS) - AUTO-HIDDEN]
+--------------------------------------------------------------------------------
+Trạng thái: Không có mục catalog nào bị trống (0 sản phẩm).
+Tất cả 11 danh mục / khoảng giá đều có sản phẩm thực tế từ KiotViet.
+================================================================================
