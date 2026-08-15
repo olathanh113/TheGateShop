@@ -1,4 +1,0 @@
-Module status at packaging time:
-?? integrations/kiot_public_catalog/
-
-No git add, commit, reset, checkout or push was performed. Packaging used a scoped allowlist.

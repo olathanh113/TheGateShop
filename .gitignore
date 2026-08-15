@@ -1,4 +1,6 @@
 node_modules/
+temp_handoff/
 *.xlsx
 *.bin
+*.zip
 .DS_Store

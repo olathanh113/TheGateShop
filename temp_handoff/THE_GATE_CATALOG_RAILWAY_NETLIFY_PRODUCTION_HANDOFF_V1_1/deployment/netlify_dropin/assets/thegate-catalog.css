@@ -1,9 +1,0 @@
-.thegate-catalog { display: grid; gap: 1rem; }
-.thegate-catalog__status { font: 500 0.875rem/1.4 system-ui, sans-serif; }
-.thegate-catalog__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-.thegate-catalog__card { border: 1px solid #dedbd4; background: #fff; color: #171717; }
-.thegate-catalog__image { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
-.thegate-catalog__body { padding: 0.875rem; }
-.thegate-catalog__name { margin: 0 0 0.5rem; font: 600 1rem/1.3 system-ui, sans-serif; }
-.thegate-catalog__price { margin: 0; font: 500 0.9375rem/1.3 system-ui, sans-serif; }
-.thegate-catalog[data-state="error"] .thegate-catalog__grid { display: none; }
