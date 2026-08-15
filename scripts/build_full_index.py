@@ -33,7 +33,7 @@ local_business_schemas = [
       "latitude": 21.0315,
       "longitude": 105.8398
     },
-    "telephone": "+84355393871",
+    "telephone": "+84395251095",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -59,7 +59,7 @@ local_business_schemas = [
       "latitude": 20.9947,
       "longitude": 105.8118
     },
-    "telephone": "+84395251095",
+    "telephone": "+84355393871",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -208,8 +208,8 @@ if script_marker in html:
     end_script_idx = html.find('</script>', start_script_idx)
     
     new_script_code = '''const STORES_INFO = {
-      cs1: { code: "CS1", name: "HN CS1: Tôn Thất Thiệp (Ba Đình)", shortAddr: "27 ngõ 8 Tôn Thất Thiệp, Ba Đình, Hà Nội", phone: "0355393871", zalo: "0355393871" },
-      cs2: { code: "CS2", name: "HN CS2: Nguyễn Trãi (Thanh Xuân)", shortAddr: "86 ngõ 72 Nguyễn Trãi, Thanh Xuân, Hà Nội", phone: "0395251095", zalo: "0395251095" },
+      cs1: { code: "CS1", name: "HN CS1: Tôn Thất Thiệp (Ba Đình)", shortAddr: "27 ngõ 8 Tôn Thất Thiệp, Ba Đình, Hà Nội", phone: "0395251095", zalo: "0395251095" },
+      cs2: { code: "CS2", name: "HN CS2: Nguyễn Trãi (Thanh Xuân)", shortAddr: "86 ngõ 72 Nguyễn Trãi, Thanh Xuân, Hà Nội", phone: "0355393871", zalo: "0355393871" },
       cs3: { code: "CS3", name: "Ninh Bình: Tam Cốc (Ninh Thắng)", shortAddr: "Cổng làng Tuân Cáo, Ninh Thắng, Ninh Bình", phone: "0942326993", zalo: "0942326993" }
     };
 

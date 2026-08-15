@@ -34,7 +34,7 @@ local_business_schemas = [
       "latitude": 21.0315,
       "longitude": 105.8398
     },
-    "telephone": "+84355393871",
+    "telephone": "+84395251095",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -60,7 +60,7 @@ local_business_schemas = [
       "latitude": 20.9947,
       "longitude": 105.8118
     },
-    "telephone": "+84395251095",
+    "telephone": "+84355393871",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],

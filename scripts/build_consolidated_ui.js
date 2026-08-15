@@ -109,15 +109,15 @@ const newJsCode = `
         code: "CS1",
         name: "HN CS1: Tôn Thất Thiệp (Ba Đình)",
         shortAddr: "27 ngõ 8 Tôn Thất Thiệp, Ba Đình, Hà Nội",
-        phone: "0355393871",
-        zalo: "0355393871"
+        phone: "0395251095",
+        zalo: "0395251095"
       },
       cs2: {
         code: "CS2",
         name: "HN CS2: Nguyễn Trãi (Thanh Xuân)",
         shortAddr: "86 ngõ 72 Nguyễn Trãi, Thanh Xuân, Hà Nội",
-        phone: "0395251095",
-        zalo: "0395251095"
+        phone: "0355393871",
+        zalo: "0355393871"
       },
       cs3: {
         code: "CS3",
