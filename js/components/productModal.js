@@ -64,8 +64,6 @@ function createModalHTML(product) {
     `<span class="modal__color-tag">${color}</span>`
   ).join('');
 
-  const stars = '★'.repeat(Math.floor(product.rating)) + (product.rating % 1 >= 0.5 ? '½' : '');
-
   return `
 <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-label="Chi tiết sản phẩm">
   <div class="modal-box">
@@ -95,12 +93,6 @@ function createModalHTML(product) {
       <div class="modal__info-col">
         <span class="modal__category">${product.categoryDisplay} · VNXK</span>
         <h2 class="modal__product-name">${product.name}</h2>
-
-        <!-- Rating -->
-        <div class="modal__rating">
-          <span class="modal__stars">${stars}</span>
-          <span class="modal__rating-text">${product.rating}/5 · ${product.reviewCount} đánh giá</span>
-        </div>
 
         <!-- Price -->
         <div class="modal__prices">
@@ -237,9 +229,6 @@ const MODAL_CSS = `
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 700; color: #f5f5f5; line-height: 1.3;
 }
-.modal__rating { display: flex; align-items: center; gap: 0.5rem; }
-.modal__stars { color: #c9a96e; font-size: 1rem; }
-.modal__rating-text { font-size: 0.8rem; color: #888; }
 .modal__prices { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 .modal__price-sale { font-size: 1.6rem; font-weight: 700; color: #c9a96e; }
 .modal__price-orig { font-size: 1rem; color: #666; text-decoration: line-through; }
