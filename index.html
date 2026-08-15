@@ -2398,10 +2398,23 @@
             <span>🔥 SALE HÈ UP TO 50% — HÀNG XUẤT KHẨU CHÍNH HÃNG — MIỄN SHIP ĐƠN TỪ 500K</span>
           </div>
           <div class="flex items-center gap-4 text-xs">
-            <a href="https://zalo.me/0395251095" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1 font-bold">
+            <!-- Mỗi cơ sở một thẻ <a> riêng, trỏ đúng Zalo của chính cơ sở đó.
+                 Trước đây cả cụm chữ nằm trong MỘT thẻ <a> trỏ Zalo Tôn Thất
+                 Thiệp, nên khách bấm vào chỗ "Nguyễn Trãi" hay "Tam Cốc" vẫn
+                 vào nhầm Zalo Tôn Thất Thiệp. Dựng theo đúng cấu trúc khối
+                 mobile ở trên (md:hidden), chỉ khác là dùng zalo.me thay tel:
+                 vì trên máy tính bấm tel: phần lớn không làm gì.
+                 Giữ nguyên từng ký tự chữ hiển thị để bề ngang không đổi —
+                 thanh cam đo được còn dư 0px ở mọi khổ desktop. -->
+            <div class="flex items-center gap-1 font-bold">
               <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-              HOTLINE: Tôn Thất Thiệp: 0395.251.095 | Nguyễn Trãi: 0355.393.871 | Tam Cốc: 0942.326.993
-            </a>
+              <span>HOTLINE:</span>
+              <a href="https://zalo.me/0395251095" target="_blank" rel="noopener noreferrer" class="hover:underline" title="Nhắn Zalo Tôn Thất Thiệp">Tôn Thất Thiệp: 0395.251.095</a>
+              <span class="opacity-60">|</span>
+              <a href="https://zalo.me/0355393871" target="_blank" rel="noopener noreferrer" class="hover:underline" title="Nhắn Zalo Nguyễn Trãi">Nguyễn Trãi: 0355.393.871</a>
+              <span class="opacity-60">|</span>
+              <a href="https://zalo.me/0942326993" target="_blank" rel="noopener noreferrer" class="hover:underline" title="Nhắn Zalo Tam Cốc">Tam Cốc: 0942.326.993</a>
+            </div>
             <span class="opacity-60">|</span>
             <a href="https://www.facebook.com/thegatevietnamxk" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
               <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
