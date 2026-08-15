@@ -3948,7 +3948,7 @@
       uniqueImgs.forEach((img, idx) => {
         const slide = document.createElement('div');
         slide.className = 'w-full h-full min-w-full shrink-0 snap-start flex items-center justify-center p-1';
-        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" class="max-w-full max-h-full w-auto h-auto object-contain rounded-2xl drop-shadow-sm select-none" loading="lazy" />`;
+        slide.innerHTML = `<img src="${img}" alt="${activeProduct.name} - ${idx+1}" class="max-w-full max-h-full w-auto h-auto object-contain rounded-2xl drop-shadow-sm select-none" loading="lazy" width="800" height="800" />`;
         sliderContainer.appendChild(slide);
 
         if (dotsContainer && uniqueImgs.length > 1) {
