@@ -13,9 +13,79 @@
   force = true
   headers = { Accept = "application/json" }
 
+# D4 — /index.html và / đang trả cùng một nội dung, Google coi là 2 trang
+# trùng lặp. Gộp về một URL chuẩn duy nhất là /.
+# force = true là bắt buộc: index.html tồn tại thật nên nếu không ép,
+# Netlify phục vụ thẳng file và bỏ qua redirect.
+# Request tới / không khớp mẫu "/index.html" nên không tạo vòng lặp.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # N21b — khoá các quyền site không dùng. Đã grep xác nhận không có
+    # geolocation / camera / micro / thanh toán / cảm biến, 0 iframe,
+    # 0 thẻ video-audio. Link Google Maps là link ngoài nên không cần quyền.
+    Permissions-Policy = "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), publickey-credentials-get=(), screen-wake-lock=(), usb=(), xr-spatial-tracking=()"
+
+# -----------------------------------------------------------------
+# C6 — cache trình duyệt
+#
+# HTML KHÔNG đặt Cache-Control ở đây, giữ nguyên mặc định của Netlify là
+# max-age=0, must-revalidate. Cache dài cho HTML là khách không bao giờ
+# thấy bản mới.
+#
+# CSS/JS chỉ đặt cache NGẮN vì tên file chưa có mã băm
+# (tailwind.min.css, custom.min.css, productsData.js). Cache dài cho file
+# không mã băm sẽ làm khách cũ kẹt ở bản cũ hàng tháng.
+# -----------------------------------------------------------------
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Ảnh, SVG và icon: nội dung ổn định, đổi ảnh thì đổi luôn tên file,
+# nên cache dài an toàn.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Hai file lạc trong assets/ — không được index.html nạp, nhưng vẫn là
+# .css/.js không mã băm nên trả về cache ngắn như mọi CSS/JS khác.
+[[headers]]
+  for = "/assets/thegate-catalog.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/assets/thegate-catalog-client.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/favicon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/apple-touch-icon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
