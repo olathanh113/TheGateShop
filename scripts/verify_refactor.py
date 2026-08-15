@@ -4,7 +4,9 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-base_dir = r'c:\laragon\www\TheGateShop'
+# Thư mục gốc dự án, tính từ vị trí file script này (scripts/ -> ..)
+# nên chạy được trên cả Mac lẫn Windows, bất kể gọi từ thư mục nào.
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def check(name, condition, details=""):
     status = "PASS" if condition else "FAIL"
