@@ -29,7 +29,6 @@ for (const [pid, p] of initialItems) {
 
   const badgeHtml = badge ? `<span class="product-card__badge-tag ${badgeColor}">${badge}</span>` : '';
   const origHtml = (p.isSale && origPrice) ? `<span class="text-[10px] sm:text-xs text-slate-400 line-through font-normal truncate">${origPrice}</span>` : '';
-  const reviewCount = p.reviewCount || 50;
 
   const card = `          <article class="product-card group relative rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-2 sm:p-3.5" data-id="${pid}">
             <div onclick="openEnhancedProductModal('${pid}')" class="product-card__image-wrapper relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center p-1.5 sm:p-2 mb-2 sm:mb-3 cursor-pointer">
@@ -45,10 +44,6 @@ for (const [pid, p] of initialItems) {
             <div class="product-card__body flex flex-col flex-grow">
               <span class="text-[10px] sm:text-[11px] font-bold text-orange-600 block uppercase mb-0.5 sm:mb-1">MÃ: ${code}</span>
               <h3 onclick="openEnhancedProductModal('${pid}')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="${name}">${name}</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(${reviewCount})</span>
-              </div>
               <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
                 <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">${price}</span>
                 ${origHtml}
