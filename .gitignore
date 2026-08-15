@@ -1,6 +1,7 @@
 node_modules/
 temp_handoff/
 *.ai
+*.pdf
 *.xlsx
 *.bin
 *.zip
