@@ -30,11 +30,11 @@ for pid, p in data.items():
     price_str = p.get('price', '299000')
     price_num = int(re.sub(r'[^\d]', '', str(price_str)) or '299000')
 
-    img_url = final_img if final_img.startswith(('http://', 'https://')) else f"https://the-gate-shop.vercel.app/{final_img}"
+    img_url = final_img if final_img.startswith(('http://', 'https://')) else f"https://thegatevnxk.com/{final_img}"
 
     product_schema = {
         "@type": "Product",
-        "@id": f"https://the-gate-shop.vercel.app/#product-{pid}",
+        "@id": f"https://thegatevnxk.com/#product-{pid}",
         "name": name,
         "image": img_url,
         "description": f"{name} - Hàng Việt Nam Xuất Khẩu chất lượng cao chính hãng tại The Gate Shop.",
@@ -45,7 +45,7 @@ for pid, p in data.items():
         },
         "offers": {
             "@type": "Offer",
-            "url": "https://the-gate-shop.vercel.app/",
+            "url": "https://thegatevnxk.com/",
             "priceCurrency": "VND",
             "price": str(price_num),
             "priceValidUntil": "2026-12-31",

@@ -28,11 +28,11 @@ with open(os.path.join(base_dir, 'index.html'), 'r', encoding='utf-8') as f:
 
 # 1. Domain & Canonical
 run_test("N1: Dead domain thegateshop.vn removed from index.html", "thegateshop.vn" not in index_content)
-run_test("N1: Canonical URL is updated", 'link rel="canonical" href="https://the-gate-shop.vercel.app/"' in index_content)
+run_test("N1: Canonical URL is updated", 'link rel="canonical" href="https://thegatevnxk.com/"' in index_content)
 
 with open(os.path.join(base_dir, 'sitemap.xml'), 'r', encoding='utf-8') as f:
     sitemap_content = f.read()
-run_test("N1: Sitemap URL is updated", "https://the-gate-shop.vercel.app/" in sitemap_content)
+run_test("N1: Sitemap URL is updated", "https://thegatevnxk.com/" in sitemap_content)
 
 # 2. Block Google Index (D6)
 run_test("D6: Meta robots noindex present in index.html", 'meta name="robots" content="noindex, nofollow"' in index_content)

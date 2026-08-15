@@ -18,10 +18,10 @@ with open(os.path.join(base_dir, 'scripts', 'product_schemas.json'), 'r', encodi
 local_business_schemas = [
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-hanoi-cs1",
+    "@id": "https://thegatevnxk.com/#store-hanoi-cs1",
     "name": "The Gate — Cơ sở Tôn Thất Thiệp (Ba Đình)",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "27 ngõ 8 Tôn Thất Thiệp, Ba Đình",
@@ -44,10 +44,10 @@ local_business_schemas = [
   },
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-hanoi-cs2",
+    "@id": "https://thegatevnxk.com/#store-hanoi-cs2",
     "name": "The Gate — Cơ sở Nguyễn Trãi (Thanh Xuân)",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "86 ngõ 72 Nguyễn Trãi, Thanh Xuân",
@@ -69,10 +69,10 @@ local_business_schemas = [
   },
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-ninhbinh",
+    "@id": "https://thegatevnxk.com/#store-ninhbinh",
     "name": "The Gate Tam Cốc — Cơ sở Ninh Bình",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng tại Tam Cốc Ninh Bình.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cổng làng Tuân Cáo, Ninh Thắng",
@@ -107,7 +107,7 @@ html = html.replace('assets/images/sale/2.png', 'assets/images/sale/2.webp')
 html = html.replace('assets/images/sale/5.png', 'assets/images/sale/5.webp')
 html = html.replace('assets/images/sale/6.png', 'assets/images/sale/6.webp')
 html = html.replace('assets/images/sale/7.png', 'assets/images/sale/7.webp')
-html = html.replace('https://thegateshop.vn/', 'https://the-gate-shop.vercel.app/')
+html = html.replace('https://thegateshop.vn/', 'https://thegatevnxk.com/')
 
 # 2. Update <head>
 head_start = html.find('<head>')
@@ -126,8 +126,8 @@ new_head = f'''<head>
   <meta property="og:locale" content="vi_VN" />
   <meta property="og:title" content="The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor" />
   <meta property="og:description" content="Chuyên đồ thời trang Việt Nam Xuất Khẩu chính hãng, chất lượng cao, thiết kế năng động và bền đẹp." />
-  <meta property="og:url" content="https://the-gate-shop.vercel.app/" />
-  <meta property="og:image" content="https://the-gate-shop.vercel.app/assets/images/banners/hero-banner.webp" />
+  <meta property="og:url" content="https://thegatevnxk.com/" />
+  <meta property="og:image" content="https://thegatevnxk.com/assets/images/banners/hero-banner.webp" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -137,7 +137,7 @@ new_head = f'''<head>
   <title>The Gate — Thời Trang Việt Nam Xuất Khẩu & Outdoor</title>
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://the-gate-shop.vercel.app/" />
+  <link rel="canonical" href="https://thegatevnxk.com/" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
