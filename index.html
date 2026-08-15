@@ -2415,7 +2415,14 @@
     </div>
 
     <!-- TẦNG 2: SUB HEADER (DARK SLATE #0f172a - ẨN TRÊN MOBILE hidden lg:block ĐỂ TRÁNH VỠ HEADER) -->
-    <div class="hidden lg:block bg-slate-900 border-b border-slate-800 py-2.5 px-4 text-xs text-slate-200">
+    <!-- Thanh dia chi nay tu truoc toi nay chua bao gio hien vi .hidden{!important}.
+         Khi go xung dot cascade thi no lo ra, nhung cum 3 dia chi dung
+         whitespace-nowrap con cum kenh ban dung shrink-0 nen khong co lai duoc:
+         tu 1024px den ~1360px no day ca trang ra, sinh cuon ngang (do duoc:
+         scrollWidth 1335 so voi clientWidth 1016 o kho 1024px). Chi vua tu ~1400px.
+         Tam giu an bang "hidden" thuan de giu nguyen hien trang; sua bo cuc
+         cho no de PR rieng. -->
+    <div class="hidden bg-slate-900 border-b border-slate-800 py-2.5 px-4 text-xs text-slate-200">
       <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
         <div class="flex items-center gap-4 whitespace-nowrap text-xs font-medium text-slate-300">
           <a href="https://maps.google.com/?q=27+ngõ+8+Tôn+Thất+Thiệp,+Ba+Đình,+Hà+Nội" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors flex items-center gap-1.5" title="Xem bản đồ CS1 Tôn Thất Thiệp">
