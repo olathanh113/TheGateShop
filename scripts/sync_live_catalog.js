@@ -125,8 +125,6 @@ async function buildFullCatalog() {
       isSale: isSale,
       badge: badge,
       badgeColor: badgeClass,
-      rating: 5,
-      reviewCount: 30 + (idx % 70),
       images: it.images && it.images.length > 0 ? it.images : ['assets/images/products/product-01.svg'],
       availability: it.availability || {
         ton_that_thiep: 'in_stock',

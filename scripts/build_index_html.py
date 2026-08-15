@@ -19,10 +19,10 @@ with open(os.path.join(base_dir, 'scripts', 'product_schemas.json'), 'r', encodi
 local_business_schemas = [
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-hanoi-cs1",
+    "@id": "https://thegatevnxk.com/#store-hanoi-cs1",
     "name": "The Gate — Cơ sở Tôn Thất Thiệp (Ba Đình)",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "27 ngõ 8 Tôn Thất Thiệp, Ba Đình",
@@ -45,10 +45,10 @@ local_business_schemas = [
   },
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-hanoi-cs2",
+    "@id": "https://thegatevnxk.com/#store-hanoi-cs2",
     "name": "The Gate — Cơ sở Nguyễn Trãi (Thanh Xuân)",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng, đồ outdoor, đồ thể thao cao cấp.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "86 ngõ 72 Nguyễn Trãi, Thanh Xuân",
@@ -70,10 +70,10 @@ local_business_schemas = [
   },
   {
     "@type": "ClothingStore",
-    "@id": "https://the-gate-shop.vercel.app/#store-ninhbinh",
+    "@id": "https://thegatevnxk.com/#store-ninhbinh",
     "name": "The Gate Tam Cốc — Cơ sở Ninh Bình",
     "description": "Chuyên bán quần áo Việt Nam Xuất Khẩu chính hãng tại Tam Cốc Ninh Bình.",
-    "url": "https://the-gate-shop.vercel.app/",
+    "url": "https://thegatevnxk.com/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cổng làng Tuân Cáo, Ninh Thắng",

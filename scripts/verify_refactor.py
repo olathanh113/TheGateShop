@@ -4,7 +4,9 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-base_dir = r'c:\laragon\www\TheGateShop'
+# Thư mục gốc dự án, tính từ vị trí file script này (scripts/ -> ..)
+# nên chạy được trên cả Mac lẫn Windows, bất kể gọi từ thư mục nào.
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def check(name, condition, details=""):
     status = "PASS" if condition else "FAIL"
@@ -28,27 +30,29 @@ with open(os.path.join(base_dir, 'index.html'), 'r', encoding='utf-8') as f:
 
 # 1. Domain & Canonical
 run_test("N1: Dead domain thegateshop.vn removed from index.html", "thegateshop.vn" not in index_content)
-run_test("N1: Canonical URL is updated", 'link rel="canonical" href="https://the-gate-shop.vercel.app/"' in index_content)
+run_test("N1: Canonical URL is updated", 'link rel="canonical" href="https://thegatevnxk.com/"' in index_content)
 
 with open(os.path.join(base_dir, 'sitemap.xml'), 'r', encoding='utf-8') as f:
     sitemap_content = f.read()
-run_test("N1: Sitemap URL is updated", "https://the-gate-shop.vercel.app/" in sitemap_content)
+run_test("N1: Sitemap URL is updated", "https://thegatevnxk.com/" in sitemap_content)
 
-# 2. Block Google Index (D6)
-run_test("D6: Meta robots noindex present in index.html", 'meta name="robots" content="noindex, nofollow"' in index_content)
+# 2. Cho phép Google Index (D6)
+# Test này trước đây khẳng định index.html PHẢI chứa noindex, có từ thời
+# site còn là bản nháp cần chặn Google. Site nay chạy thật ở
+# thegatevnxk.com và cần được index, nên đảo lại thành chốt an toàn:
+# bắt trường hợp ai đó vô tình đẩy noindex lên production.
+run_test("D6: index.html KHÔNG chứa noindex", "noindex" not in index_content)
 
-with open(os.path.join(base_dir, 'vercel.json'), 'r', encoding='utf-8') as f:
-    vercel_content = f.read()
-run_test("D6: X-Robots-Tag in vercel.json", "X-Robots-Tag" in vercel_content and "noindex, nofollow" in vercel_content)
-
-with open(os.path.join(base_dir, '.htaccess'), 'r', encoding='utf-8') as f:
-    htaccess_content = f.read()
-run_test("D6: X-Robots-Tag in .htaccess", "X-Robots-Tag" in htaccess_content)
+# Ghi chú: hai test X-Robots-Tag cho vercel.json và .htaccess đã bỏ —
+# hai file đó không còn trong repo (host là Netlify, không đọc chúng).
 
 # 3. Pin CDN (N2)
 run_test("N2: Lucide CDN pinned version", "lucide@0.344.0" in index_content and "lucide@latest" not in index_content)
 
 # 4. Static HTML Rendering (C1)
+# Ngưỡng 80 phản ánh mục tiêu SEO: catalogue 4.694 sản phẩm nhưng chỉ 16
+# nằm trong HTML gốc. Test này CỐ Ý fail cho tới khi kiến trúc render đổi.
+# Đừng hạ ngưỡng cho nó pass.
 run_test("C1: Static product cards embedded in index.html", index_content.count('<article class="product-card') >= 80)
 
 # 5. Clean Fake Reviews (N17)

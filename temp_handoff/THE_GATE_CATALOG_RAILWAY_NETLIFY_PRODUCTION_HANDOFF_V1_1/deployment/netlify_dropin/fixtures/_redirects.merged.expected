@@ -1,5 +1,0 @@
-# Existing site routes
-/legacy  /legacy/index.html  301
-/assets/*  /static/:splat  200
-/api/catalog  https://approved.example.invalid/v1/website/catalog  200!
-/*  /index.html  200

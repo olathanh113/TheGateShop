@@ -26,7 +26,6 @@ const staticCardsHtml = page1Products.map(p => {
   const code = p.code || pid;
   const badge = p.badgeText || (p.discountPercent ? `🔥 GIẢM ${p.discountPercent}%` : '');
   const badgeColor = p.badgeColor || 'bg-orange-600 text-white shadow-sm';
-  const reviewCount = 85 + (parseInt(pid, 10) % 30 || 10);
   const sizeCount = p.sizes ? p.sizes.length : 1;
   const colorCount = p.colors ? p.colors.length : 1;
 
@@ -50,10 +49,6 @@ const staticCardsHtml = page1Products.map(p => {
                 <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">${sizeCount} Size • ${colorCount} Màu</span>
               </div>
               <h3 onclick="openEnhancedProductModal('${pid}')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="${name}">${name}</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(${reviewCount})</span>
-              </div>
               <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
                 <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">${price}</span>
                 ${origHtml}
@@ -227,7 +222,6 @@ const newJsCode = `
         const code = p.code || pid;
         const badge = p.badgeText || (p.discountPercent ? \`🔥 GIẢM \${p.discountPercent}%\` : '');
         const badgeColor = p.badgeColor || 'bg-orange-600 text-white shadow-sm';
-        const reviewCount = 85 + (parseInt(pid, 10) % 30 || 10);
         const sizeCount = p.sizes ? p.sizes.length : 1;
         const colorCount = p.colors ? p.colors.length : 1;
 
@@ -252,10 +246,6 @@ const newJsCode = `
                 <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">\${sizeCount} Size • \${colorCount} Màu</span>
               </div>
               <h3 onclick="openEnhancedProductModal('\${pid}')" class="product-card__name font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] mb-1 hover:text-orange-600 transition-colors cursor-pointer" title="\${name}">\${name}</h3>
-              <div class="flex items-center gap-1 text-[10px] sm:text-xs text-amber-400 mb-1 sm:mb-1.5">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(\${reviewCount})</span>
-              </div>
               <div class="product-card__prices flex items-baseline gap-1.5 mb-2 sm:mb-3 mt-auto flex-wrap">
                 <span class="product-card__price font-extrabold text-orange-600 text-xs sm:text-base">\${price}</span>
                 \${origHtml}

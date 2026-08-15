@@ -47,7 +47,6 @@ for (const [pid, p] of Object.entries(data)) {
   const badgeHtml = badge ? `<span class="absolute top-3 left-3 z-10 px-2.5 py-1 text-[11px] font-black rounded-lg uppercase tracking-wider shadow-sm ${badgeColor}">${badge}</span>` : '';
   const origHtml = origPrice ? `<span class="text-xs text-slate-400 line-through">${origPrice}</span>` : '';
   const priceNum = parseNumericPrice(price);
-  const reviewCount = p.reviewCount || Math.floor(Math.random() * 40 + 35);
 
   const card = `          <article class="product-card group relative rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col w-[260px] shrink-0 snap-start lg:w-auto lg:shrink" data-id="${pid}" data-category="${category}" data-price="${priceNum}">
             <div class="product-card__image-wrapper relative aspect-square w-full overflow-hidden bg-slate-50 flex items-center justify-center">
@@ -63,10 +62,6 @@ for (const [pid, p] of Object.entries(data)) {
             <div class="product-card__body p-4 sm:p-5 flex flex-col flex-grow">
               <span class="text-xs font-bold text-orange-600 block mb-1">MÃ: ${code}</span>
               <h3 class="product-card__name font-bold text-slate-900 text-sm sm:text-base mb-1.5 line-clamp-1 group-hover:text-orange-600 transition-colors" title="${name}">${name}</h3>
-              <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
-                <span>★★★★★</span>
-                <span class="text-slate-400 font-normal">(${reviewCount})</span>
-              </div>
               <div class="product-card__prices flex items-baseline gap-2 mb-3 mt-auto">
                 <span class="product-card__price font-extrabold text-orange-600 text-base sm:text-lg">${price}</span>
                 ${origHtml}
