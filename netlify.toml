@@ -58,6 +58,12 @@
 
 # Ảnh, SVG và icon: nội dung ổn định, đổi ảnh thì đổi luôn tên file,
 # nên cache dài an toàn.
+#
+# Rule này phủ cả file con nhiều cấp, nên hai logo mới
+# thegate_logo_*.v2.webp đã tự động được cache 1 năm — KHÔNG cần thêm
+# rule riêng. Chính vì cache 1 năm mà logo xuất lại phải ĐỔI TÊN
+# (thêm hậu tố .v2) chứ không được ghi đè: khách cũ sẽ kẹt bản 2989px
+# tới 1 năm. Lần sau xuất lại logo thì tăng lên .v3.
 [[headers]]
   for = "/assets/*"
   [headers.values]
