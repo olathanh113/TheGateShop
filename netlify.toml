@@ -63,6 +63,14 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000"
 
+# Banner khuyến mãi theo mùa. Tên file (1.webp … 7.webp) KHÔNG có mã băm,
+# đổi banner mà giữ nguyên tên thì khách cũ kẹt banner cũ tới 1 năm.
+# Đặt 1 ngày. Rule này PHẢI nằm sau "/assets/*" để thắng được rule đó.
+[[headers]]
+  for = "/assets/images/sale/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
 # Hai file lạc trong assets/ — không được index.html nạp, nhưng vẫn là
 # .css/.js không mã băm nên trả về cache ngắn như mọi CSS/JS khác.
 [[headers]]
