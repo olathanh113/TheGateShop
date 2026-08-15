@@ -50,6 +50,9 @@ run_test("D6: index.html KHÔNG chứa noindex", "noindex" not in index_content)
 run_test("N2: Lucide CDN pinned version", "lucide@0.344.0" in index_content and "lucide@latest" not in index_content)
 
 # 4. Static HTML Rendering (C1)
+# Ngưỡng 80 phản ánh mục tiêu SEO: catalogue 4.694 sản phẩm nhưng chỉ 16
+# nằm trong HTML gốc. Test này CỐ Ý fail cho tới khi kiến trúc render đổi.
+# Đừng hạ ngưỡng cho nó pass.
 run_test("C1: Static product cards embedded in index.html", index_content.count('<article class="product-card') >= 80)
 
 # 5. Clean Fake Reviews (N17)
