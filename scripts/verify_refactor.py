@@ -37,13 +37,8 @@ run_test("N1: Sitemap URL is updated", "https://the-gate-shop.vercel.app/" in si
 # 2. Block Google Index (D6)
 run_test("D6: Meta robots noindex present in index.html", 'meta name="robots" content="noindex, nofollow"' in index_content)
 
-with open(os.path.join(base_dir, 'vercel.json'), 'r', encoding='utf-8') as f:
-    vercel_content = f.read()
-run_test("D6: X-Robots-Tag in vercel.json", "X-Robots-Tag" in vercel_content and "noindex, nofollow" in vercel_content)
-
-with open(os.path.join(base_dir, '.htaccess'), 'r', encoding='utf-8') as f:
-    htaccess_content = f.read()
-run_test("D6: X-Robots-Tag in .htaccess", "X-Robots-Tag" in htaccess_content)
+# Ghi chú: hai test X-Robots-Tag cho vercel.json và .htaccess đã bỏ —
+# hai file đó không còn trong repo (host là Netlify, không đọc chúng).
 
 # 3. Pin CDN (N2)
 run_test("N2: Lucide CDN pinned version", "lucide@0.344.0" in index_content and "lucide@latest" not in index_content)
