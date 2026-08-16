@@ -3,6 +3,19 @@
    Typography, body, utilities
    ============================================ */
 
+/* ⚠️ KHI GỘP VÀO custom.min.css: chỉ các rule dùng SELECTOR CẤP PHẦN TỬ
+   trong file này mới được bọc vào `@layer app-reset { ... }`, cụ thể là:
+       body        h1,h2,h3,h4,h5,h6      h1  h2  h3  h4      p
+       a           a:hover
+   Xem chú thích đầu css/reset.css để biết vì sao.
+
+   MỌI RULE CÒN LẠI trong file này (.text-gold .text-muted .section-header
+   .section-subtitle .section-title .section-desc .divider .sr-only .reveal
+   .reveal-delay-* .skeleton và khối @media K3) PHẢI ĐỂ NGUYÊN NGOÀI LAYER.
+   Chúng là CSS thành phần, cần giữ quyền thắng tiện ích Tailwind khi hoà
+   độ đặc hiệu — đúng như bản v3 cũ vẫn chạy. Bọc nhầm chúng vào layer là
+   đảo ngược thứ tự ưu tiên trên 119 phần tử trộn class. */
+
 body {
   font-family: var(--font-body);
   font-size: var(--fs-body);

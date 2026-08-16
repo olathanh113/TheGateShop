@@ -1,3 +1,17 @@
+/* Khai thứ tự layer TRƯỚC khi nạp Tailwind.
+   `app-reset` là chỗ dành cho phần reset/base cấp phần tử của custom.min.css
+   (khối `*{margin:0;padding:0}`, `body`, `h1..h6`, `p`, `a`, `img/svg`...).
+
+   Đặt SAU `base` và TRƯỚC `components`/`utilities` để tái lập đúng thứ tự ưu
+   tiên mà bản Tailwind v3 cũ đang có:
+     - reset của mình vẫn thắng preflight của Tailwind  (nhờ nằm sau `base`)
+     - nhưng THUA mọi tiện ích p-* m-* px-* ...          (nhờ nằm trước `utilities`)
+
+   Không có dòng này, `*{margin:0;padding:0}` nằm ngoài mọi layer sẽ thắng
+   toàn bộ tiện ích khoảng cách của Tailwind — đo được 237/934 phần tử vỡ
+   hình học, 128 phần tử mất padding, 131 phần tử mất margin. */
+@layer theme, base, app-reset, components, utilities;
+
 @import "tailwindcss";
 
 @theme {
