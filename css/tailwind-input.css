@@ -7,6 +7,12 @@
   --color-brand-dark: #0f172a;
   --color-brand-body: #f8fafc;
   --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+
+  /* Ghim shadow-sm về đúng giá trị Tailwind v3 đang chạy trên site.
+     v4 định nghĩa lại shadow-sm nặng hơn (= shadow của v3); trang dùng
+     lớp này 4.748 lần nên để mặc định v4 sẽ làm đậm bóng toàn site.
+     Đổi thiết kế là việc của PR khác. */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
