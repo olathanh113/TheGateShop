@@ -3,6 +3,20 @@
    Modern minimal reset
    ============================================ */
 
+/* ⚠️ KHI GỘP VÀO custom.min.css: TOÀN BỘ file này phải nằm trong
+   `@layer app-reset { ... }`.
+
+   Lý do: từ Tailwind v4, tiện ích nằm trong `@layer utilities`. CSS không
+   thuộc layer nào thì thắng CSS thuộc layer BẤT KỂ độ đặc hiệu. Nếu để
+   `*{margin:0;padding:0}` bên dưới nằm ngoài layer, nó sẽ xoá sạch mọi lớp
+   p-* m-* px-* py-* của Tailwind trên toàn site — đã đo: 237/934 phần tử
+   vỡ hình học, 128 mất padding, 131 mất margin.
+
+   Thứ tự layer khai trong css/tailwind-input.css:
+       theme, base, app-reset, components, utilities
+   Đặt sau `base` để reset này vẫn thắng preflight của Tailwind, và trước
+   `utilities` để thua các lớp tiện ích — đúng như bản v3 cũ vẫn chạy. */
+
 *,
 *::before,
 *::after {

@@ -33,10 +33,9 @@
 }
 
 /* ---- Grid ---- */
-.grid {
-  display: grid;
-  gap: var(--space-lg);
-}
+/* `.grid` đã gỡ: trùng tên tiện ích Tailwind. Vì custom.min.css nạp sau
+   tailwind.min.css nên `gap: var(--space-lg)` đè lên mọi lớp `gap-*` của
+   Tailwind ở 6 lưới trong index.html. Tailwind đã cung cấp `display: grid`. */
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
@@ -82,9 +81,9 @@
 }
 
 /* ---- Flex Utilities ---- */
-.flex {
-  display: flex;
-}
+/* `.flex` đã gỡ khỏi custom.min.css ở PR #7 (xung đột cascade làm header
+   desktop không bao giờ hiện) nhưng bỏ sót ở file nguồn này. Đồng bộ lại
+   để lần nén sau không làm tái phát. */
 
 .flex-center {
   display: flex;

@@ -55,7 +55,7 @@ const staticCardsHtml = page1Products.map(p => {
               </div>
               <button type="button" onclick="openEnhancedProductModal('${pid}')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
                 <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+                <span class="tracking-wide">Xem Size & Tồn Kho</span>
               </button>
             </div>
           </article>`;
@@ -252,7 +252,7 @@ const newJsCode = `
               </div>
               <button type="button" onclick="openEnhancedProductModal('\${pid}')" class="w-full py-2 px-2.5 sm:py-2.5 sm:px-3 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5 transition-all mt-auto cursor-pointer border-0">
                 <i data-lucide="tag" class="w-3.5 h-3.5 shrink-0 text-white"></i>
-                <span class="truncate tracking-wide">Xem Size & Tồn Kho</span>
+                <span class="tracking-wide">Xem Size & Tồn Kho</span>
               </button>
             </div>
           </article>

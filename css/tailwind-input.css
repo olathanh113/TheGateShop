@@ -1,3 +1,17 @@
+/* Khai thứ tự layer TRƯỚC khi nạp Tailwind.
+   `app-reset` là chỗ dành cho phần reset/base cấp phần tử của custom.min.css
+   (khối `*{margin:0;padding:0}`, `body`, `h1..h6`, `p`, `a`, `img/svg`...).
+
+   Đặt SAU `base` và TRƯỚC `components`/`utilities` để tái lập đúng thứ tự ưu
+   tiên mà bản Tailwind v3 cũ đang có:
+     - reset của mình vẫn thắng preflight của Tailwind  (nhờ nằm sau `base`)
+     - nhưng THUA mọi tiện ích p-* m-* px-* ...          (nhờ nằm trước `utilities`)
+
+   Không có dòng này, `*{margin:0;padding:0}` nằm ngoài mọi layer sẽ thắng
+   toàn bộ tiện ích khoảng cách của Tailwind — đo được 237/934 phần tử vỡ
+   hình học, 128 phần tử mất padding, 131 phần tử mất margin. */
+@layer theme, base, app-reset, components, utilities;
+
 @import "tailwindcss";
 
 @theme {
@@ -7,6 +21,12 @@
   --color-brand-dark: #0f172a;
   --color-brand-body: #f8fafc;
   --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+
+  /* Ghim shadow-sm về đúng giá trị Tailwind v3 đang chạy trên site.
+     v4 định nghĩa lại shadow-sm nặng hơn (= shadow của v3); trang dùng
+     lớp này 4.748 lần nên để mặc định v4 sẽ làm đậm bóng toàn site.
+     Đổi thiết kế là việc của PR khác. */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
