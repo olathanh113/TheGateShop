@@ -1,1 +1,5 @@
-/api/catalog  https://catalog-api-production-6f96.up.railway.app/v1/website/catalog  200!
+/scripts/*          /404.html  404!
+/package.json       /404.html  404!
+/package-lock.json  /404.html  404!
+/api/catalog        https://catalog-api-production-6f96.up.railway.app/v1/website/catalog  200!
+/index.html         /  301!
