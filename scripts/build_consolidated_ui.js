@@ -72,14 +72,77 @@ if (gIdx !== -1 && gEndIdx !== -1) {
   html = html.substring(0, gIdx + gridStartMarker.length) + '\n' + staticCardsHtml + '\n        </div>\n\n        ' + html.substring(gEndIdx);
 }
 
-// 4. Update Pagination text on initial load
+// 4. Update Pagination text & Search Modal
 const totalPages = Math.ceil(products.length / 16);
 const pagTextMatch = html.match(/Trang <span class="text-orange-600 font-extrabold">1<\/span> \/ \d+ \(Tổng [^)]+\)/);
 if (pagTextMatch) {
   html = html.replace(pagTextMatch[0], `Trang <span class="text-orange-600 font-extrabold">1</span> / ${totalPages} (Tổng ${products.length.toLocaleString('vi-VN')} sản phẩm)`);
 }
 
-// 5. Update Modal Header in HTML
+// 5. Update Modal Header & Add Search Modal in HTML
+const searchModalHtml = `
+  <!-- MODAL TÌM KIẾM NHANH SẢN PHẨM -->
+  <div class="fixed inset-0 z-50 flex items-start justify-center p-3 sm:p-6 bg-slate-900/75 backdrop-blur-md hidden overflow-y-auto" id="quickSearchModal" role="dialog" aria-modal="true" aria-labelledby="quickSearchTitle">
+    <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-7 max-w-2xl w-full relative shadow-2xl transform transition-all scale-95 opacity-0 duration-300 mt-12 sm:mt-16 mb-8" id="quickSearchCard">
+      <!-- Nút Đóng -->
+      <button onclick="closeQuickSearchModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-orange-600 text-slate-500 hover:text-white flex items-center justify-center transition-colors z-10" aria-label="Đóng tìm kiếm">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <h2 class="text-lg sm:text-xl font-extrabold text-slate-900" id="quickSearchTitle">Tìm Kiếm Sản Phẩm The Gate</h2>
+          <p class="text-xs text-slate-500">Tra cứu nhanh theo tên, mã sản phẩm, thương hiệu hoặc phân loại</p>
+        </div>
+      </div>
+
+      <!-- Ô nhập tìm kiếm -->
+      <div class="relative mb-4">
+        <input
+          type="text"
+          id="quickSearchInput"
+          placeholder="Nhập tên sản phẩm, mã SP (VD: 175, Polo, Quiksilver, Pacsun, Jogger...)..."
+          class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm font-medium focus:outline-none focus:border-orange-600 focus:bg-white focus:ring-2 focus:ring-orange-200 transition-all shadow-inner"
+          autocomplete="off"
+        />
+        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+        <button id="quickSearchClearBtn" onclick="clearQuickSearch()" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-600 flex items-center justify-center text-xs font-bold transition-all">✕</button>
+      </div>
+
+      <!-- Gợi ý từ khóa phổ biến -->
+      <div class="mb-4">
+        <span class="text-xs font-bold text-slate-500 mr-2">Gợi ý:</span>
+        <div class="inline-flex flex-wrap gap-1.5 align-middle">
+          <button type="button" onclick="setQuickSearchTerm('Polo')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">Áo Polo</button>
+          <button type="button" onclick="setQuickSearchTerm('Pacsun')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">PacSun</button>
+          <button type="button" onclick="setQuickSearchTerm('Quiksilver')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">Quiksilver</button>
+          <button type="button" onclick="setQuickSearchTerm('Jogger')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">Jogger</button>
+          <button type="button" onclick="setQuickSearchTerm('Kid')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">Trẻ Em</button>
+          <button type="button" onclick="setQuickSearchTerm('Khoác')" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-orange-50 hover:text-orange-600 text-slate-700 transition-colors">Áo Khoác</button>
+        </div>
+      </div>
+
+      <!-- Kết quả tìm kiếm -->
+      <div class="max-h-[50vh] overflow-y-auto space-y-2 pr-1 custom-scrollbar" id="quickSearchResultsContainer">
+        <div class="py-10 text-center text-slate-400 text-xs">
+          <i data-lucide="sparkles" class="w-8 h-8 mx-auto mb-2 text-orange-400 opacity-80"></i>
+          <p>Nhập từ khóa phía trên để tìm kiếm trong hơn 1.068 mẫu sản phẩm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+if (!html.includes('id="quickSearchModal"')) {
+  const modalEndIdx = html.indexOf('  <!-- Nút Quay lại đầu trang -->');
+  if (modalEndIdx !== -1) {
+    html = html.substring(0, modalEndIdx) + searchModalHtml + '\n' + html.substring(modalEndIdx);
+  }
+}
+
 const modalNameIdx = html.indexOf('<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight mb-1" id="modalProductName">');
 if (modalNameIdx !== -1) {
   const modalHeaderSnippet = `<h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight mb-1" id="modalProductName">Tên sản phẩm</h3>
@@ -449,7 +512,6 @@ const newJsCode = `
         imgs = ['assets/images/products/product-01.svg'];
       }
 
-      // Strict Deduplication & keep max 3 photos per color
       const uniqueImgs = Array.from(new Set(imgs)).slice(0, 3);
 
       uniqueImgs.forEach((img, idx) => {
@@ -501,12 +563,12 @@ const newJsCode = `
 
     window.selectModalSize = function(size) {
       selectedSize = size;
-      renderSizeButtons();
       const currentVariant = getActiveVariant(activeProduct, selectedSize, selectedColor);
       if (currentVariant && currentVariant.color && currentVariant.color !== selectedColor) {
         selectedColor = currentVariant.color;
-        renderColorButtons();
       }
+      renderSizeButtons();
+      renderColorButtons();
       renderModalImagesSlider(selectedColor);
       updateVariantDetails();
     };
@@ -529,6 +591,11 @@ const newJsCode = `
 
     window.selectModalColor = function(colorName) {
       selectedColor = colorName;
+      const currentVariant = getActiveVariant(activeProduct, selectedSize, selectedColor);
+      if (currentVariant && currentVariant.size && currentVariant.size !== selectedSize) {
+        selectedSize = currentVariant.size;
+      }
+      renderSizeButtons();
       renderColorButtons();
       renderModalImagesSlider(selectedColor);
       updateVariantDetails();
@@ -695,9 +762,174 @@ const newJsCode = `
       });
     }
 
+    // ==================== SEARCH MODAL LOGIC ====================
+    let searchDebounceTimer = null;
+
+    window.openQuickSearchModal = function() {
+      const modal = document.getElementById('quickSearchModal');
+      const card = document.getElementById('quickSearchCard');
+      const input = document.getElementById('quickSearchInput');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        if (card) {
+          setTimeout(() => {
+            card.classList.remove('scale-95', 'opacity-0');
+            card.classList.add('scale-100', 'opacity-100');
+            if (input) input.focus();
+          }, 10);
+        }
+      }
+    };
+
+    window.closeQuickSearchModal = function() {
+      const modal = document.getElementById('quickSearchModal');
+      const card = document.getElementById('quickSearchCard');
+      if (card) {
+        card.classList.remove('scale-100', 'opacity-100');
+        card.classList.add('scale-95', 'opacity-0');
+      }
+      setTimeout(() => {
+        if (modal) modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 200);
+    };
+
+    window.clearQuickSearch = function() {
+      const input = document.getElementById('quickSearchInput');
+      const clearBtn = document.getElementById('quickSearchClearBtn');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      if (clearBtn) clearBtn.classList.add('hidden');
+      performQuickSearch('');
+    };
+
+    window.setQuickSearchTerm = function(term) {
+      const input = document.getElementById('quickSearchInput');
+      if (input) {
+        input.value = term;
+        input.focus();
+      }
+      const clearBtn = document.getElementById('quickSearchClearBtn');
+      if (clearBtn) clearBtn.classList.remove('hidden');
+      performQuickSearch(term);
+    };
+
+    function performQuickSearch(query) {
+      const resultsContainer = document.getElementById('quickSearchResultsContainer');
+      if (!resultsContainer) return;
+
+      const q = (query || '').trim().toLowerCase();
+      if (!q) {
+        resultsContainer.innerHTML = \`
+          <div class="py-10 text-center text-slate-400 text-xs">
+            <i data-lucide="sparkles" class="w-8 h-8 mx-auto mb-2 text-orange-400 opacity-80"></i>
+            <p>Nhập từ khóa phía trên để tìm kiếm trong hơn 1.068 mẫu sản phẩm</p>
+          </div>
+        \`;
+        if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
+        return;
+      }
+
+      const dataObj = window.PRODUCTS_DATA || (typeof PRODUCTS_DATA !== 'undefined' ? PRODUCTS_DATA : {});
+      const allProducts = Object.values(dataObj);
+
+      const matches = allProducts.filter(p => {
+        const name = (p.name || '').toLowerCase();
+        const code = (p.code || p.id || '').toLowerCase();
+        const cat = (p.category || '').toLowerCase();
+        const sizesStr = (p.sizes || []).join(' ').toLowerCase();
+        const colorsStr = (p.colors || []).map(c => typeof c === 'string' ? c : (c.name + ' ' + (c.label||''))).join(' ').toLowerCase();
+
+        return name.includes(q) || code.includes(q) || cat.includes(q) || sizesStr.includes(q) || colorsStr.includes(q);
+      }).slice(0, 30);
+
+      if (matches.length === 0) {
+        resultsContainer.innerHTML = \`
+          <div class="py-10 text-center text-slate-500 text-xs">
+            <p class="font-bold text-sm text-slate-700 mb-1">Không tìm thấy sản phẩm nào khớp với "\${query}"</p>
+            <p>Vui lòng thử lại với từ khóa khác (VD: Polo, Pacsun, Quiksilver, 175...)</p>
+          </div>
+        \`;
+        return;
+      }
+
+      resultsContainer.innerHTML = \`
+        <div class="text-xs font-bold text-slate-500 mb-2">Tìm thấy <span class="text-orange-600">\${matches.length}</span> mẫu sản phẩm phù hợp:</div>
+        <div class="space-y-2">
+          \${matches.map(p => {
+            const pid = p.id || p.code;
+            const mainImg = (p.images && p.images[0]) || 'assets/images/products/product-01.svg';
+            const sizeCount = p.sizes ? p.sizes.length : 1;
+            const colorCount = p.colors ? p.colors.length : 1;
+            return \`
+              <div onclick="closeQuickSearchModal(); openEnhancedProductModal('\${pid}')" class="p-2.5 rounded-2xl bg-white border border-slate-200 hover:border-orange-400 hover:shadow-md transition-all flex items-center justify-between gap-3 cursor-pointer group">
+                <div class="flex items-center gap-3">
+                  <div class="w-14 h-14 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden flex items-center justify-center shrink-0 p-1">
+                    <img src="\${mainImg}" alt="\${p.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-[10px] font-extrabold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">MÃ: \${p.code}</span>
+                      <span class="text-[10px] font-semibold text-slate-400">\${sizeCount} Size • \${colorCount} Màu</span>
+                    </div>
+                    <h4 class="font-bold text-xs text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1">\${p.name}</h4>
+                    <div class="flex items-center gap-2 mt-0.5">
+                      <span class="font-extrabold text-orange-600 text-xs">\${p.price}</span>
+                      \${p.originalPrice ? \`<span class="text-[10px] text-slate-400 line-through">\${p.originalPrice}</span>\` : ''}
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="px-3 py-1.5 rounded-xl bg-orange-600 group-hover:bg-orange-700 text-white font-bold text-xs shrink-0 transition-colors shadow">
+                  Xem Size
+                </button>
+              </div>
+            \`;
+          }).join('')}
+        </div>
+      \`;
+
+      if (window.lucide && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       checkAndHideEmptyCategories();
       renderProductsPage();
+
+      const searchBtn = document.getElementById('searchBtn');
+      if (searchBtn) {
+        searchBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openQuickSearchModal();
+        });
+      }
+
+      const searchInput = document.getElementById('quickSearchInput');
+      const searchClearBtn = document.getElementById('quickSearchClearBtn');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const val = e.target.value;
+          if (searchClearBtn) {
+            if (val) searchClearBtn.classList.remove('hidden');
+            else searchClearBtn.classList.add('hidden');
+          }
+          clearTimeout(searchDebounceTimer);
+          searchDebounceTimer = setTimeout(() => {
+            performQuickSearch(val);
+          }, 200);
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeEnhancedModal();
+          closeQuickSearchModal();
+        }
+      });
 
       const toggleBtn = document.getElementById('navbarToggle');
       const mobileMenu = document.getElementById('mobileMenu');
